@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/floristry/static/css/main.4aa5a05d.css",
-    "main.js": "/floristry/static/js/main.b56059db.js",
-    "static/js/680.b82dc846.chunk.js": "/floristry/static/js/680.b82dc846.chunk.js",
+    "main.css": "/floristry/static/css/main.71dab599.css",
+    "main.js": "/floristry/static/js/main.ce30a48c.js",
+    "static/js/25.0c090e8c.chunk.js": "/floristry/static/js/25.0c090e8c.chunk.js",
+    "static/media/flowers.jpg": "/floristry/static/media/flowers.2538dbbb4e73bd30c05d.jpg",
     "index.html": "/floristry/index.html",
-    "main.4aa5a05d.css.map": "/floristry/static/css/main.4aa5a05d.css.map",
-    "main.b56059db.js.map": "/floristry/static/js/main.b56059db.js.map",
-    "680.b82dc846.chunk.js.map": "/floristry/static/js/680.b82dc846.chunk.js.map"
+    "main.71dab599.css.map": "/floristry/static/css/main.71dab599.css.map",
+    "main.ce30a48c.js.map": "/floristry/static/js/main.ce30a48c.js.map",
+    "25.0c090e8c.chunk.js.map": "/floristry/static/js/25.0c090e8c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4aa5a05d.css",
-    "static/js/main.b56059db.js"
+    "static/css/main.71dab599.css",
+    "static/js/main.ce30a48c.js"
   ]
 }

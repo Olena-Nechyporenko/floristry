@@ -1,13 +1,17 @@
 @import-normalize;
 
 :root {
+  --main-dark-text-color: #161616;
+  --main-light-text-color: #ffffff;
+  --secondary-bg-color: #ffe4fd;
+
   --main-transition: 250ms linear;
 }
 
 body {
   margin: 0;
-  font-family: 'Roboto', sans-serif;
-  background-color: #fff;
+  font-family: 'Merienda', cursive;
+  background-color: #fdfdfd;
 }
 
 ul {

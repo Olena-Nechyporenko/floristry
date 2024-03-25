@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/floristry/static/css/main.4aa5a05d.css",
+    "main.js": "/floristry/static/js/main.b56059db.js",
+    "static/js/680.b82dc846.chunk.js": "/floristry/static/js/680.b82dc846.chunk.js",
+    "index.html": "/floristry/index.html",
+    "main.4aa5a05d.css.map": "/floristry/static/css/main.4aa5a05d.css.map",
+    "main.b56059db.js.map": "/floristry/static/js/main.b56059db.js.map",
+    "680.b82dc846.chunk.js.map": "/floristry/static/js/680.b82dc846.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4aa5a05d.css",
+    "static/js/main.b56059db.js"
+  ]
+}

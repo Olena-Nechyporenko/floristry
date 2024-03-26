@@ -1,11 +1,12 @@
-import { Header } from 'components/Header/Header';
-import { HeroSection, Title } from './Hero.styled';
+import { HeroSection, Title, TitleWrapper, Subtitle } from './Hero.styled';
 
 export const Hero = () => {
   return (
     <HeroSection>
-      <Header />
-      <Title>Choose your best bouquet</Title>
+      <TitleWrapper>
+        <Title>Bouquet Delivery</Title>
+        <Subtitle>Choose your best bouquet</Subtitle>
+      </TitleWrapper>
     </HeroSection>
   );
 };

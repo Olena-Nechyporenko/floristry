@@ -1,0 +1,42 @@
+[
+  {
+    "_id": "1",
+    "name": "Pink Giant",
+    "description": "Beautiful bouquet of pink roses",
+    "price": 35,
+    "url": "https://res.cloudinary.com/dzqlwkzwd/image/upload/v1711447253/_6484f8c1-42c8-47e9-9c2e-6beaee6ed497_phcodc.jpg",
+    "type": "everyday"
+  },
+  {
+    "_id": "2",
+    "name": "Sunny Joy",
+    "description": "Sunny bouquet of yellow tulips",
+    "price": 25,
+    "url": "https://res.cloudinary.com/dzqlwkzwd/image/upload/v1711447252/_2df365ca-b237-476c-9b86-037de4f7204e_nyyhat.jpg",
+    "type": "everyday"
+  },
+  {
+    "_id": "3",
+    "name": "Colorful Spring",
+    "description": "Colorful bouquet of various flowers",
+    "price": 40,
+    "url": "https://res.cloudinary.com/dzqlwkzwd/image/upload/v1711447252/_f538f860-a069-407a-a19a-33ed4debc4ab_ats8rv.jpg",
+    "type": "everyday"
+  },
+  {
+    "_id": "4",
+    "name": "Gentle Rose",
+    "description": "Gentle bouquet of white roses",
+    "price": 30,
+    "url": "https://res.cloudinary.com/dzqlwkzwd/image/upload/v1711447253/_ec67d4bf-4de7-4bfa-bc7c-7c54df399422_qzxpge.jpg",
+    "type": "everyday"
+  },
+  {
+    "_id": "5",
+    "name": "Summer Breeze",
+    "description": "Fresh bouquet of light-colored flowers",
+    "price": 28,
+    "url": "https://res.cloudinary.com/dzqlwkzwd/image/upload/v1711447252/_13bebde3-42ab-4840-9330-51351d9b695f_insljm.jpg",
+    "type": "everyday"
+  }
+]

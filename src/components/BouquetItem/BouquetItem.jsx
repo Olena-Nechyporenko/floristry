@@ -18,8 +18,10 @@ export const BouquetItem = ({ bouquet }) => {
   const dispatch = useDispatch();
   const cartProducts = useSelector(selectCartProducts);
 
-  const handleAddToCart = bouquet => {
+  const handleAddToCart = () => {
     const existingProduct = cartProducts.find(item => item._id === bouquet._id);
+    console.log(existingProduct);
+
     if (existingProduct) {
       dispatch(
         increaseQuantity({
@@ -32,6 +34,7 @@ export const BouquetItem = ({ bouquet }) => {
       console.log(cartProducts);
     }
   };
+
   return (
     <BouquetWrapper>
       <ImgWrapper>

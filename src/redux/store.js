@@ -16,7 +16,7 @@ import { bouquetsReducer } from './bouquets/bouquetSlice.js';
 const persistConfig = {
   key: 'root',
   storage,
-  whitelist: ['cartProducts'],
+  whitelist: ['products'],
 };
 const persistedContactsReducer = persistReducer(
   persistConfig,

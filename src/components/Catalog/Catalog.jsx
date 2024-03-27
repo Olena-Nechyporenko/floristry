@@ -12,7 +12,7 @@ export const Catalog = () => {
 
   useEffect(() => {
     dispatch(fetchBouquets()); // Dispatch the fetchBouquets action
-  }, []);
+  }, [dispatch]);
 
   const bouquets = useSelector(selectAllBouquets);
   console.log(bouquets);

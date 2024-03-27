@@ -1,9 +1,4 @@
-import {
-  addToCart,
-  changeQuantity,
-  increaseQuantity,
-  removeFromCart,
-} from 'redux/cartProductsSlice';
+import { changeQuantity, removeFromCart } from 'redux/cartProductsSlice';
 import {
   BouquetWrapper,
   Button,

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import img from '../..//images/peonies.jpg';
+import img from '../../images/peonies.jpg';
 
 export const HeroSection = styled.div`
   position: relative;

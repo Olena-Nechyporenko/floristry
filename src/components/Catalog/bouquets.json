@@ -38,5 +38,14 @@
     "price": 28,
     "url": "https://res.cloudinary.com/dzqlwkzwd/image/upload/v1711447252/_13bebde3-42ab-4840-9330-51351d9b695f_insljm.jpg",
     "type": "everyday"
+  },
+
+    {
+    "_id": "5",
+    "name": "Passion roses",
+    "description": "Fresh bouquet of light-colored flowers",
+    "price": 28,
+    "url": "https://res.cloudinary.com/dzqlwkzwd/image/upload/v1711542090/_f180c907-5f69-449b-9bb8-46a156ddb15f_drbkrj.jpg",
+    "type": "everyday"
   }
 ]

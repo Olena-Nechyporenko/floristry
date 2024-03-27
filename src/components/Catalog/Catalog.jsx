@@ -5,11 +5,13 @@ import { nanoid } from 'nanoid';
 import { useEffect } from 'react';
 import { fetchBouquets } from 'redux/bouquets/operations';
 import { selectAllBouquets } from 'redux/bouquets/selectors';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 export const Catalog = () => {
+  const dispatch = useDispatch();
+
   useEffect(() => {
-    fetchBouquets();
+    dispatch(fetchBouquets()); // Dispatch the fetchBouquets action
   }, []);
 
   const bouquets = useSelector(selectAllBouquets);

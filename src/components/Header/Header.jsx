@@ -3,7 +3,7 @@ import { HeaderWrapper, NavList, Link } from './Header.module';
 export const Header = () => {
   return (
     <HeaderWrapper>
-      <Link>Bouquet delivery</Link>
+      <Link to="/">Bouquet delivery</Link>
 
       <nav>
         <NavList>
@@ -11,7 +11,7 @@ export const Header = () => {
             <Link>About us</Link>
           </li>
           <li>
-            <Link>Catalog</Link>
+            <Link to="/catalog">Catalog</Link>
           </li>
           <li>
             <Link>Contacts</Link>

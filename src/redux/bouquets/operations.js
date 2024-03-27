@@ -19,7 +19,7 @@ export const getBouquetById = createAsyncThunk(
   'bouquets/getBouquetById',
   async (bouquetId, { rejectWithValue }) => {
     try {
-      const bouquet = await axios.get(`/contacts/${bouquetId}`);
+      const bouquet = await axios.get(`/bouquets/${bouquetId}`);
       return bouquet.data;
     } catch (e) {
       return rejectWithValue(e.message);

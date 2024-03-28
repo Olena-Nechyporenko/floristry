@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/floristry/static/css/main.71dab599.css",
-    "main.js": "/floristry/static/js/main.95571d21.js",
+    "main.js": "/floristry/static/js/main.fe87d35f.js",
     "static/js/44.bfb079da.chunk.js": "/floristry/static/js/44.bfb079da.chunk.js",
     "static/media/peonies.jpg": "/floristry/static/media/peonies.fcc172c37a59058d23fd.jpg",
     "static/media/creative.jpg": "/floristry/static/media/creative.5bb4c255343b86a1da60.jpg",
@@ -10,11 +10,11 @@
     "static/media/consultation.jpg": "/floristry/static/media/consultation.1e733626fe8336fa5060.jpg",
     "index.html": "/floristry/index.html",
     "main.71dab599.css.map": "/floristry/static/css/main.71dab599.css.map",
-    "main.95571d21.js.map": "/floristry/static/js/main.95571d21.js.map",
+    "main.fe87d35f.js.map": "/floristry/static/js/main.fe87d35f.js.map",
     "44.bfb079da.chunk.js.map": "/floristry/static/js/44.bfb079da.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.71dab599.css",
-    "static/js/main.95571d21.js"
+    "static/js/main.fe87d35f.js"
   ]
 }

@@ -1,20 +1,61 @@
 import styled from 'styled-components';
-import img from '../../images/peonies.jpg';
+import img1 from '../../images/peonies.jpg';
+import img2 from '../../images/wide-a.jpg';
+import img3 from '../../images/consultation.jpg';
+import Slider from 'react-slick';
 
 export const HeroSection = styled.div`
-  position: relative;
   height: 600px;
-  background-image: url(${img});
+  background-color: var(--secondary-bg-color);
+`;
+
+export const CustomSlider = styled(Slider)`
+  .slick-track {
+    display: flex;
+  }
+
+  .slick-dots {
+    bottom: 20px;
+  }
+  .slick-dots li {
+    margin: 0 14px;
+  }
+
+  .slick-dots li button:before {
+    content: '';
+    width: 35px;
+    height: 8px;
+    border-radius: 14px;
+    font-size: 12px;
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+
+  .slick-dots li.slick-active button:before {
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+`;
+
+const Slide = styled.div`
+  position: relative;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   overflow: hidden;
   padding: 0 10px;
-  background-color: var(--secondary-bg-color);
+  width: 800px;
+  height: 600px;
+`;
 
-  @media screen and (min-width: 768px) {
-    padding: 0 20px;
-  }
+export const Slide1 = styled(Slide)`
+  background-image: url(${img1});
+`;
+
+export const Slide2 = styled(Slide)`
+  background-image: url(${img2});
+`;
+
+export const Slide3 = styled(Slide)`
+  background-image: url(${img3});
 `;
 
 export const Title = styled.h1`

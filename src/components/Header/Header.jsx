@@ -1,4 +1,10 @@
-import { HeaderWrapper, NavList, Link } from './Header.module';
+import {
+  HeaderWrapper,
+  NavList,
+  Link,
+  AnchorLink,
+  CartIcon,
+} from './Header.module';
 
 export const Header = () => {
   return (
@@ -8,16 +14,21 @@ export const Header = () => {
       <nav>
         <NavList>
           <li>
-            <Link>About us</Link>
+            <AnchorLink href="#about-us">About us</AnchorLink>
           </li>
           <li>
             <Link to="/catalog">Catalog</Link>
           </li>
           <li>
-            <Link to="/cart">Cart</Link>
+            <AnchorLink href="#reviews">Reviews</AnchorLink>
           </li>
           <li>
-            <Link>Contacts</Link>
+            <AnchorLink href="#contacts">Contacts</AnchorLink>
+          </li>
+          <li>
+            <Link to="/cart">
+              <CartIcon />
+            </Link>
           </li>
         </NavList>
       </nav>

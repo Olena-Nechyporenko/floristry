@@ -9,7 +9,6 @@ export const FilterWrapper = styled.div`
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   flex-wrap: wrap;
   margin-bottom: 50px;
-  marfin-top: 50px;
 `;
 export const StyledForm = styled(Form)`
   display: flex;

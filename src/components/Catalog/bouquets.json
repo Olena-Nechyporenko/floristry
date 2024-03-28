@@ -1,51 +1,185 @@
 [
   {
-    "_id": "1",
     "name": "Pink Giant",
     "description": "Beautiful bouquet of pink roses",
     "price": 35,
     "url": "https://res.cloudinary.com/dzqlwkzwd/image/upload/v1711447253/_6484f8c1-42c8-47e9-9c2e-6beaee6ed497_phcodc.jpg",
-    "type": "everyday"
+    "type": "everyday",
+    "new": false,
+    "composition": ["Roses", "Daisies", "Tulips"]
   },
   {
-    "_id": "2",
     "name": "Sunny Joy",
     "description": "Sunny bouquet of yellow tulips",
     "price": 25,
     "url": "https://res.cloudinary.com/dzqlwkzwd/image/upload/v1711447252/_2df365ca-b237-476c-9b86-037de4f7204e_nyyhat.jpg",
-    "type": "everyday"
+    "type": "everyday",
+    "new": false,
+    "composition": ["Sunflowers", "Daffodils", "Lilies"]
   },
   {
-    "_id": "3",
     "name": "Colorful Spring",
     "description": "Colorful bouquet of various flowers",
     "price": 40,
     "url": "https://res.cloudinary.com/dzqlwkzwd/image/upload/v1711447252/_f538f860-a069-407a-a19a-33ed4debc4ab_ats8rv.jpg",
-    "type": "everyday"
+    "type": "everyday",
+    "new": false,
+    "composition": ["Carnations", "Chrysanthemums", "Lavender"]
   },
   {
-    "_id": "4",
     "name": "Gentle Rose",
     "description": "Gentle bouquet of white roses",
     "price": 30,
     "url": "https://res.cloudinary.com/dzqlwkzwd/image/upload/v1711447253/_ec67d4bf-4de7-4bfa-bc7c-7c54df399422_qzxpge.jpg",
-    "type": "everyday"
+    "type": "everyday",
+    "new": false,
+    "composition": ["Daisies", "Tulips", "Sunflowers"]
   },
   {
-    "_id": "5",
     "name": "Summer Breeze",
     "description": "Fresh bouquet of light-colored flowers",
     "price": 28,
     "url": "https://res.cloudinary.com/dzqlwkzwd/image/upload/v1711447252/_13bebde3-42ab-4840-9330-51351d9b695f_insljm.jpg",
-    "type": "everyday"
+    "type": "everyday",
+    "new": false,
+    "composition": ["Daffodils", "Irises", "Peonies"]
   },
-
-    {
-    "_id": "5",
+  {
     "name": "Passion roses",
     "description": "Fresh bouquet of light-colored flowers",
     "price": 28,
     "url": "https://res.cloudinary.com/dzqlwkzwd/image/upload/v1711542090/_f180c907-5f69-449b-9bb8-46a156ddb15f_drbkrj.jpg",
-    "type": "everyday"
+    "type": "everyday",
+    "new": false,
+    "composition": ["Violets", "Hyacinths", "Lavender"]
+  },
+  {
+    "name": "Red Roses",
+    "description": "Classic bouquet of red roses",
+    "price": 30,
+    "url": "https://example.com/red-rose  s.jpg",
+    "type": "romantic",
+    "new": false,
+    "composition": ["Roses", "Daisies", "Tulips"]
+  },
+  {
+    "name": "Yellow Delight",
+    "description": "Bright bouquet of yellow daffodils",
+    "price": 25,
+    "url": "https://example.com/yellow-delight.jpg",
+    "type": "spring",
+    "new": false,
+    "composition": ["Sunflowers", "Daffodils", "Lilies"]
+  },
+  {
+    "name": "Purple Passion",
+    "description": "Vibrant bouquet of purple carnations",
+    "price": 35,
+    "url": "https://example.com/purple-passion.jpg",
+    "type": "occasion",
+    "new": false,
+    "composition": ["Carnations", "Chrysanthemums", "Lavender"]
+  },
+  {
+    "name": "White Elegance",
+    "description": "Elegant bouquet of white lilies",
+    "price": 40,
+    "url": "https://example.com/white-elegance.jpg",
+    "type": "wedding",
+    "new": false,
+    "composition": ["Carnations", "Chrysanthemums", "Lavender"]
+  },
+  
+  {
+    "name": "Blue Bliss",
+    "description": "Serene bouquet of blue hydrangeas",
+    "price": 45,
+    "url": "https://example.com/blue-bliss.jpg",
+    "type": "summer",
+    "new": false,
+    "composition": ["Daffodils", "Irises", "Peonies"]
+  },
+  {
+    "name": "Pink Paradise",
+    "description": "Paradise bouquet of pink peonies",
+    "price": 35,
+    "url": "https://example.com/pink-paradise.jpg",
+    "type": "birthday",
+    "new": false,
+    "composition": ["Violets", "Hyacinths", "Lavender"]
+  },
+  {
+    "name": "Golden Sunset",
+    "description": "Warm bouquet of orange marigolds",
+    "price": 30,
+    "url": "https://res.cloudinary.com/dzqlwkzwd/image/upload/v1711554137/_9a4e61ef-8811-4a1f-8c30-41f4d48ac918_w5g3gy.jpg",
+    "type": "wedding",
+    "new": false,
+    "composition": ["Roses", "Daisies", "Tulips"]
+  },
+  {
+    "name": "Winter Frost",
+    "description": "Cool bouquet of white carnations",
+    "price": 40,
+    "url": "https://res.cloudinary.com/dzqlwkzwd/image/upload/v1711553833/_02d1beb5-024e-4ce8-a232-17fdde2a99bd_eoxcnf.jpg",
+    "type": "wedding",
+    "new": false,
+    "composition": ["Roses", "Daffodils", "Lilies"]
+  },
+  {
+    "name": "Ocean Breeze",
+    "description": "Refreshing bouquet of sea blue irises",
+    "price": 35,
+    "url": "https://res.cloudinary.com/dzqlwkzwd/image/upload/v1711553680/_b3680b45-1e3c-4271-a7c0-1cb467f8e913_sxysan.jpg",
+    "type": "wedding",
+    "new": false,
+    "composition": ["Carnations", "Chrysanthemums", "Lavender"]
+  },
+  {
+    "name": "Spring Fling",
+    "description": "Playful bouquet of pastel gerbera daisies",
+    "price": 30,
+    "url": "https://example.com/spring-fling.jpg",
+    "type": "spring",
+    "new": false,
+    "composition": ["Daisies", "Tulips", "Sunflowers"]
+  },
+  {
+    "name": "Autumn Glow",
+    "description": "Radiant bouquet of red and yellow dahlias",
+    "price": 35,
+    "url": "https://example.com/autumn-glow.jpg",
+    "type": "autumn",
+    "new": false,
+    "composition": ["Daffodils", "Irises", "Peonies"]
+  },
+  {
+    "name": "Winter Wonderland",
+    "description": "Enchanting bouquet of blue and white snowdrops",
+    "price": 40,
+    "url": "https://res.cloudinary.com/dzqlwkzwd/image/upload/v1711553500/_ead91d1e-509f-4cb2-885d-96c40ed6295d_ejuwv2.jpg",
+    "type": "winter",
+    "new": false,
+    "composition": ["Violets", "Hyacinths", "Lavender"]
+  },
+  {
+    "name": "Spring Symphony",
+    "description": "Harmonious bouquet of colorful tulips",
+    "price": 35,
+    "url": "https://res.cloudinary.com/dzqlwkzwd/image/upload/v1711553405/_ea1a7aef-435a-42e4-a292-ade6bc6f333a_iq0fzu.jpg",
+    "type": "spring",
+    "new": false,
+    "composition": ["Roses", "Daisies", "Tulips"]
+  },
+  {
+    "name": "Autumn Harvest",
+    "description": "Abundant bouquet of fall-colored chrysanthemums",
+    "price": 30,
+    "url": "https://res.cloudinary.com/dzqlwkzwd/image/upload/v1711553201/flowers_everyday/_8d541653-37d7-4fd4-a1c6-8ac95fc632ee_dpwkrf.jpg",
+    "type": "autumn",
+    "new": false,
+    "composition": ["Sunflowers", "Daffodils", "Lilies"]
   }
 ]
+
+

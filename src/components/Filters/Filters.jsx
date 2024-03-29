@@ -20,22 +20,13 @@ const flowerTypes = [
   'Carnations',
   'Chrysanthemums',
   'Lavender',
-  'Daisies',
-  'Tulips',
-  'Sunflowers',
-  'Daffodils',
-  'Daffodils',
   'Irises',
   'Peonies',
   'Violets',
   'Hyacinths',
-  'Lavender',
   'Hydrangeas',
   'Cornflowers',
   'Delphiniums',
-  'Cornflowers',
-  'Hydrangeas',
-  'Daisies',
 ];
 
 export const Filters = ({ onFilter, filters }) => {

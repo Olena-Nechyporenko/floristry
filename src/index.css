@@ -4,13 +4,15 @@
   --main-dark-text-color: #161616;
   --main-light-text-color: #ffffff;
   --secondary-bg-color: #ffe4fd;
+  --main-pink-color: #e6b8ca;
+  --main-green-color: #556b2f;
 
   --main-transition: 250ms linear;
 }
 
 body {
   margin: 0;
-  font-family: 'Merienda', cursive;
+  font-family: 'Lora';
   background-color: #fdfdfd;
 }
 

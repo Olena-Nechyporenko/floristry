@@ -34,6 +34,9 @@ export const Header = () => {
           <li>
             <LinkNav to="/catalog">Catalog</LinkNav>
           </li>
+          <li>
+            <LinkNav to="/weddings">Weddings</LinkNav>
+          </li>
           <AnchorLink to="/" name="reviews" onClick={handleClick}>
             Reviews
           </AnchorLink>

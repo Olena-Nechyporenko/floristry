@@ -1,15 +1,20 @@
 {
   "files": {
     "main.css": "/floristry/static/css/main.a0ce55d3.css",
-    "main.js": "/floristry/static/js/main.95cc2e94.js",
+    "main.js": "/floristry/static/js/main.f9008632.js",
     "static/css/733.71293218.chunk.css": "/floristry/static/css/733.71293218.chunk.css",
-    "static/js/733.a58cd73b.chunk.js": "/floristry/static/js/733.a58cd73b.chunk.js",
-    "static/js/180.ebdee6fc.chunk.js": "/floristry/static/js/180.ebdee6fc.chunk.js",
-    "static/js/535.e4103358.chunk.js": "/floristry/static/js/535.e4103358.chunk.js",
+    "static/js/733.dacf23a1.chunk.js": "/floristry/static/js/733.dacf23a1.chunk.js",
+    "static/js/862.373e5241.chunk.js": "/floristry/static/js/862.373e5241.chunk.js",
+    "static/js/274.54276278.chunk.js": "/floristry/static/js/274.54276278.chunk.js",
+    "static/js/717.0c99b3fe.chunk.js": "/floristry/static/js/717.0c99b3fe.chunk.js",
+    "static/js/190.d66a679e.chunk.js": "/floristry/static/js/190.d66a679e.chunk.js",
     "static/media/peonies.jpg": "/floristry/static/media/peonies.fcc172c37a59058d23fd.jpg",
+    "static/media/wedd.jpg": "/floristry/static/media/wedd.327b25124fc1722156dc.jpg",
+    "static/media/wedding-bouquet.jpg": "/floristry/static/media/wedding-bouquet.09df773f2495fcefeab3.jpg",
     "static/media/creative.jpg": "/floristry/static/media/creative.5bb4c255343b86a1da60.jpg",
     "static/media/wide-a.jpg": "/floristry/static/media/wide-a.49b81401a1823630e315.jpg",
     "static/media/high.jpg": "/floristry/static/media/high.a92509f705feb1508d36.jpg",
+    "static/media/background-form.jpg": "/floristry/static/media/background-form.d8c7782e94ef0d702e2a.jpg",
     "static/media/consultation.jpg": "/floristry/static/media/consultation.1e733626fe8336fa5060.jpg",
     "static/media/slick.svg": "/floristry/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/floristry/static/media/slick.a4e97f5a2a64f0ab1323.eot",
@@ -17,14 +22,16 @@
     "static/media/slick.woff": "/floristry/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/floristry/index.html",
     "main.a0ce55d3.css.map": "/floristry/static/css/main.a0ce55d3.css.map",
-    "main.95cc2e94.js.map": "/floristry/static/js/main.95cc2e94.js.map",
+    "main.f9008632.js.map": "/floristry/static/js/main.f9008632.js.map",
     "733.71293218.chunk.css.map": "/floristry/static/css/733.71293218.chunk.css.map",
-    "733.a58cd73b.chunk.js.map": "/floristry/static/js/733.a58cd73b.chunk.js.map",
-    "180.ebdee6fc.chunk.js.map": "/floristry/static/js/180.ebdee6fc.chunk.js.map",
-    "535.e4103358.chunk.js.map": "/floristry/static/js/535.e4103358.chunk.js.map"
+    "733.dacf23a1.chunk.js.map": "/floristry/static/js/733.dacf23a1.chunk.js.map",
+    "862.373e5241.chunk.js.map": "/floristry/static/js/862.373e5241.chunk.js.map",
+    "274.54276278.chunk.js.map": "/floristry/static/js/274.54276278.chunk.js.map",
+    "717.0c99b3fe.chunk.js.map": "/floristry/static/js/717.0c99b3fe.chunk.js.map",
+    "190.d66a679e.chunk.js.map": "/floristry/static/js/190.d66a679e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a0ce55d3.css",
-    "static/js/main.95cc2e94.js"
+    "static/js/main.f9008632.js"
   ]
 }

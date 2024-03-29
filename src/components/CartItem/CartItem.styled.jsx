@@ -81,3 +81,17 @@ export const Button = styled.button`
     box-shadow: 0 0 0 3px rgba(25, 118, 210, 0.5);
   }
 `;
+export const QuantityInput = styled.input`
+  width: 50px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  background-color: #e6b8ca;
+  margin-top: 15px;
+`;
+export const ButtonWrapper = styled.div`
+  display: flex;
+  align-items: baseline;
+  gap: 20px;
+`;

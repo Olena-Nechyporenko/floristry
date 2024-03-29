@@ -9,6 +9,7 @@ export const FilterWrapper = styled.div`
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   flex-wrap: wrap;
   margin-bottom: 50px;
+  margin-top: 50px;
 `;
 export const StyledForm = styled(Form)`
   display: flex;
@@ -51,14 +52,14 @@ export const FormGroup = styled.div`
 export const ResetButton = styled.button`
   padding: 10px 20px;
   height: 50px;
-  background-color: #556b2f;
+  background-color: var(--main-green-color);
   color: #fff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: var(--main-transition);
 
   &:hover {
-    background-color: #e6b8ca;
+    background-color: var(--main-pink-color);
   }
 `;

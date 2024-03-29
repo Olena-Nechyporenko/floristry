@@ -62,6 +62,7 @@ export const Catalog = () => {
         filters={filters}
         onReset={handleReset}
       />
+
       <CatalogWrapper>
         {filteredBouquets.map(bouquet => (
           <BouquetItem key={nanoid()} bouquet={bouquet} />

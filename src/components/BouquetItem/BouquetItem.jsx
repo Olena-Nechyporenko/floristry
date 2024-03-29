@@ -13,7 +13,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { selectCartProducts } from 'redux/selectors';
 
 export const BouquetItem = ({ bouquet }) => {
-  // <-- Accept bouquet as props
   const { url, price, description, name } = bouquet; // Destructure bouquet
   const dispatch = useDispatch();
   const cartProducts = useSelector(selectCartProducts);

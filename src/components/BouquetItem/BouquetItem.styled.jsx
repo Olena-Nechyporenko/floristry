@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 export const BouquetWrapper = styled.div`
   position: relative;
-  border: 1px solid #e6b8ca;
+  border: 1px solid var(--main-pink-color);
   display: flex;
   flex-direction: column;
   align-items: center;

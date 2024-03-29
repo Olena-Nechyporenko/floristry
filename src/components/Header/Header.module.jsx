@@ -10,8 +10,8 @@ export const HeaderWrapper = styled.header`
   z-index: 100;
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid black;
-  background-color: #fdfdfd;
+  border-bottom: 1px solid var(--main-pink-color);
+  background-color: #556b2f;
   width: 1160px;
   padding: 0 20px;
 `;
@@ -25,8 +25,12 @@ export const Link = styled(NavLink)`
   display: block;
   font-size: 20px;
   font-weight: 600;
-  color: var(--main-dark-text-color);
+  color: white;
   padding: 20px 0;
+
+  &.active {
+    color: var(--main-pink-color);
+  }
 `;
 
 export const AnchorLink = styled.a`
@@ -35,6 +39,7 @@ export const AnchorLink = styled.a`
   font-weight: 600;
   padding: 20px 0;
   cursor: pointer;
+  color: white;
 `;
 
 export const CartIcon = styled(BsCart3)`

@@ -2,8 +2,10 @@ import { changeQuantity, removeFromCart } from 'redux/cartProductsSlice';
 import {
   BouquetWrapper,
   Button,
+  ButtonWrapper,
   DescrWrapper,
   ImgWrapper,
+  QuantityInput,
   StyledDescription,
   StyledImg,
   StyledPrice,
@@ -15,8 +17,13 @@ export const CartItem = ({
   bouquet: { _id, url, name, price, description, quantity },
 }) => {
   const dispatch = useDispatch();
-  const handleQuantityChange = (quantity, productId) => {
-    dispatch(changeQuantity({ quantity, productId }));
+  const handleQuantityChange = event => {
+    const newQuantity = parseInt(event.target.value) || 0;
+    if (newQuantity <= 0) {
+      dispatch(removeFromCart(_id));
+    } else {
+      dispatch(changeQuantity({ quantity: newQuantity, productId: _id }));
+    }
   };
 
   const handleRemoveFromCart = productId => {
@@ -32,13 +39,15 @@ export const CartItem = ({
         <StyledTitle>{name}</StyledTitle>
         <StyledPrice>{price} €</StyledPrice>
         <StyledDescription>{description}</StyledDescription>
-        <input
+      </DescrWrapper>
+      <ButtonWrapper>
+        <QuantityInput
           type="number"
           value={quantity || 0}
-          onChange={e => handleQuantityChange(e.target.value, _id)}
+          onChange={handleQuantityChange}
         />
-      </DescrWrapper>
-      <Button onClick={() => handleRemoveFromCart(_id)}>Remove</Button>
+        <Button onClick={() => handleRemoveFromCart(_id)}>Remove</Button>
+      </ButtonWrapper>
     </BouquetWrapper>
   );
 };

@@ -7,6 +7,8 @@ export const Wrapper = styled.div`
   justify-content: center;
   margin: 0 auto;
   flex-direction: column;
+  margin-top: 30px;
+  margin-bottom: 30px;
 
   @media (min-width: 768px) {
     flex-direction: row;
@@ -21,6 +23,7 @@ export const PayButton = styled.button`
   cursor: pointer;
   transition: background-color 0.3s;
   margin-top: 20px;
+  margin-bottom: 30px;
   &:hover {
     background-color: #e6b8ca;
   }

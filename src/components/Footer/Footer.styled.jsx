@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { FaLocationDot } from 'react-icons/fa6';
 import { MdEmail } from 'react-icons/md';
 import { FaPhoneAlt } from 'react-icons/fa';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import { PiInstagramLogoFill } from 'react-icons/pi';
 import { FaFacebookF } from 'react-icons/fa';
 import { FaTelegramPlane } from 'react-icons/fa';
@@ -23,14 +23,14 @@ export const FooterInfoList = styled.ul`
   padding: 20px 0;
 `;
 
-export const Link = styled(NavLink)`
+export const LinkNav = styled(NavLink)`
   display: block;
   font-size: 18px;
   font-weight: 600;
   color: var(--main-dark-text-color);
 `;
 
-export const AnchorLink = styled.a`
+export const AnchorLink = styled(Link)`
   display: block;
   font-size: 18px;
   font-weight: 600;

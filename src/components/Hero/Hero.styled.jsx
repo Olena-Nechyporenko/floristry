@@ -62,7 +62,7 @@ export const Title = styled.h1`
   // font-family: 'Homemade Apple', cursive;
   font-size: 50px;
   font-weight: 400;
-  color: var(--main-dark-color:)
+  color: var(--main-dark-color);
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 `;
 

@@ -1,7 +1,8 @@
+import { useEffect, useState } from 'react';
 import {
   FooterSection,
   FooterInfoList,
-  Link,
+  LinkNav,
   AnchorLink,
   ContactsWrapper,
   ContactList,
@@ -20,18 +21,35 @@ import {
 } from './Footer.styled';
 
 export const Footer = () => {
+  const [anchor, setAnchor] = useState('');
+
+  useEffect(() => {
+    const targetElement = document.getElementById(anchor?.id);
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [anchor]);
+
+  const handleClick = e => {
+    setAnchor({ id: e.target.name });
+  };
+
   return (
-    <FooterSection>
+    <FooterSection id="contacts">
       <FooterInfoList>
         Information
         <li>
-          <AnchorLink href="#about-us">About us</AnchorLink>
+          <AnchorLink to="/" name="about-us" onClick={handleClick}>
+            About us
+          </AnchorLink>
         </li>
         <li>
-          <Link to="/catalog">Catalog</Link>
+          <LinkNav to="/catalog">Catalog</LinkNav>
         </li>
         <li>
-          <AnchorLink href="#reviews">Reviews</AnchorLink>
+          <AnchorLink to="/" name="reviews" onClick={handleClick}>
+            Reviews
+          </AnchorLink>
         </li>
       </FooterInfoList>
       <ContactsWrapper>

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import { BsCart3 } from 'react-icons/bs';
 
 export const HeaderWrapper = styled.header`
@@ -21,7 +21,7 @@ export const NavList = styled.ul`
   gap: 35px;
 `;
 
-export const Link = styled(NavLink)`
+export const LinkNav = styled(NavLink)`
   display: block;
   font-size: 20px;
   font-weight: 600;
@@ -33,7 +33,7 @@ export const Link = styled(NavLink)`
   }
 `;
 
-export const AnchorLink = styled.a`
+export const AnchorLink = styled(Link)`
   display: block;
   font-size: 20px;
   font-weight: 600;

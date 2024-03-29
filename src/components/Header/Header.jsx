@@ -1,34 +1,51 @@
+import { useEffect, useState } from 'react';
 import {
   HeaderWrapper,
   NavList,
-  Link,
+  LinkNav,
   AnchorLink,
   CartIcon,
 } from './Header.module';
 
 export const Header = () => {
+  const [anchor, setAnchor] = useState('');
+
+  useEffect(() => {
+    const targetElement = document.getElementById(anchor?.id);
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [anchor]);
+
+  const handleClick = e => {
+    setAnchor({ id: e.target.name });
+  };
   return (
     <HeaderWrapper>
-      <Link to="/">Bouquet delivery</Link>
+      <LinkNav to="/">Bouquet delivery</LinkNav>
 
       <nav>
         <NavList>
           <li>
-            <AnchorLink href="#about-us">About us</AnchorLink>
+            <AnchorLink to="/" name="about-us" onClick={handleClick}>
+              About us
+            </AnchorLink>
           </li>
           <li>
-            <Link to="/catalog">Catalog</Link>
+            <LinkNav to="/catalog">Catalog</LinkNav>
+          </li>
+          <AnchorLink to="/" name="reviews" onClick={handleClick}>
+            Reviews
+          </AnchorLink>
+          <li>
+            <AnchorLink name="contacts" onClick={handleClick}>
+              Contacts
+            </AnchorLink>
           </li>
           <li>
-            <AnchorLink href="#reviews">Reviews</AnchorLink>
-          </li>
-          <li>
-            <AnchorLink href="#contacts">Contacts</AnchorLink>
-          </li>
-          <li>
-            <Link to="/cart">
+            <LinkNav to="/cart">
               <CartIcon />
-            </Link>
+            </LinkNav>
           </li>
         </NavList>
       </nav>

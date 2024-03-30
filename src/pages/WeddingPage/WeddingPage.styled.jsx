@@ -65,30 +65,33 @@ export const Slide2 = styled(Slide)`
 
 export const TitleWrapper = styled.div`
   position: absolute;
-  top: 50px;
+  top: 140px;
   left: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 30px;
+  gap: 10px;
   width: 450px;
-  height: 300px;
+  // height: 200px;
   overflow: hidden;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0);
 `;
 
 export const Title = styled.h1`
   // font-family: 'Homemade Apple', cursive;
-  font-size: 40px;
+  font-family: 'Praise', sans-serif;
+  font-size: 60px;
   font-weight: 400;
-  color: var(--main-dark-color);
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 `;
 
 export const Text = styled.p`
-  font-size: 23px;
+  font-size: 16px;
   font-weight: 500;
   padding: 0 15px;
   text-align: center;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 `;

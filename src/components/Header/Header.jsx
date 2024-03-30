@@ -5,6 +5,7 @@ import {
   LinkNav,
   AnchorLink,
   CartIcon,
+  LinkNavHome,
 } from './Header.module';
 
 export const Header = () => {
@@ -22,7 +23,7 @@ export const Header = () => {
   };
   return (
     <HeaderWrapper>
-      <LinkNav to="/">Bouquet delivery</LinkNav>
+      <LinkNavHome to="/">Bouquet delivery</LinkNavHome>
 
       <nav>
         <NavList>

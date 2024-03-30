@@ -25,13 +25,14 @@ export const DescriptionWrapper = styled.div`
 `;
 
 export const DescrTitle = styled.h2`
-  font-size: 30px;
-  font-weight: 700;
+  font-size: 26px;
+  font-weight: 500;
 `;
 
 export const Text = styled.p`
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 400;
+  text-align: center;
   width: 400px;
 `;
 

@@ -7,8 +7,8 @@ export const ReviewsSection = styled.section`
 `;
 
 export const Title = styled.h2`
-  font-size: 25px;
-  font-weight: 700;
+  font-size: 30px;
+  font-weight: 500;
   text-align: center;
   width: 750px;
   margin: 0 auto 10px;
@@ -41,7 +41,7 @@ export const Wrapper = styled.div`
 `;
 
 export const Name = styled.h3`
-  font-size: 22px;
+  font-size: 26px;
   font-weight: 700;
   padding: 10px 20px;
   color: #fff;

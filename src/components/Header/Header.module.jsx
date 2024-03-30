@@ -2,6 +2,19 @@ import styled from 'styled-components';
 import { NavLink, Link } from 'react-router-dom';
 import { BsCart3 } from 'react-icons/bs';
 
+export const LinkNavHome = styled(NavLink)`
+  font-family: 'Praise', sans-serif;
+
+  display: block;
+  font-size: 25px;
+  color: white;
+  padding: 20px 0;
+
+  // &.active {
+  //   color: var(--main-pink-color);
+  // }
+`;
+
 export const HeaderWrapper = styled.header`
   position: fixed;
   top: 0;
@@ -23,8 +36,8 @@ export const NavList = styled.ul`
 
 export const LinkNav = styled(NavLink)`
   display: block;
-  font-size: 20px;
-  font-weight: 600;
+  font-size: 18px;
+  // font-weight: 600;
   color: white;
   padding: 20px 0;
 
@@ -35,8 +48,8 @@ export const LinkNav = styled(NavLink)`
 
 export const AnchorLink = styled(Link)`
   display: block;
-  font-size: 20px;
-  font-weight: 600;
+  font-size: 18px;
+  // font-weight: 600;
   padding: 20px 0;
   cursor: pointer;
   color: white;

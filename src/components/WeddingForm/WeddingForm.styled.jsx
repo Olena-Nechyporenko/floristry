@@ -13,7 +13,7 @@ export const FormWrapper = styled.div`
 
 export const Title = styled.h2`
   font-size: 30px;
-  font-weight: 700;
+  font-weight: 500;
   width: 800px;
   text-align: center;
   margin: 0 auto;
@@ -25,7 +25,7 @@ export const Text = styled.p`
   top: 200px;
   left: 380px;
   font-size: 22px;
-  font-weight: 500;
+  font-weight: 400;
   width: 490px;
   color: var(--main-dark-text-color);
 `;
@@ -42,7 +42,6 @@ export const StyledFormField = styled.div`
   label {
     display: block;
     margin-bottom: 5px;
-    font-weight: bold;
   }
 
   input,

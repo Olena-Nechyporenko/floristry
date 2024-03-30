@@ -17,14 +17,15 @@ export const Title = styled.h2`
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 40px;
+  font-size: 30px;
   height: 100%;
   background-color: #e6b8ca;
   transform: rotate(-90deg);
 `;
 
 export const Text = styled.p`
-  font-size: 25px;
+  font-size: 18px;
+  text-align: center;
   font-weight: 500;
   display: flex;
   align-items: center;

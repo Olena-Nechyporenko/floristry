@@ -37,7 +37,7 @@ export const Footer = () => {
   return (
     <FooterSection id="contacts">
       <FooterInfoList>
-        Information
+        {/* Information */}
         <li>
           <AnchorLink to="/" name="about-us" onClick={handleClick}>
             About us
@@ -54,6 +54,35 @@ export const Footer = () => {
       </FooterInfoList>
       <ContactsWrapper>
         <ContactList>
+          <SocialIconsList>
+            <SocialIconsItem>
+              <a
+                href="https://www.instagram.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <InstagramIcon />
+              </a>
+            </SocialIconsItem>
+            <SocialIconsItem>
+              <a
+                href="https://uk-ua.facebook.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FacebookIcon />
+              </a>
+            </SocialIconsItem>
+            <SocialIconsItem>
+              <a
+                href="https://web.telegram.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <TelegramIcon />
+              </a>
+            </SocialIconsItem>
+          </SocialIconsList>
           <Item>
             <IconWrapper>
               <LocationIcon />
@@ -90,36 +119,6 @@ export const Footer = () => {
             </ContactInfoWrapper>
           </Item>
         </ContactList>
-
-        <SocialIconsList>
-          <SocialIconsItem>
-            <a
-              href="https://www.instagram.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <InstagramIcon />
-            </a>
-          </SocialIconsItem>
-          <SocialIconsItem>
-            <a
-              href="https://uk-ua.facebook.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FacebookIcon />
-            </a>
-          </SocialIconsItem>
-          <SocialIconsItem>
-            <a
-              href="https://web.telegram.org/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <TelegramIcon />
-            </a>
-          </SocialIconsItem>
-        </SocialIconsList>
       </ContactsWrapper>
     </FooterSection>
   );

@@ -19,7 +19,7 @@ export const WeddingCatalog = () => {
 
   return (
     <>
-      <Title>Wedding collection</Title>;
+      <Title>Wedding bouquets collection</Title>;
       <CatalogWrapper>
         {weddingBouquets.map(bouquet => (
           <BouquetItem key={bouquet._id} bouquet={bouquet} />

@@ -35,6 +35,7 @@ export const StyledImg = styled.img`
 export const StyledTitle = styled.h2`
   color: #e6b8ca;
   text-align: center;
+  font-weight: 500;
 `;
 
 export const DescrWrapper = styled.div`

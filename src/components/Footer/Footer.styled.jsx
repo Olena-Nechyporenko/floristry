@@ -26,15 +26,16 @@ export const FooterInfoList = styled.ul`
 export const LinkNav = styled(NavLink)`
   display: block;
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 500;
   color: var(--main-dark-text-color);
 `;
 
 export const AnchorLink = styled(Link)`
   display: block;
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 500;
   cursor: pointer;
+  color: var(--main-dark-text-color);
 `;
 
 export const ContactsWrapper = styled.div`

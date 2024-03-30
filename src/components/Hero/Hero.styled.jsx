@@ -1,12 +1,15 @@
 import styled from 'styled-components';
-import img1 from '../../images/peonies.jpg';
-import img2 from '../../images/wide-a.jpg';
-import img3 from '../../images/consultation.jpg';
+import img1 from '../../images/wedding-bouquet-background.jpg';
+import img2 from '../../images/florist.jpg';
+import img3 from '../../images/flower-shop.jpg';
 import Slider from 'react-slick';
+import { Link } from 'react-router-dom';
 
-export const HeroSection = styled.div`
-  height: 600px;
-  background-color: var(--secondary-bg-color);
+export const HeroSection = styled.section`
+  padding-top: 70px;
+  height: 400px;
+  height: 400px;
+  background-color: white;
 `;
 
 export const CustomSlider = styled(Slider)`
@@ -42,7 +45,7 @@ const Slide = styled.div`
   background-size: cover;
   overflow: hidden;
   padding: 0 10px;
-  height: 600px;
+  height: 400px;
 `;
 
 export const Slide1 = styled(Slide)`
@@ -56,32 +59,67 @@ export const Slide2 = styled(Slide)`
 export const Slide3 = styled(Slide)`
   background-image: url(${img3});
 `;
-
-export const Title = styled.h1`
-  // font-family: 'Homemade Apple', cursive;
-  font-size: 50px;
-  font-weight: 400;
-  color: var(--main-dark-color);
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-`;
-
 export const TitleWrapper = styled.div`
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 100px;
-  width: 600px;
-  height: 300px;
+  top: 140px;
+  left: 50px;
+  gap: 10px;
+  width: 400px;
+  height: 400px;
   overflow: hidden;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0);
 `;
+export const Text = styled.p`
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+`;
+export const Title = styled.h1`
+  // font-family: 'Homemade Apple', cursive;
+  font-family: 'Praise', sans-serif;
+  font-size: 60px;
+  text-align: center;
+  font-weight: 400;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+`;
+// export const Title = styled.h1`
+//   font-family: 'Praise', sans-serif;
+//   width: 1000px;
+//   font-size: 60px;
+//   font-weight: 400;
+//   color: white;
+//   text-align: center;
+//   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+//   position: absolute;
+//   left: 50%;
+//   bottom: 70px;
+//   transform: translate(-50%, -50%);
+// `;
 
 export const Subtitle = styled.p`
   font-size: 30px;
   font-weight: 500;
+`;
+export const OrderButton = styled(Link)`
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 18px;
+  text-align: center;
+  background-color: var(--main-green-color);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 15px;
+
+  &:hover {
+    background-color: var(--main-pink-color);
+  }
 `;

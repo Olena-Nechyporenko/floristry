@@ -19,7 +19,7 @@ export const StyledForm = styled(Form)`
 export const SubmitButton = styled.button`
   padding: 10px 20px;
   height: 50px;
-  background-color: #556b2f;
+  background-color: var(--main-green-color);
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -27,7 +27,7 @@ export const SubmitButton = styled.button`
   transition: background-color 0.3s ease;
 
   &:hover {
-    background-color: #e6b8ca;
+    background-color: var(--main-pink-color);
   }
 `;
 
@@ -37,7 +37,6 @@ export const FormGroup = styled.div`
   flex-direction: column;
   label {
     display: block;
-    font-weight: bold;
     margin-bottom: 5px;
   }
 

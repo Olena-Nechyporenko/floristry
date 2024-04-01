@@ -13,7 +13,7 @@ export const CatalogWrapper = styled.div`
   }
 `;
 
-export const LoadingText = styled.p`
+export const LoadingText = styled.div`
   position: absolute;
   top: 50%;
   left: 50%;

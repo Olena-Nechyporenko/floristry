@@ -1,10 +1,10 @@
 {
   "files": {
     "main.css": "/floristry/static/css/main.a0ce55d3.css",
-    "main.js": "/floristry/static/js/main.a904d0d9.js",
+    "main.js": "/floristry/static/js/main.4a2b27d4.js",
     "static/css/800.cf623439.chunk.css": "/floristry/static/css/800.cf623439.chunk.css",
     "static/js/800.6f89db1b.chunk.js": "/floristry/static/js/800.6f89db1b.chunk.js",
-    "static/js/862.5528cca8.chunk.js": "/floristry/static/js/862.5528cca8.chunk.js",
+    "static/js/862.62468728.chunk.js": "/floristry/static/js/862.62468728.chunk.js",
     "static/js/754.57089f41.chunk.js": "/floristry/static/js/754.57089f41.chunk.js",
     "static/js/309.261d4d80.chunk.js": "/floristry/static/js/309.261d4d80.chunk.js",
     "static/js/274.b0f8f054.chunk.js": "/floristry/static/js/274.b0f8f054.chunk.js",
@@ -29,10 +29,10 @@
     "static/media/slick.woff": "/floristry/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/floristry/index.html",
     "main.a0ce55d3.css.map": "/floristry/static/css/main.a0ce55d3.css.map",
-    "main.a904d0d9.js.map": "/floristry/static/js/main.a904d0d9.js.map",
+    "main.4a2b27d4.js.map": "/floristry/static/js/main.4a2b27d4.js.map",
     "800.cf623439.chunk.css.map": "/floristry/static/css/800.cf623439.chunk.css.map",
     "800.6f89db1b.chunk.js.map": "/floristry/static/js/800.6f89db1b.chunk.js.map",
-    "862.5528cca8.chunk.js.map": "/floristry/static/js/862.5528cca8.chunk.js.map",
+    "862.62468728.chunk.js.map": "/floristry/static/js/862.62468728.chunk.js.map",
     "754.57089f41.chunk.js.map": "/floristry/static/js/754.57089f41.chunk.js.map",
     "309.261d4d80.chunk.js.map": "/floristry/static/js/309.261d4d80.chunk.js.map",
     "274.b0f8f054.chunk.js.map": "/floristry/static/js/274.b0f8f054.chunk.js.map",
@@ -44,6 +44,6 @@
   },
   "entrypoints": [
     "static/css/main.a0ce55d3.css",
-    "static/js/main.a904d0d9.js"
+    "static/js/main.4a2b27d4.js"
   ]
 }

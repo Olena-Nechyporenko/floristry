@@ -12,6 +12,7 @@ export const FooterSection = styled.footer`
   justify-content: space-between;
   padding: 0 20px;
   border-top: 1px solid black;
+  margin-top: auto;
 `;
 
 export const FooterInfoList = styled.ul`

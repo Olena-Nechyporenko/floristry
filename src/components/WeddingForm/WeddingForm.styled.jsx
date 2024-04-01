@@ -60,6 +60,7 @@ export const StyledFormField = styled.div`
 `;
 
 export const StyledButton = styled.button`
+  position: relative;
   font-family: inherit;
   font-size: 18px;
   padding: 8px 30px;

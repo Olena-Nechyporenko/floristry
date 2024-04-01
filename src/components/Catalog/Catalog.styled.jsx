@@ -12,3 +12,12 @@ export const CatalogWrapper = styled.div`
     flex-direction: row;
   }
 `;
+
+export const LoadingText = styled.p`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  font-weight: 400;
+`;

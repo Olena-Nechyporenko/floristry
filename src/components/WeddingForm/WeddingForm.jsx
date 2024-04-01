@@ -1,4 +1,6 @@
+import Notiflix from 'notiflix';
 import { Formik, Field } from 'formik';
+import axios from 'axios';
 import * as Yup from 'yup';
 import {
   Title,
@@ -8,6 +10,19 @@ import {
   StyledForm,
   StyledFormField,
 } from './WeddingForm.styled';
+
+const notiflixShowOptions = {
+  width: '340px',
+  titleFontSize: '20px',
+  messageFontSize: '18px',
+  titleColor: '#556b2f',
+  okButtonBackground: '#556b2f',
+};
+
+const notiflixSuccessOptions = {
+  fontSize: '17px',
+  success: { background: '#e6b8ca', textColor: '#161616' },
+};
 
 const emailRegex = /^[^\s@]+@[^\s@]+\.(com|net|ua)$/i;
 
@@ -26,8 +41,40 @@ const validationSchema = Yup.object().shape({
 });
 
 export const WeddingForm = () => {
-  const handleSubmit = values => {
-    console.log('Form submitted:', values);
+  const handleSubmit = async (values, { resetForm }) => {
+    const userData = {
+      firstName: values.firstName,
+      lastName: values.lastName,
+      phoneNumber: values.phoneNumber,
+      email: values.email,
+    };
+    try {
+      Notiflix.Confirm.show(
+        'Sending contact information',
+        `Send your contact details for a consultation?`,
+        'Yes',
+        'No',
+
+        async function () {
+          const response = await axios.post(
+            'https://floristry-backend.onrender.com/api/consultations',
+            userData
+          );
+          console.log('Response from server:', response.data);
+          Notiflix.Notify.success(
+            'Your consultation request has been sent! Thank you!',
+            notiflixSuccessOptions
+          );
+          resetForm();
+        },
+        function () {
+          return;
+        },
+        notiflixShowOptions
+      );
+    } catch (error) {
+      console.error('Error:', error.message);
+    }
   };
 
   return (

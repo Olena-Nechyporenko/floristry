@@ -1,3 +1,4 @@
+import Notiflix from 'notiflix';
 import { addToCart, increaseQuantity } from 'redux/cartProductsSlice';
 import {
   BouquetWrapper,
@@ -11,6 +12,11 @@ import {
 } from './BouquetItem.styled';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectCartProducts } from 'redux/selectors';
+
+const notiflixSuccessOptions = {
+  fontSize: '17px',
+  success: { background: '#e6b8ca', textColor: '#161616' },
+};
 
 export const BouquetItem = ({ bouquet }) => {
   const { url, price, description, name } = bouquet; // Destructure bouquet
@@ -28,10 +34,20 @@ export const BouquetItem = ({ bouquet }) => {
           quantity: existingProduct.quantity + 1,
         })
       );
+      Notiflix.Notify.success(
+        `You now have ${existingProduct.quantity + 1} ${
+          existingProduct.name
+        } in your cart!`,
+        notiflixSuccessOptions
+      );
     } else {
       dispatch(addToCart({ ...bouquet, quantity: 1 }));
-      console.log(cartProducts);
+      Notiflix.Notify.success(
+        `${bouquet.name} added to cart successfully`,
+        notiflixSuccessOptions
+      );
     }
+    // console.log(cartProducts);
   };
 
   return (

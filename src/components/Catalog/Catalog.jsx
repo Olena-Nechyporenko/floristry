@@ -1,15 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import { BouquetItem } from 'components/BouquetItem/BouquetItem';
-import { CatalogWrapper } from './Catalog.styled';
+import { CatalogWrapper, LoadingText } from './Catalog.styled';
 import { nanoid } from 'nanoid';
 import { fetchBouquets } from 'redux/bouquets/operations';
-import { selectAllBouquets } from 'redux/bouquets/selectors';
+import { selectAllBouquets, selectIsLoading } from 'redux/bouquets/selectors';
 import { useDispatch, useSelector } from 'react-redux';
 import { Filters } from 'components/Filters/Filters';
+import { Loader } from 'components/Loader/Loader';
 
 export const Catalog = () => {
   const dispatch = useDispatch();
   const bouquets = useSelector(selectAllBouquets);
+  const isLoading = useSelector(selectIsLoading);
   const [filters, setFilters] = useState({
     flowerType: '',
     sortByPrice: '',
@@ -56,18 +58,23 @@ export const Catalog = () => {
     });
 
   return (
-    <>
+    <section>
       <Filters
         onFilter={applyFilters}
         filters={filters}
         onReset={handleReset}
       />
-
-      <CatalogWrapper>
-        {filteredBouquets.map(bouquet => (
-          <BouquetItem key={nanoid()} bouquet={bouquet} />
-        ))}
-      </CatalogWrapper>
-    </>
+      {isLoading ? (
+        <LoadingText>
+          Please wait. Collection of bouquets is loading... <Loader />
+        </LoadingText>
+      ) : (
+        <CatalogWrapper>
+          {filteredBouquets.map(bouquet => (
+            <BouquetItem key={nanoid()} bouquet={bouquet} />
+          ))}
+        </CatalogWrapper>
+      )}
+    </section>
   );
 };

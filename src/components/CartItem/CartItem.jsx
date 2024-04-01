@@ -1,3 +1,4 @@
+import Notiflix from 'notiflix';
 import { changeQuantity, removeFromCart } from 'redux/cartProductsSlice';
 import {
   BouquetWrapper,
@@ -13,6 +14,19 @@ import {
 } from './CartItem.styled';
 import { useDispatch } from 'react-redux';
 
+const notiflixShowOptions = {
+  width: '340px',
+  titleFontSize: '20px',
+  messageFontSize: '18px',
+  titleColor: '#556b2f',
+  okButtonBackground: '#556b2f',
+};
+
+const notiflixSuccessOptions = {
+  fontSize: '17px',
+  success: { background: '#e6b8ca', textColor: '#161616' },
+};
+
 export const CartItem = ({
   bouquet: { _id, url, name, price, description, quantity },
 }) => {
@@ -26,8 +40,26 @@ export const CartItem = ({
     }
   };
 
-  const handleRemoveFromCart = productId => {
-    dispatch(removeFromCart(productId));
+  const handleRemoveFromCart = bouquet => {
+    const { _id: productId, name } = bouquet;
+    Notiflix.Confirm.show(
+      'Removing',
+      `Remove a ${name} from the cart?`,
+      'Yes',
+      'No',
+
+      function () {
+        dispatch(removeFromCart(productId));
+        Notiflix.Notify.success(
+          `${name} removed successfully from cart!`,
+          notiflixSuccessOptions
+        );
+      },
+      function () {
+        return;
+      },
+      notiflixShowOptions
+    );
   };
 
   return (
@@ -46,7 +78,9 @@ export const CartItem = ({
           value={quantity || 0}
           onChange={handleQuantityChange}
         />
-        <Button onClick={() => handleRemoveFromCart(_id)}>Remove</Button>
+        <Button onClick={() => handleRemoveFromCart({ _id, name })}>
+          Remove
+        </Button>
       </ButtonWrapper>
     </BouquetWrapper>
   );

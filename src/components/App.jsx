@@ -2,12 +2,11 @@ import { lazy } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { Layout } from './Layout/Layout';
 import NotFoundPage from 'pages/NotFoundPage/NotFoundPage';
-// import CatalogPage from 'pages/CatalogPage/CatalogPage';
-import CartPage from 'pages/CartPage/CartPage';
-import PaymentPage from 'pages/PaymentPage/PaymentPage';
 
 const HomePage = lazy(() => import('pages/HomePage/HomePage'));
 const CatalogPage = lazy(() => import('pages/CatalogPage/CatalogPage'));
+const CartPage = lazy(() => import('pages/CartPage/CartPage'));
+const PaymentPage = lazy(() => import('pages/PaymentPage/PaymentPage'));
 const WeddingPage = lazy(() => import('pages/WeddingPage/WeddingPage'));
 
 export const App = () => {

@@ -1,4 +1,6 @@
 import React from 'react';
+import axios from 'axios';
+import Notiflix from 'notiflix';
 import { Formik, Field } from 'formik';
 import * as Yup from 'yup';
 import {
@@ -6,6 +8,21 @@ import {
   StyledForm,
   StyledFormField,
 } from './DeliveryForm.styled';
+import { useSelector } from 'react-redux';
+import { selectCartProducts } from 'redux/selectors';
+
+const notiflixShowOptions = {
+  width: '340px',
+  titleFontSize: '20px',
+  messageFontSize: '18px',
+  titleColor: '#556b2f',
+  okButtonBackground: '#556b2f',
+};
+
+const notiflixSuccessOptions = {
+  fontSize: '17px',
+  success: { background: '#e6b8ca', textColor: '#161616' },
+};
 
 const initialValues = {
   firstName: '',
@@ -24,8 +41,43 @@ const validationSchema = Yup.object().shape({
 });
 
 export const PaymentForm = () => {
-  const handleSubmit = values => {
-    console.log('Form submitted:', values);
+  const orderedBouquets = useSelector(selectCartProducts);
+
+  const handleSubmit = async values => {
+    const newOrder = {
+      firstName: values.firstName,
+      lastName: values.lastName,
+      phoneNumber: values.phoneNumber,
+      address: values.address,
+      deliveryDate: values.deliveryDate,
+      bouquets: [...orderedBouquets],
+    };
+    try {
+      Notiflix.Confirm.show(
+        'Sending the order',
+        `Send your order?`,
+        'Yes',
+        'No',
+        async function () {
+          const response = await axios.post(
+            'https://floristry-backend.onrender.com/api/orders',
+            newOrder
+          );
+          console.log('Response from server:', response.data);
+          Notiflix.Notify.success(
+            'Your order has been sent successfully! Thank you!',
+            notiflixSuccessOptions
+          );
+        },
+        function () {
+          return;
+        },
+        notiflixShowOptions
+      );
+    } catch (error) {
+      console.error('Error:', error.message);
+    }
+    // console.log('Form submitted:', newOrder);
   };
 
   return (

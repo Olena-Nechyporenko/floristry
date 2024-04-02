@@ -10,7 +10,7 @@ import {
   REGISTER,
 } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
-import { cartProductsReducer } from './cartProductsSlice.js';
+import { cartProductsReducer } from './cart/cartProductsSlice.js';
 import { bouquetsReducer } from './bouquets/bouquetSlice.js';
 
 const persistConfig = {

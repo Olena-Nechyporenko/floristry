@@ -10,6 +10,8 @@ import {
   StyledForm,
   StyledFormField,
 } from './WeddingForm.styled';
+import { Loader } from 'components/Loader/Loader';
+import { useState } from 'react';
 
 const notiflixShowOptions = {
   width: '340px',
@@ -41,6 +43,7 @@ const validationSchema = Yup.object().shape({
 });
 
 export const WeddingForm = () => {
+  const [isLoading, setIsLoading] = useState(false);
   const handleSubmit = async (values, { resetForm }) => {
     const userData = {
       firstName: values.firstName,
@@ -56,6 +59,7 @@ export const WeddingForm = () => {
         'No',
 
         async function () {
+          setIsLoading(true);
           const response = await axios.post(
             'https://floristry-backend.onrender.com/api/consultations',
             userData
@@ -66,6 +70,7 @@ export const WeddingForm = () => {
             notiflixSuccessOptions
           );
           resetForm();
+          setIsLoading(false);
         },
         function () {
           return;
@@ -129,7 +134,13 @@ export const WeddingForm = () => {
                   <div className="error">{errors.email}</div>
                 )}
               </StyledFormField>
-              <StyledButton type="submit">Submit</StyledButton>
+              {isLoading ? (
+                <StyledButton type="submit">
+                  <Loader width={40} height={40} />
+                </StyledButton>
+              ) : (
+                <StyledButton type="submit">Submit</StyledButton>
+              )}
             </StyledForm>
           )}
         </Formik>

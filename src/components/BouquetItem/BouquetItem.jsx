@@ -1,5 +1,5 @@
 import Notiflix from 'notiflix';
-import { addToCart, increaseQuantity } from 'redux/cartProductsSlice';
+import { addToCart, increaseQuantity } from 'redux/cart/cartProductsSlice';
 import {
   BouquetWrapper,
   Button,
@@ -11,7 +11,7 @@ import {
   StyledTitle,
 } from './BouquetItem.styled';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectCartProducts } from 'redux/selectors';
+import { selectCartProducts } from 'redux/cart/selectors';
 
 const notiflixSuccessOptions = {
   fontSize: '17px',

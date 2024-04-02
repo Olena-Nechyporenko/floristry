@@ -1,5 +1,5 @@
 import Notiflix from 'notiflix';
-import { changeQuantity, removeFromCart } from 'redux/cartProductsSlice';
+import { changeQuantity, removeFromCart } from 'redux/cart/cartProductsSlice';
 import {
   BouquetWrapper,
   Button,

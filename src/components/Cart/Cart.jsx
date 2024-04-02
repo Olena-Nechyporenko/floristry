@@ -1,6 +1,6 @@
 import { CartItem } from 'components/CartItem/CartItem';
 import { useSelector } from 'react-redux';
-import { selectCartProducts } from 'redux/selectors';
+import { selectCartProducts } from 'redux/cart/selectors.js';
 import { PayButton, Wrapper } from './Cart.styled.jsx';
 import { Link } from 'react-router-dom';
 

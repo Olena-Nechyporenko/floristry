@@ -63,7 +63,8 @@ export const StyledButton = styled.button`
   position: relative;
   font-family: inherit;
   font-size: 18px;
-  padding: 8px 30px;
+  /* padding: 8px 30px; */
+  width: 140px;
   height: 50px;
   background-color: var(--main-green-color);
   color: #fff;

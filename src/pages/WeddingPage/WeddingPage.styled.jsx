@@ -10,19 +10,44 @@ export const WeddingHero = styled.section`
 `;
 
 export const CustomSlider = styled(Slider)`
+  position: relative;
+
   .slick-track {
     display: flex;
   }
+  .slick-list {
+    position: relative;
+    overflow: hidden;
+  }
 
   .slick-dots {
+    position: absolute;
     bottom: 20px;
+    width: 100%;
+    text-align: center;
   }
   .slick-dots li {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
     margin: 0 14px;
+    cursor: pointer;
+  }
+  .slick-dots li button {
+    font-size: 0;
+    display: block;
+    width: 20px;
+    height: 20px;
+    color: transparent;
+    padding: 5px;
+    border: none;
+    background: transparent;
   }
 
   .slick-dots li button:before {
     content: '';
+    display: block;
     width: 35px;
     height: 8px;
     border-radius: 14px;
@@ -53,16 +78,6 @@ export const Slide2 = styled(Slide)`
   background-image: url(${img2});
 `;
 
-// export const ImgWrapper = styled.div`
-//   position: relative;
-//   background-image: url(${img});
-//   background-repeat: no-repeat;
-//   background-position: center;
-//   background-size: cover;
-//   width: 1200px;
-
-// `;
-
 export const TitleWrapper = styled.div`
   position: absolute;
   top: 140px;
@@ -73,13 +88,11 @@ export const TitleWrapper = styled.div`
   align-items: center;
   gap: 10px;
   width: 450px;
-  // height: 200px;
   overflow: hidden;
   background-color: rgba(255, 255, 255, 0);
 `;
 
 export const Title = styled.h1`
-  // font-family: 'Homemade Apple', cursive;
   font-family: 'Praise', sans-serif;
   font-size: 60px;
   font-weight: 400;

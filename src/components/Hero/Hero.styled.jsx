@@ -8,7 +8,6 @@ import { Link } from 'react-router-dom';
 export const HeroSection = styled.section`
   padding-top: 70px;
   height: 400px;
-  height: 400px;
   background-color: white;
 `;
 
@@ -77,7 +76,6 @@ export const Text = styled.p`
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
 `;
 export const Title = styled.h1`
-  // font-family: 'Homemade Apple', cursive;
   font-family: 'Praise', sans-serif;
   font-size: 60px;
   text-align: center;
@@ -85,24 +83,7 @@ export const Title = styled.h1`
   color: white;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 `;
-// export const Title = styled.h1`
-//   font-family: 'Praise', sans-serif;
-//   width: 1000px;
-//   font-size: 60px;
-//   font-weight: 400;
-//   color: white;
-//   text-align: center;
-//   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-//   position: absolute;
-//   left: 50%;
-//   bottom: 70px;
-//   transform: translate(-50%, -50%);
-// `;
 
-export const Subtitle = styled.p`
-  font-size: 30px;
-  font-weight: 500;
-`;
 export const OrderButton = styled(Link)`
   display: inline-block;
   padding: 10px 20px;

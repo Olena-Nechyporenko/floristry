@@ -1,5 +1,10 @@
 import styled from 'styled-components';
 
+export const WeddingCatalogSection = styled.section`
+  position: relative;
+  min-height: 300px;
+`;
+
 export const Title = styled.h2`
   font-size: 30px;
   font-weight: 500;
@@ -19,4 +24,13 @@ export const CatalogWrapper = styled.ul`
   @media (min-width: 768px) {
     flex-direction: row;
   }
+`;
+
+export const LoadingText = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  font-weight: 400;
 `;

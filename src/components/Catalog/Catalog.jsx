@@ -66,7 +66,8 @@ export const Catalog = () => {
       />
       {isLoading ? (
         <LoadingText>
-          Please wait. Collection of bouquets is loading... <Loader />
+          Please wait. Collection of bouquets is loading...{' '}
+          <Loader width={80} height={80} />
         </LoadingText>
       ) : (
         <CatalogWrapper>

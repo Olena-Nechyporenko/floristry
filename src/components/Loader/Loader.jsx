@@ -7,13 +7,13 @@ const loaderStyle = {
   transform: 'translate(-50%, -50%)',
 };
 
-export const Loader = () => {
+export const Loader = ({ width, height }) => {
   return (
     <TailSpin
       visible={true}
-      height="80"
-      width="80"
-      color="#556b2f"
+      height={height}
+      width={width}
+      color="#738f43"
       ariaLabel="tail-spin-loading"
       radius="1"
       wrapperStyle={loaderStyle}

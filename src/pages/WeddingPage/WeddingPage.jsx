@@ -20,6 +20,7 @@ export default function WeddingPage() {
     autoplaySpeed: 3000,
     speed: 1000,
     pauseOnHover: true,
+    arrows: false,
   };
   return (
     <>

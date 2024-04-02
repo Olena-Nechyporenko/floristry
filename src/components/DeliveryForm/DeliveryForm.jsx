@@ -9,7 +9,7 @@ import {
   StyledFormField,
 } from './DeliveryForm.styled';
 import { useSelector } from 'react-redux';
-import { selectCartProducts } from 'redux/selectors';
+import { selectCartProducts } from 'redux/cart/selectors';
 
 const notiflixShowOptions = {
   width: '340px',

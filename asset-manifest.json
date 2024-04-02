@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/floristry/static/css/main.a0ce55d3.css",
-    "main.js": "/floristry/static/js/main.4a2b27d4.js",
+    "main.js": "/floristry/static/js/main.f685bd76.js",
     "static/css/800.cf623439.chunk.css": "/floristry/static/css/800.cf623439.chunk.css",
-    "static/js/800.6f89db1b.chunk.js": "/floristry/static/js/800.6f89db1b.chunk.js",
-    "static/js/862.62468728.chunk.js": "/floristry/static/js/862.62468728.chunk.js",
-    "static/js/754.57089f41.chunk.js": "/floristry/static/js/754.57089f41.chunk.js",
-    "static/js/309.261d4d80.chunk.js": "/floristry/static/js/309.261d4d80.chunk.js",
-    "static/js/274.b0f8f054.chunk.js": "/floristry/static/js/274.b0f8f054.chunk.js",
+    "static/js/800.cf51a34a.chunk.js": "/floristry/static/js/800.cf51a34a.chunk.js",
+    "static/js/862.4fbf0a68.chunk.js": "/floristry/static/js/862.4fbf0a68.chunk.js",
+    "static/js/754.ffce51fb.chunk.js": "/floristry/static/js/754.ffce51fb.chunk.js",
+    "static/js/309.a33357ec.chunk.js": "/floristry/static/js/309.a33357ec.chunk.js",
+    "static/js/274.b261cf5d.chunk.js": "/floristry/static/js/274.b261cf5d.chunk.js",
     "static/js/686.fcaf303a.chunk.js": "/floristry/static/js/686.fcaf303a.chunk.js",
     "static/js/705.32f6fbea.chunk.js": "/floristry/static/js/705.32f6fbea.chunk.js",
     "static/js/717.0c99b3fe.chunk.js": "/floristry/static/js/717.0c99b3fe.chunk.js",
@@ -29,13 +29,13 @@
     "static/media/slick.woff": "/floristry/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/floristry/index.html",
     "main.a0ce55d3.css.map": "/floristry/static/css/main.a0ce55d3.css.map",
-    "main.4a2b27d4.js.map": "/floristry/static/js/main.4a2b27d4.js.map",
+    "main.f685bd76.js.map": "/floristry/static/js/main.f685bd76.js.map",
     "800.cf623439.chunk.css.map": "/floristry/static/css/800.cf623439.chunk.css.map",
-    "800.6f89db1b.chunk.js.map": "/floristry/static/js/800.6f89db1b.chunk.js.map",
-    "862.62468728.chunk.js.map": "/floristry/static/js/862.62468728.chunk.js.map",
-    "754.57089f41.chunk.js.map": "/floristry/static/js/754.57089f41.chunk.js.map",
-    "309.261d4d80.chunk.js.map": "/floristry/static/js/309.261d4d80.chunk.js.map",
-    "274.b0f8f054.chunk.js.map": "/floristry/static/js/274.b0f8f054.chunk.js.map",
+    "800.cf51a34a.chunk.js.map": "/floristry/static/js/800.cf51a34a.chunk.js.map",
+    "862.4fbf0a68.chunk.js.map": "/floristry/static/js/862.4fbf0a68.chunk.js.map",
+    "754.ffce51fb.chunk.js.map": "/floristry/static/js/754.ffce51fb.chunk.js.map",
+    "309.a33357ec.chunk.js.map": "/floristry/static/js/309.a33357ec.chunk.js.map",
+    "274.b261cf5d.chunk.js.map": "/floristry/static/js/274.b261cf5d.chunk.js.map",
     "686.fcaf303a.chunk.js.map": "/floristry/static/js/686.fcaf303a.chunk.js.map",
     "705.32f6fbea.chunk.js.map": "/floristry/static/js/705.32f6fbea.chunk.js.map",
     "717.0c99b3fe.chunk.js.map": "/floristry/static/js/717.0c99b3fe.chunk.js.map",
@@ -44,6 +44,6 @@
   },
   "entrypoints": [
     "static/css/main.a0ce55d3.css",
-    "static/js/main.4a2b27d4.js"
+    "static/js/main.f685bd76.js"
   ]
 }

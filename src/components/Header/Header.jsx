@@ -6,10 +6,14 @@ import {
   AnchorLink,
   CartIcon,
   LinkNavHome,
+  MobileNavList,
+  BurgerIcon,
 } from './Header.module';
+import { MobileMenu } from 'components/MobileMenu/MobileMenu';
 
 export const Header = () => {
   const [anchor, setAnchor] = useState('');
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const targetElement = document.getElementById(anchor?.id);
@@ -21,38 +25,57 @@ export const Header = () => {
   const handleClick = e => {
     setAnchor({ id: e.target.name });
   };
-  return (
-    <HeaderWrapper>
-      <LinkNavHome to="/">Bouquet delivery</LinkNavHome>
 
-      <nav>
-        <NavList>
-          <li>
-            <AnchorLink to="/" name="about-us" onClick={handleClick}>
-              About us
+  const handleMobileMenuOpen = () => {
+    setMobileMenuOpen(!mobileMenuOpen);
+  };
+
+  return (
+    <>
+      <HeaderWrapper>
+        <LinkNavHome to="/">Bouquet delivery</LinkNavHome>
+
+        <nav>
+          <NavList>
+            <li>
+              <AnchorLink to="/" name="about-us" onClick={handleClick}>
+                About us
+              </AnchorLink>
+            </li>
+            <li>
+              <LinkNav to="/catalog">Catalog</LinkNav>
+            </li>
+            <li>
+              <LinkNav to="/weddings">Weddings</LinkNav>
+            </li>
+            <AnchorLink to="/" name="reviews" onClick={handleClick}>
+              Reviews
             </AnchorLink>
-          </li>
-          <li>
-            <LinkNav to="/catalog">Catalog</LinkNav>
-          </li>
-          <li>
-            <LinkNav to="/weddings">Weddings</LinkNav>
-          </li>
-          <AnchorLink to="/" name="reviews" onClick={handleClick}>
-            Reviews
-          </AnchorLink>
-          <li>
-            <AnchorLink name="contacts" onClick={handleClick}>
-              Contacts
-            </AnchorLink>
-          </li>
-          <li>
-            <LinkNav to="/cart">
-              <CartIcon />
-            </LinkNav>
-          </li>
-        </NavList>
-      </nav>
-    </HeaderWrapper>
+            <li>
+              <AnchorLink name="contacts" onClick={handleClick}>
+                Contacts
+              </AnchorLink>
+            </li>
+            <li>
+              <LinkNav to="/cart">
+                <CartIcon />
+              </LinkNav>
+            </li>
+          </NavList>
+
+          <MobileNavList>
+            <li>
+              <BurgerIcon onClick={handleMobileMenuOpen} />
+            </li>
+            <li>
+              <LinkNav to="/cart">
+                <CartIcon />
+              </LinkNav>
+            </li>
+          </MobileNavList>
+        </nav>
+      </HeaderWrapper>
+      {mobileMenuOpen && <MobileMenu onClose={handleMobileMenuOpen} />}
+    </>
   );
 };

@@ -26,10 +26,10 @@ export const WeddingCatalog = () => {
 
   return (
     <WeddingCatalogSection>
-      <Title>Wedding bouquets collection</Title>;
+      <Title>Wedding bouquets collection</Title>
       {isLoading ? (
         <LoadingText>
-          Please wait. Collection of bouquets is loading...{' '}
+          Please wait. Collection of bouquets is loading...
           <Loader width={80} height={80} />
         </LoadingText>
       ) : (

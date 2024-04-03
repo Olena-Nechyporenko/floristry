@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { NavLink, Link } from 'react-router-dom';
 import { BsCart3 } from 'react-icons/bs';
+import { RxHamburgerMenu } from 'react-icons/rx';
 
 export const LinkNavHome = styled(NavLink)`
   font-family: 'Praise', sans-serif;
@@ -25,13 +26,27 @@ export const HeaderWrapper = styled.header`
   justify-content: space-between;
   border-bottom: 1px solid var(--main-pink-color);
   background-color: #556b2f;
-  width: 1160px;
-  padding: 0 20px;
+  width: 350px;
+  padding: 0 15px;
+
+  @media screen and (min-width: 768px) {
+    width: 728px;
+    padding: 0 20px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 1160px;
+    padding: 0 20px;
+  }
 `;
 
 export const NavList = styled.ul`
-  display: flex;
+  display: none;
   gap: 35px;
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
 `;
 
 export const LinkNav = styled(NavLink)`
@@ -59,4 +74,21 @@ export const CartIcon = styled(BsCart3)`
   fill: black;
   width: 25px;
   height: 25px;
+`;
+
+export const MobileNavList = styled(NavList)`
+  display: flex;
+  gap: 15px;
+  align-items: center;
+
+  @media screen and (min-width: 1200px) {
+    display: none;
+  }
+`;
+
+export const BurgerIcon = styled(RxHamburgerMenu)`
+  fill: white;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
 `;

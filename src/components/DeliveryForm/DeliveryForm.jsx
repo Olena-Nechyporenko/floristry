@@ -10,6 +10,7 @@ import {
 } from './DeliveryForm.styled';
 import { useSelector } from 'react-redux';
 import { selectCartProducts } from 'redux/cart/selectors';
+// import { loadStripe } from '@stripe/stripe-js';
 
 const notiflixShowOptions = {
   width: '340px',
@@ -42,6 +43,30 @@ const validationSchema = Yup.object().shape({
 
 export const PaymentForm = () => {
   const orderedBouquets = useSelector(selectCartProducts);
+
+  // const stripePromise = loadStripe(process.env.REACT_APP_PUBLISHABLE_KEY);
+
+  // const handleSubmit = async () => {
+  //   const lineItems = orderedBouquets.map(item => {
+  //     return {
+  //       price_data: {
+  //         currency: 'eur',
+  //         product_data: {
+  //           name: item.name,
+  //         },
+  //         unit_amount: item.price * 100,
+  //       },
+  //       quantity: item.quantity,
+  //     };
+  //   });
+
+  //   const { data } = await axios.post('http://localhost:5000/api/checkout', {
+  //     lineItems,
+  //   });
+
+  //   const stripe = await stripePromise;
+  //   await stripe.redirectToCheckout({ sessionId: data.id });
+  // };
 
   const handleSubmit = async values => {
     const newOrder = {
@@ -77,7 +102,6 @@ export const PaymentForm = () => {
     } catch (error) {
       console.error('Error:', error.message);
     }
-    // console.log('Form submitted:', newOrder);
   };
 
   return (

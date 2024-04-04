@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { NavLink, Link } from 'react-router-dom';
 import { IoClose } from 'react-icons/io5';
 
@@ -15,6 +15,18 @@ export const BackDrop = styled.div`
   background-color: rgba(177, 177, 177, 0.5);
 `;
 
+const openAnimation = keyframes`
+  from {
+    right: -190px;
+  }
+  50% {
+    right: -90px;
+  }
+  to {
+    right: 0;
+  }
+`;
+
 export const Aside = styled.aside`
   position: fixed;
   top: 0;
@@ -24,6 +36,11 @@ export const Aside = styled.aside`
   width: 50vw;
   background-color: var(--main-pink-color);
   transition: right 0.4s;
+  animation: ${openAnimation} 400ms linear;
+
+  @media screen and (min-width: 768px) {
+    width: 30vw;
+  }
 `;
 
 export const Container = styled.div`

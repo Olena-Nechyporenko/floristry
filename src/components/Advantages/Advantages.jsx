@@ -3,6 +3,7 @@ import {
   List,
   Item,
   DescriptionWrapper,
+  Img,
   DescrTitle,
   Text,
   ImageWrapperRight,
@@ -26,12 +27,12 @@ export const Advantages = () => {
             </Text>
           </DescriptionWrapper>
           <ImageWrapperRight>
-            <img src={firstimg} alt="" width={500} height={400} />
+            <Img src={firstimg} alt="" />
           </ImageWrapperRight>
         </Item>
         <Item>
           <ImageWrapperLeft>
-            <img src={secondimg} alt="" width={500} height={400} />
+            <Img src={secondimg} alt="" />
           </ImageWrapperLeft>
           <DescriptionWrapper>
             <DescrTitle>High quality</DescrTitle>
@@ -50,12 +51,12 @@ export const Advantages = () => {
             </Text>
           </DescriptionWrapper>
           <ImageWrapperRight>
-            <img src={thirdimg} alt="" width={500} height={400} />
+            <Img src={thirdimg} alt="" />
           </ImageWrapperRight>
         </Item>
         <Item>
           <ImageWrapperLeft>
-            <img src={fourthimg} alt="" width={500} height={400} />
+            <Img src={fourthimg} alt="" />
           </ImageWrapperLeft>
           <DescriptionWrapper>
             <DescrTitle>Professional consultation</DescrTitle>

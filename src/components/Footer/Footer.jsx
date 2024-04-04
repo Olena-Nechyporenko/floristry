@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import {
   FooterSection,
-  FooterInfoList,
+  FooterNavigationList,
   LinkNav,
   AnchorLink,
   ContactsWrapper,
@@ -36,8 +36,7 @@ export const Footer = () => {
 
   return (
     <FooterSection id="contacts">
-      <FooterInfoList>
-        {/* Information */}
+      <FooterNavigationList>
         <li>
           <AnchorLink to="/" name="about-us" onClick={handleClick}>
             About us
@@ -51,38 +50,38 @@ export const Footer = () => {
             Reviews
           </AnchorLink>
         </li>
-      </FooterInfoList>
+      </FooterNavigationList>
       <ContactsWrapper>
+        <SocialIconsList>
+          <SocialIconsItem>
+            <a
+              href="https://www.instagram.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <InstagramIcon />
+            </a>
+          </SocialIconsItem>
+          <SocialIconsItem>
+            <a
+              href="https://uk-ua.facebook.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FacebookIcon />
+            </a>
+          </SocialIconsItem>
+          <SocialIconsItem>
+            <a
+              href="https://web.telegram.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <TelegramIcon />
+            </a>
+          </SocialIconsItem>
+        </SocialIconsList>
         <ContactList>
-          <SocialIconsList>
-            <SocialIconsItem>
-              <a
-                href="https://www.instagram.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <InstagramIcon />
-              </a>
-            </SocialIconsItem>
-            <SocialIconsItem>
-              <a
-                href="https://uk-ua.facebook.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FacebookIcon />
-              </a>
-            </SocialIconsItem>
-            <SocialIconsItem>
-              <a
-                href="https://web.telegram.org/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <TelegramIcon />
-              </a>
-            </SocialIconsItem>
-          </SocialIconsList>
           <Item>
             <IconWrapper>
               <LocationIcon />

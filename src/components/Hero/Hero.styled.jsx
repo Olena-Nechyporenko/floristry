@@ -43,7 +43,6 @@ const Slide = styled.div`
   background-position: center;
   background-size: cover;
   overflow: hidden;
-  padding: 0 10px;
   height: 400px;
 `;
 
@@ -58,23 +57,28 @@ export const Slide2 = styled(Slide)`
 export const Slide3 = styled(Slide)`
   background-image: url(${img3});
 `;
+
 export const TitleWrapper = styled.div`
   position: absolute;
-  top: 140px;
-  left: 50px;
-  gap: 10px;
-  width: 400px;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
   height: 400px;
   overflow: hidden;
   background-color: rgba(255, 255, 255, 0);
+
+  @media screen and (min-width: 768px) {
+    top: 140px;
+    left: 50px;
+    width: 400px;
+    height: auto;
+  }
 `;
-export const Text = styled.p`
-  font-size: 16px;
-  font-weight: 500;
-  text-align: center;
-  color: white;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
-`;
+
 export const Title = styled.h1`
   font-family: 'Praise', sans-serif;
   font-size: 60px;
@@ -84,21 +88,27 @@ export const Title = styled.h1`
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 `;
 
+export const Text = styled.p`
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+  padding: 0 10px;
+`;
+
 export const OrderButton = styled(Link)`
   display: inline-block;
-  padding: 10px 20px;
   font-size: 18px;
   text-align: center;
   background-color: var(--main-green-color);
   color: #fff;
   border: none;
   border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  padding: 10px 20px;
   margin-top: 15px;
+  transition: all var(--main-transition);
+  cursor: pointer;
 
   &:hover {
     background-color: var(--main-pink-color);

@@ -3,15 +3,28 @@ import Slider from 'react-slick';
 import { IoIosStar } from 'react-icons/io';
 
 export const ReviewsSection = styled.section`
-  padding: 100px 20px;
+  padding: 100px 10px;
+
+  @media screen and (min-width: 768px) {
+    padding: 100px 20px;
+  }
 `;
 
 export const Title = styled.h2`
-  font-size: 30px;
+  font-size: 25px;
   font-weight: 500;
   text-align: center;
-  width: 750px;
+  width: 300px;
   margin: 0 auto 10px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 30px;
+    width: 730px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 750px;
+  }
 `;
 
 export const CustomSlider = styled(Slider)`

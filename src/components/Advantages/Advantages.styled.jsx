@@ -2,11 +2,7 @@ import styled from 'styled-components';
 import img from '../../images/wide-a.jpg';
 
 export const AdvantagesSection = styled.section`
-  padding: 0;
-
-  @media screen and (min-width: 768px) {
-    padding: 20px 0;
-  }
+  padding-bottom: 70px;
 `;
 
 export const List = styled.ul`

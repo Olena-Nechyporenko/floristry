@@ -2,32 +2,74 @@ import { Form } from 'formik';
 import styled from 'styled-components';
 import img from '../../images/background-form.jpg';
 
+export const FormSection = styled.section`
+  padding-bottom: 70px;
+`;
+
 export const FormWrapper = styled.div`
   position: relative;
   background-image: url(${img});
   background-size: cover;
-  background-position: center;
+  background-position: right 80% top 0;
   background-repeat: no-repeat;
-  padding: 30px;
+  padding: 20px 0 90px;
+
+  @media (min-width: 768px) {
+    padding: 20px;
+  }
+
+  @media (min-width: 1200px) {
+    background-position: center;
+    padding: 30px;
+  }
 `;
 
 export const Title = styled.h2`
-  font-size: 30px;
+  font-size: 25px;
   font-weight: 500;
-  width: 800px;
   text-align: center;
-  margin: 0 auto;
+  padding: 0 10px;
   margin-bottom: 30px;
+
+  @media (min-width: 768px) {
+    font-size: 30px;
+    padding: 0 20px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: 1200px) {
+    width: 800px;
+    padding: 0;
+  }
 `;
 
 export const Text = styled.p`
   position: absolute;
-  top: 200px;
-  left: 380px;
-  font-size: 22px;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 15px;
   font-weight: 400;
-  width: 490px;
+  line-height: 1.3;
+  text-align: center;
+  width: 340px;
   color: var(--main-dark-text-color);
+
+  @media (min-width: 768px) {
+    top: 200px;
+    left: 330px;
+    transform: none;
+    font-size: 18px;
+    text-align: left;
+    width: 340px;
+  }
+
+  @media (min-width: 1200px) {
+    left: 380px;
+    font-size: 22px;
+    width: 490px;
+  }
 `;
 
 export const StyledForm = styled(Form)`
@@ -36,6 +78,11 @@ export const StyledForm = styled(Form)`
   flex-direction: column;
   align-items: center;
   gap: 16px;
+  margin: 0 auto;
+
+  @media (min-width: 768px) {
+    margin: 0;
+  }
 `;
 
 export const StyledFormField = styled.div`
@@ -46,7 +93,7 @@ export const StyledFormField = styled.div`
 
   input,
   select {
-    width: 100%;
+    width: 200px;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -63,7 +110,6 @@ export const StyledButton = styled.button`
   position: relative;
   font-family: inherit;
   font-size: 18px;
-  /* padding: 8px 30px; */
   width: 140px;
   height: 50px;
   background-color: var(--main-green-color);

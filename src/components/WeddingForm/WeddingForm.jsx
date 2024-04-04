@@ -3,6 +3,7 @@ import { Formik, Field } from 'formik';
 import axios from 'axios';
 import * as Yup from 'yup';
 import {
+  FormSection,
   Title,
   Text,
   FormWrapper,
@@ -83,7 +84,7 @@ export const WeddingForm = () => {
   };
 
   return (
-    <>
+    <FormSection>
       <Title>
         You can order a consultation on wedding decoration or selection of
         bouquets
@@ -117,11 +118,7 @@ export const WeddingForm = () => {
               </StyledFormField>
               <StyledFormField>
                 <label htmlFor="phoneNumber">Phone Number</label>
-                <Field
-                  type="tel"
-                  name="phoneNumber"
-                  placeholder="Enter phone number"
-                />
+                <Field type="tel" name="phoneNumber" />
                 {errors.phoneNumber && touched.phoneNumber && (
                   <div className="error">{errors.phoneNumber}</div>
                 )}
@@ -145,6 +142,6 @@ export const WeddingForm = () => {
           )}
         </Formik>
       </FormWrapper>
-    </>
+    </FormSection>
   );
 };

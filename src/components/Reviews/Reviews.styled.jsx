@@ -3,10 +3,10 @@ import Slider from 'react-slick';
 import { IoIosStar } from 'react-icons/io';
 
 export const ReviewsSection = styled.section`
-  padding: 100px 10px;
+  padding: 20px 10px 70px;
 
   @media screen and (min-width: 768px) {
-    padding: 100px 20px;
+    padding: 30px 20px 70px;
   }
 `;
 

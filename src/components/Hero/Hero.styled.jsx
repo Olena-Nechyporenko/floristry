@@ -6,9 +6,13 @@ import Slider from 'react-slick';
 import { Link } from 'react-router-dom';
 
 export const HeroSection = styled.section`
-  padding-top: 70px;
+  padding-top: 40px;
   height: 400px;
   background-color: white;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 60px;
+  }
 `;
 
 export const CustomSlider = styled(Slider)`

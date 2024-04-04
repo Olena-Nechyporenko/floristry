@@ -47,7 +47,6 @@ export const BouquetItem = ({ bouquet }) => {
         notiflixSuccessOptions
       );
     }
-    // console.log(cartProducts);
   };
 
   return (

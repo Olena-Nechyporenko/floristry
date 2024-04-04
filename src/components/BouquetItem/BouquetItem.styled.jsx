@@ -1,11 +1,12 @@
 import styled from 'styled-components';
-export const BouquetWrapper = styled.div`
+
+export const BouquetWrapper = styled.li`
   position: relative;
-  border: 1px solid var(--main-pink-color);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  border: 1px solid var(--main-pink-color);
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   padding: 10px;
@@ -15,11 +16,11 @@ export const BouquetWrapper = styled.div`
     margin-bottom: 20px;
   }
 
-  @media (min-width: 1440px) {
-    flex-basis: calc((100% - 240px) / 4);
-    margin-bottom: 20px;
+  @media (min-width: 1200px) {
+    flex-basis: calc((100% - 240px) / 3);
   }
 `;
+
 export const ImgWrapper = styled.div`
   width: 300px;
   height: 300px;

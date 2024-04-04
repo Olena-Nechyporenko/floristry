@@ -4,9 +4,12 @@ import img1 from '../../images/wedding-bouquet.jpg';
 import img2 from '../../images/wedd.jpg';
 
 export const WeddingHero = styled.section`
-  padding-top: 70px;
+  padding-top: 40px;
   height: 400px;
-  margin-bottom: 80px;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 60px;
+  }
 `;
 
 export const CustomSlider = styled(Slider)`
@@ -66,7 +69,6 @@ const Slide = styled.div`
   background-position: center;
   background-size: cover;
   overflow: hidden;
-  padding: 0 10px;
   height: 400px;
 `;
 
@@ -80,22 +82,30 @@ export const Slide2 = styled(Slide)`
 
 export const TitleWrapper = styled.div`
   position: absolute;
-  top: 140px;
-  left: 20px;
+  top: 0;
+  left: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 10px;
-  width: 450px;
+  width: 100%;
+  height: 400px;
   overflow: hidden;
   background-color: rgba(255, 255, 255, 0);
+
+  @media screen and (min-width: 768px) {
+    top: 140px;
+    left: 50px;
+    width: 400px;
+    height: auto;
+  }
 `;
 
 export const Title = styled.h1`
   font-family: 'Praise', sans-serif;
   font-size: 60px;
   font-weight: 400;
+  text-align: center;
   color: white;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 `;
@@ -103,8 +113,8 @@ export const Title = styled.h1`
 export const Text = styled.p`
   font-size: 16px;
   font-weight: 500;
-  padding: 0 15px;
   text-align: center;
   color: white;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  padding: 0 10px;
 `;

@@ -1,23 +1,59 @@
 import { Form } from 'formik';
+import { VscFilter } from 'react-icons/vsc';
 import styled from 'styled-components';
 
 export const FilterWrapper = styled.div`
   display: flex;
-  padding: 20px;
+  justify-content: flex-end;
+  flex-wrap: wrap;
   background-color: #f7f7f7;
   border-radius: 8px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  flex-wrap: wrap;
-  margin-bottom: 50px;
-  margin-top: 50px;
+  padding: 10px 20px;
+  margin: 20px 0;
+
+  @media screen and (min-width: 1200px) {
+    justify-content: flex-start;
+    padding: 20px;
+    margin: 50px 0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
 `;
-export const StyledForm = styled(Form)`
+export const FilterIconWrapper = styled.div`
   display: flex;
-  gap: 30px;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+
+  @media screen and (min-width: 1200px) {
+    display: none;
+  }
+`;
+
+export const FilterButton = styled.button`
+  width: 30px;
+  height: 30px;
+  border: none;
+  background-color: transparent;
+`;
+
+export const FilterIcon = styled(VscFilter)`
+  width: 30px;
+  height: 30px;
+`;
+
+export const StyledForm = styled(Form)`
+  display: none;
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+  }
 `;
 export const SubmitButton = styled.button`
-  padding: 10px 20px;
+  font-family: inherit;
+  font-weight: 400;
+  padding: 10px 15px;
   height: 50px;
   background-color: var(--main-green-color);
   color: #fff;
@@ -49,7 +85,9 @@ export const FormGroup = styled.div`
   }
 `;
 export const ResetButton = styled.button`
-  padding: 10px 20px;
+  font-family: inherit;
+  font-weight: 400;
+  padding: 10px 15px;
   height: 50px;
   background-color: var(--main-green-color);
   color: #fff;

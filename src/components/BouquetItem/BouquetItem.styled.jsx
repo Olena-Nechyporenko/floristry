@@ -66,10 +66,12 @@ export const StyledDescription = styled.p`
   text-align: center;
 `;
 export const Button = styled.button`
+  font-family: inherit;
+  font-weight: 400;
+  padding: 10px 20px;
   background-color: #556b2f;
   color: white;
   border: none;
-  padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;

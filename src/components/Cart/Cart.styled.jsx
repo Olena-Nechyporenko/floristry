@@ -2,28 +2,43 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.div`
   display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  justify-content: center;
-  margin: 0 auto;
   flex-direction: column;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin: 30px auto;
 
   @media (min-width: 768px) {
     flex-direction: row;
   }
 `;
+
+export const PricePayWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-left: 20px;
+  padding-bottom: 70px;
+`;
+
+export const TotalPrice = styled.p`
+  font-size: 28px;
+  font-weight: 500;
+  color: var(--main-dark-text-color);
+`;
+
 export const PayButton = styled.button`
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 18px;
   background-color: #556b2f;
   color: white;
   border: none;
-  padding: 10px 20px;
   border-radius: 5px;
+  padding: 10px 20px;
   cursor: pointer;
+
   transition: background-color 0.3s;
-  margin-top: 20px;
-  margin-bottom: 30px;
   &:hover {
     background-color: #e6b8ca;
   }

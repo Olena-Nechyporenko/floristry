@@ -2,10 +2,9 @@ import { Form } from 'formik';
 import styled from 'styled-components';
 
 export const StyledForm = styled(Form)`
-  max-width: 400px;
+  max-width: 350px;
   margin: 0 auto;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  padding: 30px 0;
 `;
 
 export const StyledFormField = styled.div`
@@ -18,7 +17,7 @@ export const StyledFormField = styled.div`
 
   input,
   select {
-    width: 100%;
+    width: 320px;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;

@@ -53,9 +53,11 @@ export const Header = () => {
             <li>
               <LinkNav to="/weddings">Weddings</LinkNav>
             </li>
-            <AnchorLink to="/" name="reviews" onClick={handleClick}>
-              Reviews
-            </AnchorLink>
+            <li>
+              <AnchorLink to="/" name="reviews" onClick={handleClick}>
+                Reviews
+              </AnchorLink>
+            </li>
             <li>
               <AnchorLink name="contacts" onClick={handleClick}>
                 Contacts

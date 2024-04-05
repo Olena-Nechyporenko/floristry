@@ -1,7 +1,12 @@
 import { CartItem } from 'components/CartItem/CartItem';
 import { useSelector } from 'react-redux';
 import { selectCartProducts } from 'redux/cart/selectors.js';
-import { PayButton, Wrapper } from './Cart.styled.jsx';
+import {
+  PayButton,
+  Wrapper,
+  PricePayWrapper,
+  TotalPrice,
+} from './Cart.styled.jsx';
 import { Link } from 'react-router-dom';
 
 export const Cart = () => {
@@ -20,10 +25,12 @@ export const Cart = () => {
           <CartItem key={product._id} bouquet={product} />
         ))}
       </Wrapper>
-      <p>Total price: {calculateTotal()} eur</p>
-      <Link to="/payment">
-        <PayButton>To pay</PayButton>
-      </Link>
+      <PricePayWrapper>
+        <TotalPrice>Total price: {calculateTotal()} eur</TotalPrice>
+        <Link to="/payment">
+          <PayButton>To pay</PayButton>
+        </Link>
+      </PricePayWrapper>
     </>
   );
 };

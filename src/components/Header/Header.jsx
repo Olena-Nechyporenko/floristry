@@ -10,8 +10,13 @@ import {
   BurgerIcon,
 } from './Header.module';
 import { MobileMenu } from 'components/MobileMenu/MobileMenu';
+import { useAuth } from 'components/hooks/useAuth';
+import { UserMenu } from 'components/UserMenu/UserMenu';
+import { AuthNav } from 'components/AuthNav/AuthNav';
 
 export const Header = () => {
+  const { isLoggedIn } = useAuth();
+
   const [anchor, setAnchor] = useState('');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -56,6 +61,8 @@ export const Header = () => {
                 Contacts
               </AnchorLink>
             </li>
+            <li>{isLoggedIn ? <UserMenu /> : <AuthNav />}</li>
+            <li>{isLoggedIn && <LinkNav to="/orders">Orders</LinkNav>}</li>
             <li>
               <LinkNav to="/cart">
                 <CartIcon />

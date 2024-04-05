@@ -73,3 +73,14 @@ export const refreshUser = createAsyncThunk(
     }
   }
 );
+export const getCurrent = createAsyncThunk(
+  'auth/current',
+  async (_, thunkAPI) => {
+    try {
+      const response = await axios.get('/auth/current');
+      return response.data;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.message);
+    }
+  }
+);

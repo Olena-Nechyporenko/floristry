@@ -8,6 +8,8 @@ import {
   TotalPrice,
 } from './Cart.styled.jsx';
 import { Link } from 'react-router-dom';
+import { useAuth } from 'components/hooks/useAuth.js';
+import Notiflix from 'notiflix';
 
 export const Cart = () => {
   const products = useSelector(selectCartProducts);
@@ -18,6 +20,9 @@ export const Cart = () => {
     });
     return total;
   };
+  const { isLoggedIn } = useAuth();
+  console.log(isLoggedIn);
+
   return (
     <>
       <Wrapper>
@@ -27,9 +32,15 @@ export const Cart = () => {
       </Wrapper>
       <PricePayWrapper>
         <TotalPrice>Total price: {calculateTotal()} eur</TotalPrice>
-        <Link to="/payment">
-          <PayButton>To pay</PayButton>
-        </Link>
+        {isLoggedIn ? (
+          <Link to="/payment">
+            <PayButton>To pay</PayButton>
+          </Link>
+        ) : (
+          <PayButton onClick={() => Notiflix.Notify.failure('Please login')}>
+            To pay
+          </PayButton>
+        )}
       </PricePayWrapper>
     </>
   );

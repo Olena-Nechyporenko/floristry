@@ -13,6 +13,9 @@ import { MobileMenu } from 'components/MobileMenu/MobileMenu';
 import { useAuth } from 'components/hooks/useAuth';
 import { UserMenu } from 'components/UserMenu/UserMenu';
 import { AuthNav } from 'components/AuthNav/AuthNav';
+import { useDispatch, useSelector } from 'react-redux';
+import { selectUser } from 'redux/auth/selectors';
+import { getCurrent } from 'redux/auth/operations';
 
 export const Header = () => {
   const { isLoggedIn } = useAuth();
@@ -26,6 +29,14 @@ export const Header = () => {
       targetElement.scrollIntoView({ behavior: 'smooth' });
     }
   }, [anchor]);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getCurrent());
+  }, []);
+
+  const user = useSelector(selectUser);
+  console.log(user);
 
   const handleClick = e => {
     setAnchor({ id: e.target.name });

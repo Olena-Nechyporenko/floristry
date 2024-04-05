@@ -12,11 +12,18 @@ import {
 import storage from 'redux-persist/lib/storage';
 import { cartProductsReducer } from './cart/cartProductsSlice.js';
 import { bouquetsReducer } from './bouquets/bouquetSlice.js';
+import { authReducer } from './auth/slice.js';
 
 const persistConfig = {
   key: 'root',
   storage,
   whitelist: ['products'],
+};
+
+const authPersistConfig = {
+  key: 'auth',
+  storage,
+  whitelist: ['token'],
 };
 const persistedContactsReducer = persistReducer(
   persistConfig,
@@ -25,6 +32,7 @@ const persistedContactsReducer = persistReducer(
 
 export const store = configureStore({
   reducer: {
+    auth: persistReducer(authPersistConfig, authReducer),
     cartProducts: persistedContactsReducer,
     bouquets: bouquetsReducer,
   },

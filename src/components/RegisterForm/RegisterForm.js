@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Modal from 'react-modal';
 import { useDispatch } from 'react-redux';
 import { register } from 'redux/auth/operations';
@@ -11,7 +11,6 @@ import {
   StyledButton,
   StyledTitle,
   StyledCloseIcon,
-  StyledCloseButton,
 } from './RegisterForm.styled';
 import { Formik } from 'formik';
 
@@ -26,8 +25,8 @@ const schema = Yup.object().shape({
 
 const customStyles = {
   overlay: {
-    backgroundColor: 'rgba(0, 0, 0, 0.5)', // Полупрозрачный серый фон
-    zIndex: 1000, // Выше других элементов
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    zIndex: 1000,
   },
   content: {
     top: '50%',
@@ -35,19 +34,21 @@ const customStyles = {
     right: 'auto',
     bottom: 'auto',
     marginRight: '-50%',
-    transform: 'translate(-50%, -50%)', // Центрируем по горизонтали и вертикали
-    maxWidth: '400px', // Лимитируем ширину контента
+    transform: 'translate(-50%, -50%)',
+    maxWidth: '400px',
   },
 };
 
 const RegisterModal = ({ isOpen, onClose }) => {
   const dispatch = useDispatch();
+  const [isRegistered, setIsRegistered] = useState(false);
 
   const handleSubmit = async (values, { resetForm }) => {
     try {
       await dispatch(register(values));
       resetForm();
-      onClose(); // Закрываем модальное окно после успешной регистрации
+      setIsRegistered(true);
+      onClose();
     } catch (error) {
       console.error('Registration error:', error);
     }
@@ -87,10 +88,8 @@ const RegisterModal = ({ isOpen, onClose }) => {
           )}
         </Formik>
       </InputWrapper>
-      <StyledCloseButton onClick={onClose}>
-        {' '}
-        <StyledCloseIcon />
-      </StyledCloseButton>
+
+      <StyledCloseIcon onClick={onClose} />
     </Modal>
   );
 };

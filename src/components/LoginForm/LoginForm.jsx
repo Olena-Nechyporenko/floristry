@@ -3,6 +3,7 @@ import Modal from 'react-modal';
 import { useDispatch } from 'react-redux';
 import { logIn } from 'redux/auth/operations';
 import { Formik } from 'formik';
+
 import * as Yup from 'yup';
 import {
   StyledForm,
@@ -12,8 +13,11 @@ import {
   StyledCloseIcon,
   StyledTitle,
   StyledButton,
+  StyledText,
 } from './LoginForm.styled';
 import RegisterModal from 'components/RegisterForm/RegisterForm';
+
+Modal.setAppElement('#root');
 
 const customStyles = {
   overlay: {
@@ -85,20 +89,19 @@ const LoginModal = ({ isOpen, onClose }) => {
               <StyledButton type="submit" variant="contained" color="primary">
                 Log In
               </StyledButton>
+              <StyledText>If you don't have an account yet please </StyledText>
+              <StyledButton
+                onClick={() => {
+                  openRegisterModal();
+                }}
+              >
+                Sign up
+              </StyledButton>
             </StyledForm>
           )}
         </Formik>
       </InputWrapper>
-      <p>
-        If you don't have account yet please{' '}
-        <button
-          onClick={() => {
-            openRegisterModal();
-          }}
-        >
-          sign up
-        </button>
-      </p>
+
       <StyledCloseIcon onClick={handleCloseLoginModal} />
 
       {isRegisterModalOpen && (

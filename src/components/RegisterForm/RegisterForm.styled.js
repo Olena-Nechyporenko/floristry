@@ -2,13 +2,12 @@ import styled from 'styled-components';
 import { Field, Form, ErrorMessage } from 'formik';
 import { IoCloseSharp } from 'react-icons/io5';
 
-export const StyledCloseIcon = styled(IoCloseSharp)``;
-
-export const StyledCloseButton = styled.button`
+export const StyledCloseIcon = styled(IoCloseSharp)`
   position: absolute;
   top: 15px;
   right: 15px;
 `;
+
 export const InputWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -43,7 +42,10 @@ export const ErrorMessageStyled = styled(ErrorMessage)`
 
 export const StyledForm = styled(Form)`
   width: 300px;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   @media (min-width: 1440px) {
     width: 450px;
@@ -53,15 +55,23 @@ export const StyledForm = styled(Form)`
 
 export const StyledButton = styled.button`
   padding: 10px 20px;
-  height: 50px;
+  text-align: center;
   background-color: var(--main-green-color);
   color: #fff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   transition: var(--main-transition);
+  margin-left: auto;
+  margin-right: auto;
 
   &:hover {
     background-color: var(--main-pink-color);
   }
+`;
+
+export const StyledMessage = styled.p`
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 10px;
 `;

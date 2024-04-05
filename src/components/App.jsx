@@ -14,8 +14,6 @@ const CatalogPage = lazy(() => import('pages/CatalogPage/CatalogPage'));
 const CartPage = lazy(() => import('pages/CartPage/CartPage'));
 const PaymentPage = lazy(() => import('pages/PaymentPage/PaymentPage'));
 const WeddingPage = lazy(() => import('pages/WeddingPage/WeddingPage'));
-const RegisterPage = lazy(() => import('pages/Register'));
-const LoginPage = lazy(() => import('pages/Login'));
 
 export const App = () => {
   const dispatch = useDispatch();
@@ -30,7 +28,7 @@ export const App = () => {
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<HomePage />} />
-        <Route
+        {/* <Route
           path="/register"
           element={
             <RestrictedRoute
@@ -38,17 +36,17 @@ export const App = () => {
               component={<RegisterPage />}
             />
           }
-        />
-        <Route
+        /> */}
+        {/* <Route
           path="/login"
           element={
             <RestrictedRoute redirectTo="/orders" component={<LoginPage />} />
           }
-        />
+        /> */}
         <Route
-          path="/contacts"
+          path="/orders"
           element={
-            <PrivateRoute redirectTo="/login" component={<OrderPage />} />
+            <PrivateRoute redirectTo="/orders" component={<OrderPage />} />
           }
         />
         <Route path="/catalog" element={<CatalogPage />} />

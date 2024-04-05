@@ -63,14 +63,13 @@ export const Header = () => {
                 Contacts
               </AnchorLink>
             </li>
-            <li>{isLoggedIn ? <UserMenu /> : <AuthNav />}</li>
-            <li>{isLoggedIn && <LinkNav to="/orders">Orders</LinkNav>}</li>
             <li>
               <LinkNav to="/cart">
                 <CartIcon />
               </LinkNav>
             </li>
           </NavList>
+          {isLoggedIn ? <UserMenu /> : <AuthNav />}
 
           <MobileNavList>
             <li>

@@ -7,7 +7,7 @@ export const InputWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 30px;
+  margin-top: 20px;
 
   @media (min-width: 1440px) {
     width: 450px;
@@ -18,6 +18,10 @@ export const InputWrapper = styled.div`
 export const StyledForm = styled.form`
   width: 300px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   @media (min-width: 1440px) {
     width: 450px;
@@ -54,16 +58,25 @@ export const StyledTitle = styled.h2`
   text-align: center;
 `;
 export const StyledButton = styled.button`
+  margin-top: 10px;
   padding: 10px 20px;
-  height: 50px;
+  text-align: center;
   background-color: var(--main-green-color);
   color: #fff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   transition: var(--main-transition);
+  margin-left: auto;
+  margin-right: auto;
 
   &:hover {
     background-color: var(--main-pink-color);
   }
+`;
+
+export const StyledText = styled.p`
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 10px;
 `;

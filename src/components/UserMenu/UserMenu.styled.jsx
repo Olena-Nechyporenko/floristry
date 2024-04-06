@@ -6,11 +6,12 @@ export const StyledWrapper = styled.div`
   align-items: center;
   gap: 12px;
   position: absolute;
-  top: 85%;
+  top: 59px;
   right: 0%;
+  z-index: 1000;
 
   @media screen and (min-width: 1200px) {
-    top: 100%;
+    top: 70px;
   }
 `;
 export const StyledButton = styled.button`

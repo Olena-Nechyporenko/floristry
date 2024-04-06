@@ -1,11 +1,45 @@
 import styled from 'styled-components';
 import { Field, Form, ErrorMessage } from 'formik';
-import { IoCloseSharp } from 'react-icons/io5';
+import { IoClose } from 'react-icons/io5';
 
-export const StyledCloseIcon = styled(IoCloseSharp)`
+export const BackDrop = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(177, 177, 177, 0.5);
+`;
+
+export const Modal = styled.div`
   position: absolute;
-  top: 15px;
-  right: 15px;
+  z-index: 20px;
+  width: 400px;
+  border: 1px solid var(--main-green-color);
+  border-radius: 8px;
+  background-color: #f7f7f7;
+
+  @media screen and (min-width: 320px) and (max-width: 375px) {
+    width: 90%;
+  }
+`;
+
+export const ModalContainer = styled.div`
+  position: relative;
+  padding: 24px;
+`;
+
+export const CloseIcon = styled(IoClose)`
+  font-size: 24px;
+  fill: var(--main-dark-text-color);
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  cursor: pointer;
 `;
 
 export const InputWrapper = styled.div`

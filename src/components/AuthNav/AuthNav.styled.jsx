@@ -1,10 +1,11 @@
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import { IoPersonSharp } from 'react-icons/io5';
+
 export const AuthWrapper = styled.div`
   position: absolute;
   right: 0;
-  top: 60px;
+  top: 50px;
 `;
 export const StyledLink = styled(NavLink)`
   display: inline-block;
@@ -12,8 +13,6 @@ export const StyledLink = styled(NavLink)`
   padding: 12px;
   font-weight: 700;
   color: white;
-
-  }
 `;
 export const StyledIcon = styled(IoPersonSharp)`
   color: var(--main-green-color);

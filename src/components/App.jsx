@@ -5,7 +5,7 @@ import NotFoundPage from 'pages/NotFoundPage/NotFoundPage';
 import { useAuth } from './hooks/useAuth';
 import { useDispatch } from 'react-redux';
 import { refreshUser } from 'redux/auth/operations';
-import { RestrictedRoute } from './RestrictedRoute';
+// import { RestrictedRoute } from './RestrictedRoute';
 import { PrivateRoute } from './PrivateRoute';
 import OrderPage from 'pages/OrderPage/OrderPage';
 

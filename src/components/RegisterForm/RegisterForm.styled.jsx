@@ -47,12 +47,6 @@ export const InputWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   margin-top: 30px;
-
-  @media (min-width: 1440px) {
-    width: 450px;
-    margin: 0 auto;
-    margin-top: 45px;
-  }
 `;
 export const StyledTitle = styled.h2`
   text-align: center;
@@ -64,10 +58,6 @@ export const StyledInput = styled(Field)`
   border: 1px solid #ccc;
   border-radius: 5px;
   box-sizing: border-box;
-
-  @media (min-width: 1440px) {
-    width: 450px;
-  }
 `;
 
 export const ErrorMessageStyled = styled(ErrorMessage)`
@@ -80,11 +70,6 @@ export const StyledForm = styled(Form)`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  @media (min-width: 1440px) {
-    width: 450px;
-    margin: 0 auto;
-  }
 `;
 
 export const StyledButton = styled.button`

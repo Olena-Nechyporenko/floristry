@@ -66,7 +66,7 @@ const LoginModal = ({ onLoginClose }) => {
   return (
     <>
       <BackDrop
-        open={isRegisterModalOpen ? 'false' : 'true'}
+        open={isRegisterModalOpen ? false : true}
         onClick={handleCloseOnBackdrop}
       >
         <Modal>

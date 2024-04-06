@@ -4,7 +4,6 @@ import LoginModal from 'components/LoginForm/LoginForm';
 
 export const AuthNav = () => {
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
-  console.log('login modal open', isLoginModalOpen);
 
   const openModal = () => {
     setIsLoginModalOpen(!isLoginModalOpen);

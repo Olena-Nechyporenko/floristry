@@ -4,9 +4,9 @@ import { IoClose } from 'react-icons/io5';
 
 const isOpen = props => {
   switch (props.open) {
-    case 'true':
+    case true:
       return 'flex';
-    case 'false':
+    case false:
       return 'none';
     default:
       return 'none';
@@ -59,12 +59,6 @@ export const InputWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   margin-top: 20px;
-
-  @media (min-width: 1440px) {
-    width: 450px;
-    margin: 0 auto;
-    margin-top: 45px;
-  }
 `;
 export const StyledForm = styled.form`
   width: 300px;
@@ -73,10 +67,6 @@ export const StyledForm = styled.form`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  @media (min-width: 1440px) {
-    width: 450px;
-  }
 `;
 
 export const StyledLabel = styled.label`
@@ -91,10 +81,6 @@ export const StyledInput = styled(Field)`
   border: 1px solid #ccc;
   border-radius: 5px;
   box-sizing: border-box;
-
-  @media (min-width: 1440px) {
-    width: 450px;
-  }
 `;
 
 export const ErrorMessageStyled = styled(ErrorMessage)`

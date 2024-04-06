@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { register } from 'redux/auth/operations';
+import { getCurrent, register } from 'redux/auth/operations';
 import * as Yup from 'yup';
 import {
   BackDrop,
@@ -50,7 +50,9 @@ const RegisterModal = ({ onClose }) => {
   const handleSubmit = async (values, { resetForm }) => {
     try {
       await dispatch(register(values));
+      await dispatch(getCurrent);
       resetForm();
+
       onClose();
     } catch (error) {
       console.error('Registration error:', error);

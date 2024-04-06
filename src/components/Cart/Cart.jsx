@@ -21,7 +21,6 @@ export const Cart = () => {
     return total;
   };
   const { isLoggedIn } = useAuth();
-  console.log(isLoggedIn);
 
   return (
     <>

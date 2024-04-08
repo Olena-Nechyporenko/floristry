@@ -8,8 +8,9 @@ import {
   StyledForm,
   StyledFormField,
 } from './DeliveryForm.styled';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { selectCartProducts } from 'redux/cart/selectors';
+import { removeAllFromCart } from 'redux/cart/cartProductsSlice';
 // import { loadStripe } from '@stripe/stripe-js';
 
 const notiflixShowOptions = {
@@ -67,7 +68,7 @@ export const PaymentForm = () => {
   //   const stripe = await stripePromise;
   //   await stripe.redirectToCheckout({ sessionId: data.id });
   // };
-
+  const dispatch = useDispatch();
   const handleSubmit = async values => {
     const newOrder = {
       firstName: values.firstName,
@@ -93,6 +94,7 @@ export const PaymentForm = () => {
             'Your order has been sent successfully! Thank you!',
             notiflixSuccessOptions
           );
+          dispatch(removeAllFromCart());
         },
         function () {
           return;

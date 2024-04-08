@@ -18,7 +18,7 @@ import { ordersReducer } from './orders/ordersSlice.js';
 const persistConfig = {
   key: 'root',
   storage,
-  whitelist: ['products'],
+  whitelist: ['products', 'currentOrder'],
 };
 
 const authPersistConfig = {
@@ -26,6 +26,7 @@ const authPersistConfig = {
   storage,
   whitelist: ['token'],
 };
+
 const persistedContactsReducer = persistReducer(
   persistConfig,
   cartProductsReducer

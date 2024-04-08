@@ -9,10 +9,10 @@ import {
   ImageWrapperRight,
   ImageWrapperLeft,
 } from './Advantages.styled';
-import firstimg from '../../images/wide-a.jpg';
-import secondimg from '../../images/high.jpg';
-import thirdimg from '../../images/creative.jpg';
-import fourthimg from '../../images/consultation.jpg';
+import firstimg from '../../images/wide-3.jpg';
+import secondimg from '../../images/high-2.jpg';
+import thirdimg from '../../images/wide-1.jpg';
+import fourthimg from '../../images/consultation-1.jpg';
 
 export const Advantages = () => {
   return (

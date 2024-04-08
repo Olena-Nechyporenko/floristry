@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { PiSmileySad } from 'react-icons/pi';
+import { FaRegCircleCheck } from 'react-icons/fa6';
 import { IoIosArrowForward } from 'react-icons/io';
 import { NavLink } from 'react-router-dom';
 
@@ -12,13 +12,11 @@ export const Wrapper = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 20px;
-`;
-
-export const EmojiIcon = styled(PiSmileySad)`
-  width: 150px;
-  height: 150px;
-  fill: var(--main-green-color);
+  gap: 40px;
+  width: 500px;
+  height: 300px;
+  background-color: rgba(98, 248, 133, 0.6);
+  border-radius: 8px;
 `;
 
 export const Title = styled.h2`
@@ -27,27 +25,33 @@ export const Title = styled.h2`
   color: var(--main-dark-text-color);
 `;
 
+export const CheckIcon = styled(FaRegCircleCheck)`
+  width: 70px;
+  height: 70px;
+  fill: #0e8b00;
+`;
+
 export const ArrowIcon = styled(IoIosArrowForward)`
   width: 20px;
   height: 20px;
-  fill: var(--main-green-color);
+  fill: #0e8b00;
   transition: all var(--main-transition);
 `;
 
 export const Link = styled(NavLink)`
   font-size: 25px;
   font-weight: 500;
-  color: var(--main-green-color);
+  color: #0e8b00;
   display: flex;
   align-items: center;
   gap: 10px;
   transition: all var(--main-transition);
 
   &:hover {
-    color: var(--main-pink-color);
+    color: #15cf00;
 
     & ${ArrowIcon} {
-      fill: var(--main-pink-color);
+      fill: #15cf00;
     }
   }
 `;

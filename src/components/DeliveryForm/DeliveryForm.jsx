@@ -10,8 +10,8 @@ import {
 } from './DeliveryForm.styled';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectCartProducts } from 'redux/cart/selectors';
-import { removeAllFromCart } from 'redux/cart/cartProductsSlice';
-// import { loadStripe } from '@stripe/stripe-js';
+import { addToOrder } from 'redux/cart/cartProductsSlice';
+import { loadStripe } from '@stripe/stripe-js';
 
 const notiflixShowOptions = {
   width: '340px',
@@ -19,11 +19,6 @@ const notiflixShowOptions = {
   messageFontSize: '18px',
   titleColor: '#556b2f',
   okButtonBackground: '#556b2f',
-};
-
-const notiflixSuccessOptions = {
-  fontSize: '17px',
-  success: { background: '#e6b8ca', textColor: '#161616' },
 };
 
 const initialValues = {
@@ -43,32 +38,11 @@ const validationSchema = Yup.object().shape({
 });
 
 export const PaymentForm = () => {
+  const dispatch = useDispatch();
   const orderedBouquets = useSelector(selectCartProducts);
 
-  // const stripePromise = loadStripe(process.env.REACT_APP_PUBLISHABLE_KEY);
+  const stripePromise = loadStripe(process.env.REACT_APP_PUBLISHABLE_KEY);
 
-  // const handleSubmit = async () => {
-  //   const lineItems = orderedBouquets.map(item => {
-  //     return {
-  //       price_data: {
-  //         currency: 'eur',
-  //         product_data: {
-  //           name: item.name,
-  //         },
-  //         unit_amount: item.price * 100,
-  //       },
-  //       quantity: item.quantity,
-  //     };
-  //   });
-
-  //   const { data } = await axios.post('http://localhost:5000/api/checkout', {
-  //     lineItems,
-  //   });
-
-  //   const stripe = await stripePromise;
-  //   await stripe.redirectToCheckout({ sessionId: data.id });
-  // };
-  const dispatch = useDispatch();
   const handleSubmit = async values => {
     const newOrder = {
       firstName: values.firstName,
@@ -78,6 +52,7 @@ export const PaymentForm = () => {
       deliveryDate: values.deliveryDate,
       bouquets: [...orderedBouquets],
     };
+
     try {
       Notiflix.Confirm.show(
         'Sending the order',
@@ -85,16 +60,37 @@ export const PaymentForm = () => {
         'Yes',
         'No',
         async function () {
-          const response = await axios.post(
-            'https://floristry-backend.onrender.com/api/orders',
-            newOrder
+          dispatch(addToOrder(newOrder));
+
+          const lineItems = orderedBouquets.map(item => {
+            return {
+              price_data: {
+                currency: 'eur',
+                product_data: {
+                  name: item.name,
+                  description: item.description,
+                },
+                unit_amount: item.price * 100,
+              },
+              quantity: item.quantity,
+            };
+          });
+
+          const { data } = await axios.post(
+            'https://floristry-backend.onrender.com/api/checkout',
+            {
+              lineItems,
+            }
           );
-          console.log('Response from server:', response.data);
-          Notiflix.Notify.success(
-            'Your order has been sent successfully! Thank you!',
-            notiflixSuccessOptions
-          );
-          dispatch(removeAllFromCart());
+
+          // await axios.post('http://localhost:5000/api/orders', newOrder);
+          // Notiflix.Notify.success(
+          //   'Your order has been sent successfully! Thank you!',
+          //   notiflixSuccessOptions)
+
+          const stripe = await stripePromise;
+          await stripe.redirectToCheckout({ sessionId: data.id });
+          // dispatch(removeAllFromCart());
         },
         function () {
           return;

@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import img from '../../images/wide-a.jpg';
 
 export const AdvantagesSection = styled.section`
   padding-bottom: 70px;
@@ -70,7 +69,7 @@ export const Text = styled.p`
 `;
 
 export const ImageWrapperRight = styled.div`
-  /* background-image: url(${img});
+  /* background-image: url();
   background-size: cover; */
   width: 100%;
   height: 400px;
@@ -89,7 +88,7 @@ export const ImageWrapperRight = styled.div`
 `;
 
 export const ImageWrapperLeft = styled.div`
-  /* background-image: url(${img});
+  /* background-image: url();
   background-size: cover; */
   width: 100%;
   height: 400px;

@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/floristry/static/css/main.a0ce55d3.css",
-    "main.js": "/floristry/static/js/main.a773d5e3.js",
+    "main.js": "/floristry/static/js/main.e7f5af61.js",
     "static/css/869.b6eb3de2.chunk.css": "/floristry/static/css/869.b6eb3de2.chunk.css",
     "static/js/869.ee743592.chunk.js": "/floristry/static/js/869.ee743592.chunk.js",
     "static/js/50.e89e0b73.chunk.js": "/floristry/static/js/50.e89e0b73.chunk.js",
     "static/js/754.db88f328.chunk.js": "/floristry/static/js/754.db88f328.chunk.js",
-    "static/js/797.8be0ffd7.chunk.js": "/floristry/static/js/797.8be0ffd7.chunk.js",
+    "static/js/797.3d7dc49d.chunk.js": "/floristry/static/js/797.3d7dc49d.chunk.js",
     "static/js/274.40173def.chunk.js": "/floristry/static/js/274.40173def.chunk.js",
     "static/js/717.0c99b3fe.chunk.js": "/floristry/static/js/717.0c99b3fe.chunk.js",
     "static/js/651.f5cc3ed4.chunk.js": "/floristry/static/js/651.f5cc3ed4.chunk.js",
@@ -26,18 +26,18 @@
     "static/media/slick.woff": "/floristry/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/floristry/index.html",
     "main.a0ce55d3.css.map": "/floristry/static/css/main.a0ce55d3.css.map",
-    "main.a773d5e3.js.map": "/floristry/static/js/main.a773d5e3.js.map",
+    "main.e7f5af61.js.map": "/floristry/static/js/main.e7f5af61.js.map",
     "869.b6eb3de2.chunk.css.map": "/floristry/static/css/869.b6eb3de2.chunk.css.map",
     "869.ee743592.chunk.js.map": "/floristry/static/js/869.ee743592.chunk.js.map",
     "50.e89e0b73.chunk.js.map": "/floristry/static/js/50.e89e0b73.chunk.js.map",
     "754.db88f328.chunk.js.map": "/floristry/static/js/754.db88f328.chunk.js.map",
-    "797.8be0ffd7.chunk.js.map": "/floristry/static/js/797.8be0ffd7.chunk.js.map",
+    "797.3d7dc49d.chunk.js.map": "/floristry/static/js/797.3d7dc49d.chunk.js.map",
     "274.40173def.chunk.js.map": "/floristry/static/js/274.40173def.chunk.js.map",
     "717.0c99b3fe.chunk.js.map": "/floristry/static/js/717.0c99b3fe.chunk.js.map",
     "651.f5cc3ed4.chunk.js.map": "/floristry/static/js/651.f5cc3ed4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a0ce55d3.css",
-    "static/js/main.a773d5e3.js"
+    "static/js/main.e7f5af61.js"
   ]
 }

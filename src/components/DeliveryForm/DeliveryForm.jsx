@@ -55,8 +55,8 @@ export const PaymentForm = () => {
 
     try {
       Notiflix.Confirm.show(
-        'Sending the order',
-        `Send your order?`,
+        'Order payment',
+        `Go to order payment?`,
         'Yes',
         'No',
         async function () {
@@ -82,11 +82,6 @@ export const PaymentForm = () => {
               lineItems,
             }
           );
-
-          // await axios.post('http://localhost:5000/api/orders', newOrder);
-          // Notiflix.Notify.success(
-          //   'Your order has been sent successfully! Thank you!',
-          //   notiflixSuccessOptions)
 
           const stripe = await stripePromise;
           await stripe.redirectToCheckout({ sessionId: data.id });

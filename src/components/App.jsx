@@ -55,10 +55,9 @@ export const App = () => {
         <Route path="/cart" element={<CartPage />} />
         <Route path="/payment" element={<PaymentPage />} />
         <Route path="/weddings" element={<WeddingPage />} />
-        <Route path="/success" element={<SuccessPage />} />
-        <Route path="/failure" element={<FailurePage />} />
       </Route>
-
+      <Route path="/success" element={<SuccessPage />} />
+      <Route path="/failure" element={<FailurePage />} />
       <Route path="*" element={<NotFoundPage />} />
     </Routes>
   );

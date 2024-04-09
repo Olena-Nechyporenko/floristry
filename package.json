@@ -2,7 +2,7 @@
   "name": "react-homework-template",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://floristry-app.netlify.app/",
+  "homepage": "https://floristry-app.netlify.app/floristry/",
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.7",
     "@stripe/stripe-js": "^3.2.0",

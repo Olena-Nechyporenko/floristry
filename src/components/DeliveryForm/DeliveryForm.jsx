@@ -85,7 +85,6 @@ export const PaymentForm = () => {
 
           const stripe = await stripePromise;
           await stripe.redirectToCheckout({ sessionId: data.id });
-          // dispatch(removeAllFromCart());
         },
         function () {
           return;

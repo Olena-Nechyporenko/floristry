@@ -34,6 +34,9 @@ export default function SuccessPage() {
       );
       dispatch(removeAllFromCurrentOrder());
     };
+
+    // Disable eslint rule for exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     sendOrder();
   }, []);
 

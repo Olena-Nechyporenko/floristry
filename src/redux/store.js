@@ -21,6 +21,12 @@ const persistConfig = {
   whitelist: ['products', 'currentOrder'],
 };
 
+const orderPersistConfig = {
+  key: 'root',
+  storage,
+  whitelist: ['currentOrder'],
+};
+
 const authPersistConfig = {
   key: 'auth',
   storage,
@@ -37,7 +43,7 @@ export const store = configureStore({
     auth: persistReducer(authPersistConfig, authReducer),
     cartProducts: persistedContactsReducer,
     bouquets: bouquetsReducer,
-    orders: ordersReducer,
+    orders: (orderPersistConfig, ordersReducer),
   },
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({

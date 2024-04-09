@@ -14,3 +14,15 @@ export const fetchOrders = createAsyncThunk(
     }
   }
 );
+
+export const sendOrder = createAsyncThunk(
+  'orders/sendOrder',
+  async (currentOrder, { rejectWithValue }) => {
+    try {
+      const orders = await axios.post('/orders', { currentOrder });
+      return orders.data;
+    } catch (e) {
+      return rejectWithValue(e.message);
+    }
+  }
+);

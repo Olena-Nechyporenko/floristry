@@ -3,7 +3,6 @@ import { createSlice } from '@reduxjs/toolkit';
 const cartProductsSlice = createSlice({
   name: 'cartProducts',
   initialState: {
-    currentOrder: {},
     products: [],
     isLoading: false,
     error: null,
@@ -29,7 +28,6 @@ const cartProductsSlice = createSlice({
     },
     changeQuantity(state, action) {
       const { productId, quantity } = action.payload;
-      console.log(action.payload);
       const updatedProducts = state.products.map(product => {
         if (product._id === productId) {
           return { ...product, quantity };
@@ -41,12 +39,6 @@ const cartProductsSlice = createSlice({
     removeAllFromCart(state, action) {
       state.products = [];
     },
-    addToOrder(state, action) {
-      state.currentOrder = action.payload;
-    },
-    removeAllFromCurrentOrder(state, action) {
-      state.currentOrder = {};
-    },
   },
 });
 
@@ -57,6 +49,4 @@ export const {
   changeQuantity,
   increaseQuantity,
   removeAllFromCart,
-  addToOrder,
-  removeAllFromCurrentOrder,
 } = cartProductsSlice.actions;

@@ -1,5 +1,3 @@
-import axios from 'axios';
-import Notiflix from 'notiflix';
 import { useDispatch, useSelector } from 'react-redux';
 import {
   Wrapper,
@@ -8,37 +6,17 @@ import {
   ArrowIcon,
   CheckIcon,
 } from './SuccessPage.styled';
-import { selectCurrentOrder } from 'redux/cart/selectors';
 import { useEffect } from 'react';
-import { removeAllFromCurrentOrder } from 'redux/cart/cartProductsSlice';
-
-const notiflixSuccessOptions = {
-  fontSize: '17px',
-  success: { background: '#e6b8ca', textColor: '#161616' },
-};
+import { selectCurrentOrder } from 'redux/orders/selectors';
+import { sendOrder } from 'redux/orders/operations';
 
 export default function SuccessPage() {
-  const dispatch = useDispatch();
   const currentOrder = useSelector(selectCurrentOrder);
-  console.log(currentOrder);
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    const sendOrder = async () => {
-      await axios.post(
-        'https://floristry-backend.onrender.com/api/orders',
-        currentOrder
-      );
-      Notiflix.Notify.success(
-        'Your order has been sent successfully! Thank you!',
-        notiflixSuccessOptions
-      );
-      dispatch(removeAllFromCurrentOrder());
-    };
-
-    // Disable eslint rule for exhaustive-deps
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    sendOrder();
-  }, []);
+    dispatch(sendOrder(currentOrder));
+  }, [dispatch, currentOrder]);
 
   return (
     <Wrapper>

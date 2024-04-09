@@ -10,8 +10,8 @@ import {
 } from './DeliveryForm.styled';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectCartProducts } from 'redux/cart/selectors';
-import { addToOrder } from 'redux/cart/cartProductsSlice';
 import { loadStripe } from '@stripe/stripe-js';
+import { addToOrder } from 'redux/orders/ordersSlice';
 
 const notiflixShowOptions = {
   width: '340px',

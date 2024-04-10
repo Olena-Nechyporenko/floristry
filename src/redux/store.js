@@ -22,7 +22,7 @@ const persistConfig = {
 };
 
 const orderPersistConfig = {
-  key: 'root',
+  key: 'orders',
   storage,
   whitelist: ['currentOrder'],
 };
@@ -43,7 +43,7 @@ export const store = configureStore({
     auth: persistReducer(authPersistConfig, authReducer),
     cartProducts: persistedContactsReducer,
     bouquets: bouquetsReducer,
-    orders: (orderPersistConfig, ordersReducer),
+    orders: persistReducer(orderPersistConfig, ordersReducer),
   },
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({

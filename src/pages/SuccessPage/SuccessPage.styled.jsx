@@ -12,17 +12,49 @@ export const Wrapper = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 40px;
-  width: 500px;
+  gap: 30px;
+  width: 90%;
   height: 300px;
   background-color: rgba(98, 248, 133, 0.6);
   border-radius: 8px;
+
+  @media (min-width: 768px) {
+    width: 500px;
+  }
 `;
 
 export const Title = styled.h2`
-  font-size: 30px;
+  font-size: 22px;
   font-weight: 600;
   color: var(--main-dark-text-color);
+  padding: 0 10px;
+
+  @media (min-width: 768px) {
+    font-size: 30px;
+  }
+`;
+
+const isDisable = props => {
+  switch (props.disabled) {
+    case false:
+      return 'pointer';
+    case true:
+      return 'not-allowed';
+    default:
+      return 'not-allowed';
+  }
+};
+
+export const Button = styled.button`
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 400;
+  background-color: #0e8b00;
+  color: #ffffff;
+  border: none;
+  padding: 15px 20px;
+  border-radius: 5px;
+  cursor: ${isDisable};
 `;
 
 export const CheckIcon = styled(FaRegCircleCheck)`

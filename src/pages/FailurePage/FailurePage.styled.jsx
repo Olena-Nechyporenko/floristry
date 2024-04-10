@@ -13,16 +13,24 @@ export const Wrapper = styled.section`
   justify-content: center;
   align-items: center;
   gap: 20px;
-  width: 500px;
+  width: 90%;
   height: 300px;
   background-color: rgba(255, 84, 84, 0.6);
   border-radius: 8px;
+
+  @media (min-width: 768px) {
+    width: 500px;
+  }
 `;
 
 export const Title = styled.h2`
-  font-size: 30px;
+  font-size: 22px;
   font-weight: 600;
   color: var(--main-dark-text-color);
+
+  @media (min-width: 768px) {
+    font-size: 30px;
+  }
 `;
 
 export const Text = styled.p`

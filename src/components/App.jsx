@@ -10,6 +10,7 @@ import OrderPage from 'pages/OrderPage/OrderPage';
 import FailurePage from 'pages/FailurePage/FailurePage';
 import SuccessPage from 'pages/SuccessPage/SuccesPage';
 import NotFoundPage from 'pages/NotFoundPage/NotFoundPage';
+import { Loader } from './Loader/Loader';
 
 const HomePage = lazy(() => import('../pages/HomePage/HomePage'));
 const CatalogPage = lazy(() => import('pages/CatalogPage/CatalogPage'));
@@ -25,7 +26,7 @@ export const App = () => {
     dispatch(refreshUser());
   }, [dispatch]);
   return isRefreshing ? (
-    <b>Refreshing user...</b>
+    <Loader />
   ) : (
     <Routes>
       <Route path="/" element={<Layout />}>
@@ -54,7 +55,7 @@ export const App = () => {
         <Route path="/catalog" element={<CatalogPage />} />
         <Route path="/cart" element={<CartPage />} />
         <Route path="/payment" element={<PaymentPage />} />
-        <Route path="/weddings" element={<WeddingPage />} />
+        <Route path="/weddings" element={<WeddingPage />} />{' '}
       </Route>
       <Route path="/success" element={<SuccessPage />} />
       <Route path="/failure" element={<FailurePage />} />

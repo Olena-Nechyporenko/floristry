@@ -61,7 +61,6 @@ export const PaymentForm = () => {
         'No',
         async function () {
           dispatch(addToOrder(newOrder));
-
           const lineItems = orderedBouquets.map(item => {
             return {
               price_data: {

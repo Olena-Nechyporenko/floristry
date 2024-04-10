@@ -3,7 +3,7 @@ import { fetchOrders, sendOrder } from 'redux/orders/operations';
 const ordersSlice = createSlice({
   name: 'orders',
   initialState: {
-    currentOrder: {},
+    currentOrder: null,
     orders: [],
     isLoading: false,
     error: null,
@@ -37,7 +37,7 @@ const ordersSlice = createSlice({
       .addCase(sendOrder.fulfilled, (state, action) => {
         state.isLoading = false;
         state.error = null;
-        state.currentOrder = {};
+        state.currentOrder = null;
       });
   },
 });

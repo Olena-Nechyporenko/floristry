@@ -3,28 +3,26 @@ import styled from 'styled-components';
 
 export const StyledWrapper = styled.div`
   display: flex;
+  justify-content: flex-end;
   align-items: center;
   gap: 12px;
-  position: absolute;
-  top: 65px;
-  right: 0%;
-  z-index: 1000;
+  padding: 70px 10px 0;
 
-  @media screen and (min-width: 1200px) {
-    top: 70px;
+  @media screen and (min-width: 768px) {
+    padding: 70px 20px 0;
   }
 `;
 export const StyledButton = styled.button`
-  padding: 10px 20px;
+  font-family: inherit;
+  font-size: 15px;
   text-align: center;
   background-color: var(--main-green-color);
   color: #fff;
   border: none;
   border-radius: 5px;
+  padding: 10px 20px;
   cursor: pointer;
   transition: var(--main-transition);
-  margin-left: auto;
-  margin-right: auto;
 
   &:hover {
     background-color: var(--main-pink-color);

@@ -1,6 +1,18 @@
 import styled from 'styled-components';
 
-export const Wrapper = styled.div`
+export const TextEmptyCart = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  font-size: 36px;
+  font-weight: 500;
+  color: rgba(22, 22, 22, 0.7);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+`;
+
+export const Wrapper = styled.ul`
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -28,15 +40,16 @@ export const TotalPrice = styled.p`
 `;
 
 export const PayButton = styled.button`
-  width: 200px;
   font-family: inherit;
+  font-size: 18px;
   font-weight: 400;
-  padding: 10px 15px;
+  width: 200px;
   height: 50px;
   background-color: var(--main-green-color);
   color: #fff;
   border: none;
   border-radius: 5px;
+  padding: 10px 15px;
   cursor: pointer;
   transition: var(--main-transition);
 

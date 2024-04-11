@@ -16,7 +16,3 @@ export const Container = styled.div`
     max-width: 1200px;
   }
 `;
-
-export const Main = styled.main`
-  padding-top: 70px;
-`;

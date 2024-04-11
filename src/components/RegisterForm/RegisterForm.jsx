@@ -7,10 +7,10 @@ import {
   Modal,
   ModalContainer,
   CloseIcon,
+  StyledForm,
+  StyledLabel,
   StyledInput,
   ErrorMessageStyled,
-  InputWrapper,
-  StyledForm,
   StyledButton,
   StyledTitle,
 } from './RegisterForm.styled';
@@ -66,36 +66,36 @@ const RegisterModal = ({ onClose }) => {
           <CloseIcon onClick={onClose} />
           <StyledTitle>Please sign up</StyledTitle>
 
-          <InputWrapper>
-            <Formik
-              initialValues={initialValues}
-              validationSchema={schema}
-              onSubmit={handleSubmit}
-            >
-              {({ dirty, isValid }) => (
-                <StyledForm autoComplete="off">
+          <Formik
+            initialValues={initialValues}
+            validationSchema={schema}
+            onSubmit={handleSubmit}
+          >
+            {({ dirty, isValid }) => (
+              <StyledForm autoComplete="off">
+                <StyledLabel htmlFor="email">
                   <StyledInput type="email" name="email" placeholder="Email" />
                   <ErrorMessageStyled name="email" component="div" />
-
+                </StyledLabel>
+                <StyledLabel htmlFor="password">
                   <StyledInput
                     type="password"
                     name="password"
                     placeholder="Password"
                   />
                   <ErrorMessageStyled name="password" component="div" />
-
-                  <StyledButton
-                    type="submit"
-                    variant="contained"
-                    color="primary"
-                    disabled={!dirty || !isValid}
-                  >
-                    Register
-                  </StyledButton>
-                </StyledForm>
-              )}
-            </Formik>
-          </InputWrapper>
+                </StyledLabel>
+                <StyledButton
+                  type="submit"
+                  variant="contained"
+                  color="primary"
+                  disabled={!dirty || !isValid}
+                >
+                  Register
+                </StyledButton>
+              </StyledForm>
+            )}
+          </Formik>
         </ModalContainer>
       </Modal>
     </BackDrop>

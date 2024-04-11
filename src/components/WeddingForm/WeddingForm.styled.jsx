@@ -86,6 +86,8 @@ export const StyledForm = styled(Form)`
 `;
 
 export const StyledFormField = styled.div`
+  position: relative;
+
   label {
     display: block;
     margin-bottom: 5px;
@@ -101,6 +103,9 @@ export const StyledFormField = styled.div`
   }
 
   .error {
+    position: absolute;
+    bottom: -16px;
+    right: 0;
     color: red;
     font-size: 14px;
   }
@@ -116,6 +121,7 @@ export const StyledButton = styled.button`
   color: #fff;
   border: none;
   border-radius: 5px;
+  margin-top: 10px;
   cursor: pointer;
   transition: var(--main-transition);
 

@@ -2,10 +2,11 @@ import { CartItem } from 'components/CartItem/CartItem';
 import { useSelector } from 'react-redux';
 import { selectCartProducts } from 'redux/cart/selectors.js';
 import {
-  PayButton,
+  TextEmptyCart,
   Wrapper,
   PricePayWrapper,
   TotalPrice,
+  PayButton,
 } from './Cart.styled.jsx';
 import { Link } from 'react-router-dom';
 import { useAuth } from 'components/hooks/useAuth.js';
@@ -24,11 +25,16 @@ export const Cart = () => {
 
   return (
     <>
-      <Wrapper>
-        {products.map(product => (
-          <CartItem key={product._id} bouquet={product} />
-        ))}
-      </Wrapper>
+      {products.length === 0 ? (
+        <TextEmptyCart>Your cart is empty</TextEmptyCart>
+      ) : (
+        <Wrapper>
+          {products.map(product => (
+            <CartItem key={product._id} bouquet={product} />
+          ))}
+        </Wrapper>
+      )}
+
       <PricePayWrapper>
         <TotalPrice>Total price: {calculateTotal()} eur</TotalPrice>
         {isLoggedIn ? (

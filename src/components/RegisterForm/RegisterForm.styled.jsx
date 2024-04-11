@@ -18,13 +18,17 @@ export const BackDrop = styled.div`
 export const Modal = styled.div`
   position: absolute;
   z-index: 20px;
-  width: 400px;
+  width: 340px;
   border: 1px solid var(--main-green-color);
   border-radius: 8px;
   background-color: #f7f7f7;
 
   @media screen and (min-width: 320px) and (max-width: 375px) {
     width: 90%;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 400px;
   }
 `;
 
@@ -42,34 +46,45 @@ export const CloseIcon = styled(IoClose)`
   cursor: pointer;
 `;
 
-export const InputWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 30px;
-`;
 export const StyledTitle = styled.h2`
   text-align: center;
-`;
-export const StyledInput = styled(Field)`
-  width: 300px;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-sizing: border-box;
-`;
-
-export const ErrorMessageStyled = styled(ErrorMessage)`
-  color: red;
+  margin-bottom: 20px;
 `;
 
 export const StyledForm = styled(Form)`
-  width: 300px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+`;
+
+export const StyledLabel = styled.label`
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+`;
+
+export const StyledInput = styled(Field)`
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 20px;
+
+  @media screen and (min-width: 320px) and (max-width: 375px) {
+    width: 90%;
+  }
+`;
+
+export const ErrorMessageStyled = styled(ErrorMessage)`
+  position: absolute;
+  bottom: 4px;
+  left: 5%;
+  font-size: 13px;
+  color: red;
 `;
 
 export const StyledButton = styled.button`
@@ -87,10 +102,4 @@ export const StyledButton = styled.button`
   &:hover {
     background-color: var(--main-pink-color);
   }
-`;
-
-export const StyledMessage = styled.p`
-  font-size: 14px;
-  font-weight: 600;
-  margin-top: 10px;
 `;

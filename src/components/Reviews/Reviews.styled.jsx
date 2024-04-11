@@ -39,9 +39,14 @@ export const CustomSlider = styled(Slider)`
     color: #556b2f;
     font-size: 12px;
   }
+
+  .slick-dots li.slick-active button:before {
+    color: #556b2f;
+  }
 `;
 
 export const Slide = styled.div`
+  position: relative;
   width: 200px;
   height: 350px;
   background-color: #e6b8ca;
@@ -54,7 +59,7 @@ export const Wrapper = styled.div`
 `;
 
 export const Name = styled.h3`
-  font-size: 26px;
+  font-size: 22px;
   font-weight: 700;
   padding: 10px 20px;
   color: #fff;
@@ -64,11 +69,15 @@ export const Name = styled.h3`
 export const Text = styled.p`
   font-size: 18px;
   font-weight: 400;
+  line-height: 1.3;
   color: var(--main-dark-text-color);
   padding: 20px;
 `;
 
 export const StarList = styled.ul`
+  position: absolute;
+  bottom: 30px;
+  left: 0;
   display: flex;
   gap: 8px;
   padding-left: 20px;

@@ -9,6 +9,7 @@ export const StyledForm = styled(Form)`
 
 export const StyledFormField = styled.div`
   margin-bottom: 20px;
+  position: relative;
 
   label {
     display: block;
@@ -25,6 +26,9 @@ export const StyledFormField = styled.div`
   }
 
   .error {
+    position: absolute;
+    bottom: -16px;
+    right: 8px;
     color: red;
     font-size: 14px;
   }

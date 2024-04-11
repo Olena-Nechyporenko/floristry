@@ -4,18 +4,16 @@ import styled from 'styled-components';
 
 export const FilterWrapper = styled.div`
   display: flex;
-  justify-content: flex-end;
   flex-wrap: wrap;
   background-color: #f7f7f7;
   border-radius: 8px;
   padding: 10px 20px;
-  margin: 20px 0;
+  margin-bottom: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 
   @media screen and (min-width: 1200px) {
-    justify-content: flex-start;
     padding: 20px;
-    margin: 50px 0;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 50px;
   }
 `;
 export const FilterIconWrapper = styled.div`

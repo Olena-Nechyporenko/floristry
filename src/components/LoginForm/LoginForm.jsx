@@ -9,11 +9,13 @@ import {
   ModalContainer,
   CloseIcon,
   StyledForm,
+  StyledLabel,
   StyledInput,
   ErrorMessageStyled,
   InputWrapper,
   StyledTitle,
-  StyledButton,
+  StyledLoginButton,
+  StyledRegisterButton,
   StyledText,
 } from './LoginForm.styled';
 import RegisterModal from 'components/RegisterForm/RegisterForm';
@@ -81,34 +83,36 @@ const LoginModal = ({ onLoginClose }) => {
               >
                 {({ handleSubmit }) => (
                   <StyledForm onSubmit={handleSubmit} autoComplete="off">
-                    <StyledInput
-                      type="email"
-                      name="email"
-                      placeholder="Email"
-                    />
-                    <ErrorMessageStyled name="email" component="div" />
-                    <StyledInput
-                      type="password"
-                      name="password"
-                      placeholder="Password"
-                    />
-                    <ErrorMessageStyled name="password" component="div" />
-                    <StyledButton
+                    <StyledLabel htmlFor="email">
+                      <StyledInput
+                        type="email"
+                        name="email"
+                        placeholder="Email"
+                      />
+                      <ErrorMessageStyled name="email" component="div" />
+                    </StyledLabel>
+                    <StyledLabel htmlFor="firstName">
+                      <StyledInput
+                        type="password"
+                        name="password"
+                        placeholder="Password"
+                      />
+                      <ErrorMessageStyled name="password" component="div" />
+                    </StyledLabel>
+                    <StyledLoginButton
                       type="submit"
                       variant="contained"
                       color="primary"
                     >
                       Log In
-                    </StyledButton>
-                    <StyledText>
-                      If you don't have an account yet please{' '}
-                    </StyledText>
+                    </StyledLoginButton>
                   </StyledForm>
                 )}
               </Formik>
-              <StyledButton type="button" onClick={openRegisterModal}>
+              <StyledText>If you don't have an account yet please </StyledText>
+              <StyledRegisterButton type="button" onClick={openRegisterModal}>
                 Sign up
-              </StyledButton>
+              </StyledRegisterButton>
             </InputWrapper>
           </ModalContainer>
         </Modal>

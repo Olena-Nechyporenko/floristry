@@ -109,6 +109,7 @@ export const WeddingForm = () => {
                   <div className="error">{errors.firstName}</div>
                 )}
               </StyledFormField>
+
               <StyledFormField>
                 <label htmlFor="lastName">Last Name</label>
                 <Field name="lastName" />

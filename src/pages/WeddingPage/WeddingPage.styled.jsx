@@ -4,12 +4,7 @@ import img1 from '../../images/wedding-bouquet.jpg';
 import img2 from '../../images/wedd.jpg';
 
 export const WeddingHero = styled.section`
-  padding-top: 40px;
   height: 400px;
-
-  @media screen and (min-width: 1200px) {
-    padding-top: 60px;
-  }
 `;
 
 export const CustomSlider = styled(Slider)`
@@ -105,6 +100,7 @@ export const Title = styled.h1`
   font-family: 'Praise', sans-serif;
   font-size: 60px;
   font-weight: 400;
+  line-height: 1.3;
   text-align: center;
   color: white;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);

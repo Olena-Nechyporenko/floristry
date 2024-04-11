@@ -13,11 +13,11 @@ export default function Orders() {
   }, [dispatch]);
 
   const orders = useSelector(selectAllOrders);
-  console.log(orders);
 
   return (
     <StyledList>
-      {orders.length > 0 && orders.map(order => <OrderItem />)}
+      {orders.length > 0 &&
+        orders.map(order => <OrderItem key={order._id} orders={order} />)}
     </StyledList>
   );
 }

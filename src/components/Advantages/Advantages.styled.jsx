@@ -55,6 +55,7 @@ export const DescrTitle = styled.h2`
 export const Text = styled.p`
   font-size: 18px;
   font-weight: 400;
+  line-height: 1.3;
   text-align: center;
   padding: 0 10px;
 
@@ -69,8 +70,6 @@ export const Text = styled.p`
 `;
 
 export const ImageWrapperRight = styled.div`
-  /* background-image: url();
-  background-size: cover; */
   width: 100%;
   height: 400px;
   overflow: hidden;
@@ -88,8 +87,6 @@ export const ImageWrapperRight = styled.div`
 `;
 
 export const ImageWrapperLeft = styled.div`
-  /* background-image: url();
-  background-size: cover; */
   width: 100%;
   height: 400px;
   overflow: hidden;

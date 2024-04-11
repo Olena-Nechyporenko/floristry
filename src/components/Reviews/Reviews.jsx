@@ -48,11 +48,10 @@ export const Reviews = () => {
       <CustomSlider {...settings}>
         <Slide>
           <Wrapper>
-            <Name>Olena</Name>
+            <Name>Jessica Davis</Name>
             <Text>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo
-              dicta fugit nisi odio pariatur reiciendis, in enim dolores magni
-              id!
+              I'm very pleased with my order from this store! The bouquet was
+              incredibly beautiful and fresh. Delivery was fast and hassle-free!
             </Text>
           </Wrapper>
           <StarList>
@@ -65,11 +64,11 @@ export const Reviews = () => {
         </Slide>
         <Slide>
           <Wrapper>
-            <Name>Olena</Name>
+            <Name>Sarah Wilson</Name>
             <Text>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo
-              dicta fugit nisi odio pariatur reiciendis, in enim dolores magni
-              id!
+              Fantastic selection of flowers and bouquets to suit every taste!
+              I've ordered several times already, and each time I received
+              impeccable service and stunning flower quality.!
             </Text>
           </Wrapper>
           <StarList>
@@ -82,11 +81,11 @@ export const Reviews = () => {
         </Slide>
         <Slide>
           <Wrapper>
-            <Name>Olena</Name>
+            <Name>Jennifer Martinez</Name>
             <Text>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo
-              dicta fugit nisi odio pariatur reiciendis, in enim dolores magni
-              id!
+              I wholeheartedly recommend this store! They always pay attention
+              to every detail, and their bouquets always make an impression.
+              Many thanks for the excellent service.
             </Text>
           </Wrapper>
           <StarList>
@@ -99,11 +98,11 @@ export const Reviews = () => {
         </Slide>
         <Slide>
           <Wrapper>
-            <Name>Olena</Name>
+            <Name>Elizabeth Thompson</Name>
             <Text>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo
-              dicta fugit nisi odio pariatur reiciendis, in enim dolores magni
-              id!
+              It's very convenient to order flowers online from this store. You
+              can always choose the perfect bouquet for any occasion. Many
+              thanks for the wonderful shopping experience!
             </Text>
           </Wrapper>
           <StarList>
@@ -116,11 +115,11 @@ export const Reviews = () => {
         </Slide>
         <Slide>
           <Wrapper>
-            <Name>Olena</Name>
+            <Name>Michael Williams</Name>
             <Text>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo
-              dicta fugit nisi odio pariatur reiciendis, in enim dolores magni
-              id!
+              My bouquet was incredibly beautiful! It exactly matched the photos
+              on the website, and even exceeded them in reality. Very grateful
+              for the excellent selection and quality of flowers.
             </Text>
           </Wrapper>
           <StarList>
@@ -133,11 +132,12 @@ export const Reviews = () => {
         </Slide>
         <Slide>
           <Wrapper>
-            <Name>Olena</Name>
+            <Name>William Taylor</Name>
             <Text>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo
-              dicta fugit nisi odio pariatur reiciendis, in enim dolores magni
-              id!
+              A big thank you to the team of this store for the quality flowers
+              and excellent delivery service. You can always count on them in
+              the toughest moments. I will definitely be ordering from them
+              again!
             </Text>
           </Wrapper>
           <StarList>

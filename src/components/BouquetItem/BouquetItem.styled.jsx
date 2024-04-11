@@ -10,6 +10,7 @@ export const BouquetWrapper = styled.li`
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   padding: 10px;
+  width: 90%;
 
   @media (min-width: 768px) {
     flex-basis: calc((100% - 168px) / 2);

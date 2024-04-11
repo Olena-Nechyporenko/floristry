@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-export const BouquetWrapper = styled.div`
+export const BouquetWrapper = styled.li`
   position: relative;
   border: 1px solid #e6b8ca;
   display: flex;

@@ -10,12 +10,14 @@ export const FilterWrapper = styled.div`
   padding: 10px 20px;
   margin-bottom: 20px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 
   @media screen and (min-width: 1200px) {
     padding: 20px;
     margin-bottom: 50px;
   }
 `;
+
 export const FilterIconWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -32,6 +34,7 @@ export const FilterButton = styled.button`
   height: 30px;
   border: none;
   background-color: transparent;
+  cursor: pointer;
 `;
 
 export const FilterIcon = styled(VscFilter)`
@@ -54,7 +57,7 @@ export const SubmitButton = styled.button`
   padding: 10px 15px;
   height: 50px;
   background-color: var(--main-green-color);
-  color: #fff;
+  color: var(--main-light-text-color);
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -76,19 +79,21 @@ export const FormGroup = styled.div`
 
   select {
     width: 100%;
+    overflow-y: auto;
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 5px;
     outline: none;
   }
 `;
+
 export const ResetButton = styled.button`
   font-family: inherit;
   font-weight: 400;
   padding: 10px 15px;
   height: 50px;
   background-color: var(--main-green-color);
-  color: #fff;
+  color: var(--main-light-text-color);
   border: none;
   border-radius: 5px;
   cursor: pointer;

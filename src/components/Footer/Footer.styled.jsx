@@ -108,7 +108,7 @@ export const IconWrapper = styled.span`
 export const LocationIcon = styled(FaLocationDot)`
   width: 16px;
   height: 16px;
-  fill: #556b2f;
+  fill: var(--main-green-color);
 
   @media screen and (min-width: 1200px) {
     width: 30px;
@@ -119,7 +119,7 @@ export const LocationIcon = styled(FaLocationDot)`
 export const EmailIcon = styled(MdEmail)`
   width: 16px;
   height: 16px;
-  fill: #556b2f;
+  fill: var(--main-green-color);
 
   @media screen and (min-width: 1200px) {
     width: 30px;
@@ -130,7 +130,7 @@ export const EmailIcon = styled(MdEmail)`
 export const PhoneIcon = styled(FaPhoneAlt)`
   width: 16px;
   height: 16px;
-  fill: #556b2f;
+  fill: var(--main-green-color);
 
   @media screen and (min-width: 1200px) {
     width: 30px;
@@ -176,7 +176,7 @@ export const SocialIconsItem = styled.li`
 export const InstagramIcon = styled(PiInstagramLogoFill)`
   width: 26px;
   height: 26px;
-  fill: #556b2f;
+  fill: var(--main-green-color);
 
   @media screen and (min-width: 1200px) {
     width: 30px;
@@ -187,7 +187,7 @@ export const InstagramIcon = styled(PiInstagramLogoFill)`
 export const FacebookIcon = styled(FaFacebookF)`
   width: 22px;
   height: 22px;
-  fill: #556b2f;
+  fill: var(--main-green-color);
 
   @media screen and (min-width: 1200px) {
     width: 26px;
@@ -198,7 +198,7 @@ export const FacebookIcon = styled(FaFacebookF)`
 export const TelegramIcon = styled(FaTelegramPlane)`
   width: 26px;
   height: 26px;
-  fill: #556b2f;
+  fill: var(--main-green-color);
 
   @media screen and (min-width: 1200px) {
     width: 30px;

@@ -8,17 +8,19 @@ export const TextEmptyCart = styled.div`
   font-size: 36px;
   font-weight: 500;
   color: rgba(22, 22, 22, 0.7);
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
   margin-bottom: 20px;
 `;
 
-export const Wrapper = styled.ul`
+export const CartProductsList = styled.ul`
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   gap: 30px;
-  margin: 30px auto;
+  padding: 20px 0 30px;
 
   @media (min-width: 768px) {
     flex-direction: row;

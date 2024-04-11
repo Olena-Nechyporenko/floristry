@@ -92,7 +92,7 @@ export const WeddingForm = () => {
       <FormWrapper>
         <Text>
           After sending your contact details, our consultant will contact you as
-          soon as possible. Thank you for choosing Bouquet Delivery!
+          soon as possible. Thank you for choosing Floristic Paradise!
         </Text>
 
         <Formik

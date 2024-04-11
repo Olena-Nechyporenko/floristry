@@ -35,7 +35,7 @@ export const StyledImg = styled.img`
 `;
 
 export const StyledTitle = styled.h2`
-  color: #e6b8ca;
+  color: var(--main-pink-color);
   text-align: center;
   font-weight: 500;
 `;
@@ -50,7 +50,7 @@ export const StyledPrice = styled.p`
   position: absolute;
   top: 10px;
   right: 10px;
-  background-color: #e6b8ca;
+  background-color: var(--main-pink-color);
   border-radius: 50%;
   width: 40px;
   height: 40px;
@@ -70,15 +70,16 @@ export const Button = styled.button`
   font-family: inherit;
   font-weight: 400;
   padding: 10px 20px;
-  background-color: #556b2f;
-  color: white;
+  background-color: var(--main-green-color);
+  color: var(--main-light-text-color);
   border: none;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
   margin-top: 20px;
+
   &:hover {
-    background-color: #e6b8ca;
+    background-color: var(--main-pink-color);
   }
 
   &:focus {

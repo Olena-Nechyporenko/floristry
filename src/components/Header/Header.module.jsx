@@ -5,15 +5,10 @@ import { RxHamburgerMenu } from 'react-icons/rx';
 
 export const LinkNavHome = styled(NavLink)`
   font-family: 'Praise', sans-serif;
-
   display: block;
   font-size: 25px;
-  color: white;
+  color: var(--main-light-text-color);
   padding: 20px 0;
-
-  // &.active {
-  //   color: var(--main-pink-color);
-  // }
 `;
 
 export const HeaderWrapper = styled.header`
@@ -25,7 +20,7 @@ export const HeaderWrapper = styled.header`
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid var(--main-pink-color);
-  background-color: #556b2f;
+  background-color: var(--main-green-color);
   width: 350px;
   padding: 0 15px;
 
@@ -52,9 +47,15 @@ export const NavList = styled.ul`
 export const LinkNav = styled(NavLink)`
   display: block;
   font-size: 18px;
-  // font-weight: 600;
-  color: white;
+  color: var(--main-light-text-color);
   padding: 20px 0;
+  cursor: pointer;
+
+  transition: all var(--main-transition);
+
+  &:hover {
+    color: var(--main-pink-color);
+  }
 
   &.active {
     color: var(--main-pink-color);
@@ -64,14 +65,19 @@ export const LinkNav = styled(NavLink)`
 export const AnchorLink = styled(Link)`
   display: block;
   font-size: 18px;
-  // font-weight: 600;
+  color: var(--main-light-text-color);
   padding: 20px 0;
   cursor: pointer;
-  color: white;
+
+  transition: all var(--main-transition);
+
+  &:hover {
+    color: var(--main-pink-color);
+  }
 `;
 
 export const CartIcon = styled(BsCart3)`
-  fill: black;
+  fill: var(--main-dark-text-color);
   width: 25px;
   height: 25px;
 `;
@@ -87,7 +93,7 @@ export const MobileNavList = styled(NavList)`
 `;
 
 export const BurgerIcon = styled(RxHamburgerMenu)`
-  fill: white;
+  fill: var(--main-light-text-color);
   width: 25px;
   height: 25px;
   cursor: pointer;

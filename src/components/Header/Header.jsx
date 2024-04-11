@@ -38,7 +38,7 @@ export const Header = () => {
   return (
     <>
       <HeaderWrapper>
-        <LinkNavHome to="/">Bouquet delivery</LinkNavHome>
+        <LinkNavHome to="/">Floristic Paradise</LinkNavHome>
 
         <nav>
           <NavList>

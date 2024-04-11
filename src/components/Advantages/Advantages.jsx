@@ -1,3 +1,7 @@
+import firstImg from '../../images/wide-3.jpg';
+import secondImg from '../../images/high-2.jpg';
+import thirdImg from '../../images/wide-1.jpg';
+import fourthImg from '../../images/consultation-1.jpg';
 import {
   AdvantagesSection,
   List,
@@ -9,10 +13,6 @@ import {
   ImageWrapperRight,
   ImageWrapperLeft,
 } from './Advantages.styled';
-import firstimg from '../../images/wide-3.jpg';
-import secondimg from '../../images/high-2.jpg';
-import thirdimg from '../../images/wide-1.jpg';
-import fourthimg from '../../images/consultation-1.jpg';
 
 export const Advantages = () => {
   return (
@@ -27,12 +27,12 @@ export const Advantages = () => {
             </Text>
           </DescriptionWrapper>
           <ImageWrapperRight>
-            <Img src={firstimg} alt="" />
+            <Img src={firstImg} alt="Wide assortment" />
           </ImageWrapperRight>
         </Item>
         <Item>
           <ImageWrapperLeft>
-            <Img src={secondimg} alt="" />
+            <Img src={secondImg} alt="High quality" />
           </ImageWrapperLeft>
           <DescriptionWrapper>
             <DescrTitle>High quality</DescrTitle>
@@ -51,12 +51,12 @@ export const Advantages = () => {
             </Text>
           </DescriptionWrapper>
           <ImageWrapperRight>
-            <Img src={thirdimg} alt="" />
+            <Img src={thirdImg} alt="Creative arrangement" />
           </ImageWrapperRight>
         </Item>
         <Item>
           <ImageWrapperLeft>
-            <Img src={fourthimg} alt="" />
+            <Img src={fourthImg} alt="Professional consultation" />
           </ImageWrapperLeft>
           <DescriptionWrapper>
             <DescrTitle>Professional consultation</DescrTitle>

@@ -47,8 +47,8 @@ export const Filters = ({ onFilter, filters, onReset }) => {
   return (
     <>
       <FilterWrapper>
-        <FilterIconWrapper>
-          <FilterButton onClick={handleOpenModal}>
+        <FilterIconWrapper onClick={handleOpenModal}>
+          <FilterButton>
             <FilterIcon />
           </FilterButton>
           Filters

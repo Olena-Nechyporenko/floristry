@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import { selectCartProducts } from 'redux/cart/selectors.js';
 import {
   TextEmptyCart,
-  Wrapper,
+  CartProductsList,
   PricePayWrapper,
   TotalPrice,
   PayButton,
@@ -28,11 +28,11 @@ export const Cart = () => {
       {products.length === 0 ? (
         <TextEmptyCart>Your cart is empty</TextEmptyCart>
       ) : (
-        <Wrapper>
+        <CartProductsList>
           {products.map(product => (
             <CartItem key={product._id} bouquet={product} />
           ))}
-        </Wrapper>
+        </CartProductsList>
       )}
 
       <PricePayWrapper>

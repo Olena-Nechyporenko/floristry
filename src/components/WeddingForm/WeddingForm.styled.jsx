@@ -93,13 +93,17 @@ export const StyledFormField = styled.div`
     margin-bottom: 5px;
   }
 
-  input,
-  select {
+  input {
     width: 200px;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
+  }
+
+  input:focus {
+    outline: none;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 4px;
   }
 
   .error {

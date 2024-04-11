@@ -78,7 +78,7 @@ export const SubmitButton = styled.button`
   padding: 10px 15px;
   height: 50px;
   background-color: var(--main-green-color);
-  color: #fff;
+  color: var(--main-light-text-color);
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -90,7 +90,7 @@ export const ResetButton = styled.button`
   padding: 10px 15px;
   height: 50px;
   background-color: var(--main-green-color);
-  color: #fff;
+  color: var(--main-light-text-color);
   border: none;
   border-radius: 5px;
   cursor: pointer;

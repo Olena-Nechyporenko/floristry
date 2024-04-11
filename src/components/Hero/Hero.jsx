@@ -29,7 +29,7 @@ export const Hero = () => {
       <CustomSlider {...settings}>
         <Slide1>
           <TitleWrapper>
-            <Title>Bouquet delivery</Title>
+            <Title>Floristic Paradise</Title>
             <Text>
               We provide convenient and thoughtful service that allows you to
               send beautifully arranged flowers to your loved ones with ease.
@@ -39,7 +39,7 @@ export const Hero = () => {
         </Slide1>
         <Slide2>
           <TitleWrapper>
-            <Title>Bouquet delivery</Title>
+            <Title>Floristic Paradise</Title>
             <Text>
               Let us help you brighten someone's day with the timeless beauty of
               flowers, delivered right to their doorstep.
@@ -49,7 +49,7 @@ export const Hero = () => {
         </Slide2>
         <Slide3>
           <TitleWrapper>
-            <Title>Bouquet delivery</Title>
+            <Title>Floristic Paradise</Title>
             <Text>
               Let us help you create unforgettable moments and lasting memories
               with the enchanting beauty of floral decor for your special

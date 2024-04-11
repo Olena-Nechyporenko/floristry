@@ -1,7 +1,8 @@
 import styled from 'styled-components';
+
 export const BouquetWrapper = styled.li`
   position: relative;
-  border: 1px solid #e6b8ca;
+  border: 1px solid var(--main-pink-color);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -9,15 +10,14 @@ export const BouquetWrapper = styled.li`
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   padding: 10px;
+  width: 90%;
 
   @media (min-width: 768px) {
     flex-basis: calc((100% - 168px) / 2);
-    margin-bottom: 20px;
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: 1200px) {
     flex-basis: calc((100% - 240px) / 4);
-    margin-bottom: 20px;
   }
 `;
 export const ImgWrapper = styled.div`
@@ -33,7 +33,7 @@ export const StyledImg = styled.img`
 `;
 
 export const StyledTitle = styled.h2`
-  color: #e6b8ca;
+  color: var(--main-pink-color);
   text-align: center;
 `;
 
@@ -47,7 +47,7 @@ export const StyledPrice = styled.p`
   position: absolute;
   top: 10px;
   right: 10px;
-  background-color: #e6b8ca;
+  background-color: var(--main-pink-color);
   border-radius: 50%;
   width: 40px;
   height: 40px;
@@ -66,8 +66,8 @@ export const StyledDescription = styled.p`
 export const Button = styled.button`
   font-family: inherit;
   font-weight: 400;
-  background-color: #556b2f;
-  color: white;
+  background-color: var(--main-green-color);
+  color: var(--main-light-text-color);
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
@@ -75,7 +75,7 @@ export const Button = styled.button`
   transition: background-color 0.3s;
   margin-top: 20px;
   &:hover {
-    background-color: #e6b8ca;
+    background-color: var(--main-pink-color);
   }
 
   &:focus {
@@ -89,7 +89,7 @@ export const QuantityInput = styled.input`
   border: 1px solid #ccc;
   border-radius: 5px;
   text-align: center;
-  background-color: #e6b8ca;
+  background-color: var(--main-pink-color);
   margin-top: 15px;
 `;
 export const ButtonWrapper = styled.div`

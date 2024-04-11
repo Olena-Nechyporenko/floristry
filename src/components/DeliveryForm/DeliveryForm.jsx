@@ -3,15 +3,15 @@ import axios from 'axios';
 import Notiflix from 'notiflix';
 import { Formik, Field } from 'formik';
 import * as Yup from 'yup';
+import { useDispatch, useSelector } from 'react-redux';
+import { selectCartProducts } from 'redux/cart/selectors';
+import { loadStripe } from '@stripe/stripe-js';
+import { addToOrder } from 'redux/orders/ordersSlice';
 import {
   StyledButton,
   StyledForm,
   StyledFormField,
 } from './DeliveryForm.styled';
-import { useDispatch, useSelector } from 'react-redux';
-import { selectCartProducts } from 'redux/cart/selectors';
-import { loadStripe } from '@stripe/stripe-js';
-import { addToOrder } from 'redux/orders/ordersSlice';
 
 const notiflixShowOptions = {
   width: '340px',
@@ -68,6 +68,7 @@ export const PaymentForm = () => {
                 product_data: {
                   name: item.name,
                   description: item.description,
+                  images: [item.url],
                 },
                 unit_amount: item.price * 100,
               },

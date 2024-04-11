@@ -14,14 +14,14 @@ export const StyledLink = styled(NavLink)`
   display: inline-block;
   text-decoration: none;
   font-weight: 700;
-  color: white;
+  color: var(--main-light-text-color);
 `;
 export const StyledIcon = styled(IoPersonSharp)`
-  color: var(--main-green-color);
   font-size: 40px;
   border-radius: 50%;
+  color: var(--main-green-color);
   padding: 10px;
-  transition: color var(--main-transition);
+  transition: all var(--main-transition);
 
   &:hover {
     color: var(--main-pink-color);

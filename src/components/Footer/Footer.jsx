@@ -104,7 +104,7 @@ export const Footer = () => {
             <ContactInfoWrapper>
               Email :
               <ContactInfo href="mailto:bouquets@gmail.com">
-                bouquets@gmail.com
+                paradise@gmail.com
               </ContactInfo>
             </ContactInfoWrapper>
           </Item>
@@ -114,7 +114,9 @@ export const Footer = () => {
             </IconWrapper>
             <ContactInfoWrapper>
               Phone :
-              <ContactInfo href="tel:+3800011111">+380 00 11 111</ContactInfo>
+              <ContactInfo href="tel:+3800011111">
+                +380 98 11 11 110
+              </ContactInfo>
             </ContactInfoWrapper>
           </Item>
         </ContactList>

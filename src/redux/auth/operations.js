@@ -17,7 +17,7 @@ export const register = createAsyncThunk(
   async (credentials, thunkAPI) => {
     try {
       const res = await axios.post('auth/signup', credentials);
-      console.log(res.data);
+      console.log(res.data.token);
       Notiflix.Notify.success('Please, verify your email');
       setAuthHeader(res.data.token);
 

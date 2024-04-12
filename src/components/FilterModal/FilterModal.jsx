@@ -66,6 +66,7 @@ export const FilterModal = ({ onClose }) => {
         bouquetType: values.bouquetType,
       })
     );
+    onClose();
   };
 
   const resetFilters = () => {

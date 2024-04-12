@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { getCurrent, register } from 'redux/auth/operations';
+import Notiflix from 'notiflix';
 import * as Yup from 'yup';
 import {
   BackDrop,
@@ -15,6 +16,19 @@ import {
   StyledTitle,
 } from './RegisterForm.styled';
 import { Formik } from 'formik';
+
+const notiflixReportOptions = {
+  svgSize: '60px',
+  messageFontSize: '18px',
+  buttonFontSize: '16px',
+  width: '300px',
+  success: {
+    backOverlayColor: 'rgba(177, 177, 177, 0.5)',
+    messageColor: '#161616',
+    buttonBackground: '#556b2f',
+    buttonColor: '#fff',
+  },
+};
 
 const initialValues = { email: '', password: '' };
 
@@ -52,8 +66,13 @@ const RegisterModal = ({ onClose }) => {
       await dispatch(register(values));
       await dispatch(getCurrent);
       resetForm();
-
       onClose();
+      Notiflix.Report.success(
+        '',
+        'We have sent you an email',
+        'OK',
+        notiflixReportOptions
+      );
     } catch (error) {
       console.error('Registration error:', error);
     }

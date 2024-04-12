@@ -1,13 +1,13 @@
 import styled from 'styled-components';
-import img1 from '../../images/wedding-bouquet-background.jpg';
-import img2 from '../../images/florist.jpg';
-import img3 from '../../images/flower-shop.jpg';
+import img1 from '../../images/home-hero-1.jpg';
+import img2 from '../../images/home-hero-2.jpg';
+import img3 from '../../images/home-hero-3.jpg';
 import Slider from 'react-slick';
 import { Link } from 'react-router-dom';
 
 export const HeroSection = styled.section`
   height: 400px;
-  background-color: white;
+  background-color: var(--main-green-color);
 `;
 
 export const CustomSlider = styled(Slider)`
@@ -83,7 +83,7 @@ export const Title = styled.h1`
   font-size: 60px;
   text-align: center;
   font-weight: 400;
-  color: white;
+  color: var(--main-light-text-color);
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 `;
 
@@ -92,7 +92,7 @@ export const Text = styled.p`
   font-weight: 500;
   line-height: 1.3;
   text-align: center;
-  color: white;
+  color: var(--main-light-text-color);
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
   padding: 0 10px;
 `;
@@ -102,7 +102,7 @@ export const OrderButton = styled(Link)`
   font-size: 18px;
   text-align: center;
   background-color: var(--main-green-color);
-  color: #fff;
+  color: var(--main-light-text-color);
   border: none;
   border-radius: 5px;
   padding: 10px 20px;

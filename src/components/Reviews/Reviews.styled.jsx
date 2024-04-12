@@ -36,12 +36,12 @@ export const CustomSlider = styled(Slider)`
   }
 
   .slick-dots li button:before {
-    color: #556b2f;
+    color: var(--main-green-color);
     font-size: 12px;
   }
 
   .slick-dots li.slick-active button:before {
-    color: #556b2f;
+    color: var(--main-green-color);
   }
 `;
 
@@ -49,7 +49,7 @@ export const Slide = styled.div`
   position: relative;
   width: 200px;
   height: 350px;
-  background-color: #e6b8ca;
+  background-color: var(--main-pink-color);
   border-radius: 10%;
   overflow: hidden;
 `;
@@ -62,8 +62,8 @@ export const Name = styled.h3`
   font-size: 22px;
   font-weight: 700;
   padding: 10px 20px;
-  color: #fff;
-  background-color: #556b2f;
+  color: var(--main-light-text-color);
+  background-color: var(--main-green-color);
 `;
 
 export const Text = styled.p`

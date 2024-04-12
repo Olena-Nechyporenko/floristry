@@ -4,7 +4,7 @@ import { Container } from './Layout.styled';
 import { Header } from 'components/Header/Header';
 import { Footer } from 'components/Footer/Footer';
 import { Loader } from 'components/Loader/Loader';
-import { useAuth } from 'components/hooks/useAuth';
+import { useAuth } from 'hooks/useAuth';
 import { UserMenu } from 'components/UserMenu/UserMenu';
 
 import { AuthNav } from 'components/AuthNav/AuthNav';

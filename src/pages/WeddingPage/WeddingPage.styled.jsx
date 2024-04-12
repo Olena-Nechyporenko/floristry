@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 import Slider from 'react-slick';
-import img1 from '../../images/wedding-bouquet.jpg';
-import img2 from '../../images/wedd.jpg';
+import img1 from '../../images/wedding-hero-1.jpg';
+import img2 from '../../images/wedding-hero-2.jpg';
 
 export const WeddingHero = styled.section`
   height: 400px;
+  background-color: var(--main-green-color);
 `;
 
 export const CustomSlider = styled(Slider)`

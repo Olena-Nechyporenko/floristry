@@ -15,7 +15,7 @@ import { bouquetsReducer } from './bouquets/bouquetSlice.js';
 import { authReducer } from './auth/slice.js';
 import { ordersReducer } from './orders/ordersSlice.js';
 
-const persistConfig = {
+const cartPersistConfig = {
   key: 'root',
   storage,
   whitelist: ['products', 'currentOrder'],
@@ -33,15 +33,10 @@ const authPersistConfig = {
   whitelist: ['token'],
 };
 
-const persistedContactsReducer = persistReducer(
-  persistConfig,
-  cartProductsReducer
-);
-
 export const store = configureStore({
   reducer: {
     auth: persistReducer(authPersistConfig, authReducer),
-    cartProducts: persistedContactsReducer,
+    cartProducts: persistReducer(cartPersistConfig, cartProductsReducer),
     bouquets: bouquetsReducer,
     orders: persistReducer(orderPersistConfig, ordersReducer),
   },

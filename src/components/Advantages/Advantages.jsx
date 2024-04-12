@@ -1,7 +1,7 @@
-import firstImg from '../../images/wide-3.jpg';
-import secondImg from '../../images/high-2.jpg';
-import thirdImg from '../../images/wide-1.jpg';
-import fourthImg from '../../images/consultation-1.jpg';
+import firstImg from '../../images/wide-assortment.jpg';
+import secondImg from '../../images/high-quality.jpg';
+import thirdImg from '../../images/creative-arrangement.jpg';
+import fourthImg from '../../images/professional-consultation.jpg';
 import {
   AdvantagesSection,
   List,

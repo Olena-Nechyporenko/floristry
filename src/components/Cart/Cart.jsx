@@ -9,7 +9,7 @@ import {
   PayButton,
 } from './Cart.styled.jsx';
 import { Link } from 'react-router-dom';
-import { useAuth } from 'components/hooks/useAuth.js';
+import { useAuth } from 'hooks/useAuth.js';
 import Notiflix from 'notiflix';
 
 export const Cart = () => {

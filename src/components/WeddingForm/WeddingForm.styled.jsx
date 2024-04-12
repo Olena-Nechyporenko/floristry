@@ -110,7 +110,7 @@ export const StyledFormField = styled.div`
     position: absolute;
     bottom: -16px;
     right: 0;
-    color: red;
+    color: #ff0000;
     font-size: 14px;
   }
 `;
@@ -122,12 +122,12 @@ export const StyledButton = styled.button`
   width: 140px;
   height: 50px;
   background-color: var(--main-green-color);
-  color: #fff;
+  color: var(--main-light-text-color);
   border: none;
   border-radius: 5px;
   margin-top: 10px;
   cursor: pointer;
-  transition: var(--main-transition);
+  transition: all var(--main-transition);
 
   &:hover {
     background-color: var(--main-pink-color);

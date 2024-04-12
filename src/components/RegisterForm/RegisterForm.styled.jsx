@@ -84,14 +84,14 @@ export const ErrorMessageStyled = styled(ErrorMessage)`
   bottom: 4px;
   left: 5%;
   font-size: 13px;
-  color: red;
+  color: #ff0000;
 `;
 
 export const StyledButton = styled.button`
   padding: 10px 20px;
   text-align: center;
   background-color: var(--main-green-color);
-  color: #fff;
+  color: var(--main-light-text-color);
   border: none;
   border-radius: 5px;
   cursor: pointer;

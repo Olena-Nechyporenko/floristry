@@ -17,12 +17,12 @@ export const StyledButton = styled.button`
   font-size: 15px;
   text-align: center;
   background-color: var(--main-green-color);
-  color: #fff;
+  color: var(--main-light-text-color);
   border: none;
   border-radius: 5px;
   padding: 10px 20px;
   cursor: pointer;
-  transition: var(--main-transition);
+  transition: all var(--main-transition);
 
   &:hover {
     background-color: var(--main-pink-color);

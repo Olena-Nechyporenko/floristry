@@ -28,6 +28,19 @@ export const register = createAsyncThunk(
   }
 );
 
+export const statusVerify = createAsyncThunk(
+  'auth/statusVerify',
+  async (userId, thunkAPI) => {
+    try {
+      const res = await axios.get(`/api/auth/verifyStatus/${userId}`);
+      console.log(res.data);
+      return res.data;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.message);
+    }
+  }
+);
+
 export const logIn = createAsyncThunk(
   'auth/login',
   async (credentials, thunkAPI) => {

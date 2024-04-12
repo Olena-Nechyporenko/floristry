@@ -1,4 +1,4 @@
-import { Suspense } from 'react';
+import { Suspense, useEffect } from 'react';
 import { Outlet } from 'react-router-dom';
 import { Container } from './Layout.styled';
 import { Header } from 'components/Header/Header';
@@ -8,8 +8,30 @@ import { useAuth } from 'components/hooks/useAuth';
 import { UserMenu } from 'components/UserMenu/UserMenu';
 
 import { AuthNav } from 'components/AuthNav/AuthNav';
+import { getCurrent, logIn, statusVerify } from 'redux/auth/operations';
+import { useDispatch } from 'react-redux';
+
 export const Layout = () => {
-  const { isLoggedIn } = useAuth();
+  const { isLoggedIn, user } = useAuth();
+  const dispatch = useDispatch();
+  useEffect(() => {
+    const fetchVerifyStatus = async () => {
+      try {
+        await dispatch(getCurrent());
+        console.log(isLoggedIn, user);
+        const result = await dispatch(statusVerify(user._id));
+        if (result.verify) {
+          dispatch(logIn());
+        }
+      } catch (error) {
+        console.error('Error fetching verification status:', error);
+      }
+    };
+
+    if (isLoggedIn) {
+      fetchVerifyStatus();
+    }
+  }, [dispatch, isLoggedIn, user]);
 
   return (
     <Container>

@@ -12,6 +12,9 @@ import {
   SubmitButton,
   ResetButton,
 } from './FilterModal.styled';
+import { useDispatch, useSelector } from 'react-redux';
+import { setFilters } from 'redux/bouquets/bouquetSlice';
+import { selectFilters } from 'redux/bouquets/selectors';
 
 const flowerTypes = [
   'Roses',
@@ -32,7 +35,10 @@ const flowerTypes = [
   'Delphiniums',
 ];
 
-export const FilterModal = ({ onClose, onFilter, filters, onReset }) => {
+export const FilterModal = ({ onClose }) => {
+  const dispatch = useDispatch();
+  const filters = useSelector(selectFilters);
+
   useEffect(() => {
     const handleCloseOnKeydown = e => {
       if (e.key === 'Escape') {
@@ -53,11 +59,17 @@ export const FilterModal = ({ onClose, onFilter, filters, onReset }) => {
   };
 
   const handleSubmit = values => {
-    onFilter(values);
+    dispatch(
+      setFilters({
+        flowerType: values.flowerType,
+        price: values.price,
+        bouquetType: values.bouquetType,
+      })
+    );
   };
 
-  const handleReset = () => {
-    onReset();
+  const resetFilters = () => {
+    dispatch(setFilters({ flowerType: '', price: '', bouquetType: '' }));
     onClose();
   };
 
@@ -67,16 +79,19 @@ export const FilterModal = ({ onClose, onFilter, filters, onReset }) => {
         <ModalContainer>
           <CloseIcon onClick={onClose} />
 
-          <Formik initialValues={filters} onSubmit={handleSubmit}>
-            {({ values, setFieldValue, resetForm }) => (
+          <Formik
+            initialValues={{
+              flowerType: filters.flowerType,
+              price: filters.price,
+              bouquetType: filters.bouquetType,
+            }}
+            onSubmit={handleSubmit}
+          >
+            {({ values, resetForm }) => (
               <StyledForm>
                 <FormGroup>
                   <label htmlFor="flowerType">Flower Type:</label>
-                  <Field
-                    as="select"
-                    name="flowerType"
-                    onChange={e => setFieldValue('flowerType', e.target.value)}
-                  >
+                  <Field as="select" name="flowerType">
                     <option value="">All</option>
                     {flowerTypes.map(type => (
                       <option key={nanoid()} value={type}>
@@ -86,12 +101,8 @@ export const FilterModal = ({ onClose, onFilter, filters, onReset }) => {
                   </Field>
                 </FormGroup>
                 <FormGroup>
-                  <label htmlFor="sortByPrice">Price:</label>
-                  <Field
-                    as="select"
-                    name="sortByPrice"
-                    onChange={e => setFieldValue('sortByPrice', e.target.value)}
-                  >
+                  <label htmlFor="price">Price:</label>
+                  <Field as="select" name="price">
                     <option value=""></option>
                     <option value="asc">Ascending</option>
                     <option value="desc">Descending</option>
@@ -99,11 +110,7 @@ export const FilterModal = ({ onClose, onFilter, filters, onReset }) => {
                 </FormGroup>
                 <FormGroup>
                   <label htmlFor="bouquetType">Bouquet Type:</label>
-                  <Field
-                    as="select"
-                    name="bouquetType"
-                    onChange={e => setFieldValue('bouquetType', e.target.value)}
-                  >
+                  <Field as="select" name="bouquetType">
                     <option value="">All</option>
                     <option value="everyday">Everyday</option>
                     <option value="wedding">Wedding</option>
@@ -112,7 +119,7 @@ export const FilterModal = ({ onClose, onFilter, filters, onReset }) => {
                 </FormGroup>
                 <ButtonsWrapper>
                   <SubmitButton type="submit">Apply Filters</SubmitButton>
-                  <ResetButton type="button" onClick={handleReset}>
+                  <ResetButton type="button" onClick={resetFilters}>
                     Reset Filters
                   </ResetButton>
                 </ButtonsWrapper>

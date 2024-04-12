@@ -1,4 +1,3 @@
-// В компоненте Filters
 import React, { useState } from 'react';
 import { Formik, Field } from 'formik';
 import { nanoid } from 'nanoid';
@@ -13,6 +12,8 @@ import {
   ResetButton,
 } from './Filters.styled';
 import { FilterModal } from 'components/FilterModal/FilterModal';
+import { setFilters } from 'redux/bouquets/bouquetSlice';
+import { useDispatch } from 'react-redux';
 
 const flowerTypes = [
   'Roses',
@@ -33,15 +34,28 @@ const flowerTypes = [
   'Delphiniums',
 ];
 
-export const Filters = ({ onFilter, filters, onReset }) => {
+const initialValues = {
+  flowerType: '',
+  price: '',
+  bouquetType: '',
+};
+
+export const Filters = () => {
   const [isFilterModalOpen, setIsFilterModalOpen] = useState(false);
+  const dispatch = useDispatch();
 
   const handleOpenModal = () => {
     setIsFilterModalOpen(!isFilterModalOpen);
   };
 
   const handleSubmit = values => {
-    onFilter(values);
+    dispatch(
+      setFilters({
+        flowerType: values.flowerType,
+        price: values.price,
+        bouquetType: values.bouquetType,
+      })
+    );
   };
 
   return (
@@ -53,16 +67,12 @@ export const Filters = ({ onFilter, filters, onReset }) => {
           </FilterButton>
           Filters
         </FilterIconWrapper>
-        <Formik initialValues={filters} onSubmit={handleSubmit}>
-          {({ values, setFieldValue, resetForm }) => (
+        <Formik initialValues={initialValues} onSubmit={handleSubmit}>
+          {({ values, handleSubmit, resetForm }) => (
             <StyledForm>
               <FormGroup>
                 <label htmlFor="flowerType">Flower Type:</label>
-                <Field
-                  as="select"
-                  name="flowerType"
-                  onChange={e => setFieldValue('flowerType', e.target.value)}
-                >
+                <Field as="select" name="flowerType">
                   <option value="">All</option>
                   {flowerTypes.map(type => (
                     <option key={nanoid()} value={type}>
@@ -72,12 +82,8 @@ export const Filters = ({ onFilter, filters, onReset }) => {
                 </Field>
               </FormGroup>
               <FormGroup>
-                <label htmlFor="sortByPrice">Price:</label>
-                <Field
-                  as="select"
-                  name="sortByPrice"
-                  onChange={e => setFieldValue('sortByPrice', e.target.value)}
-                >
+                <label htmlFor="price">Price:</label>
+                <Field as="select" name="price">
                   <option value=""></option>
                   <option value="asc">Ascending</option>
                   <option value="desc">Descending</option>
@@ -85,11 +91,7 @@ export const Filters = ({ onFilter, filters, onReset }) => {
               </FormGroup>
               <FormGroup>
                 <label htmlFor="bouquetType">Bouquet Type:</label>
-                <Field
-                  as="select"
-                  name="bouquetType"
-                  onChange={e => setFieldValue('bouquetType', e.target.value)}
-                >
+                <Field as="select" name="bouquetType">
                   <option value="">All</option>
                   <option value="everyday">Everyday</option>
                   <option value="wedding">Wedding</option>
@@ -104,14 +106,7 @@ export const Filters = ({ onFilter, filters, onReset }) => {
           )}
         </Formik>
       </FilterWrapper>
-      {isFilterModalOpen && (
-        <FilterModal
-          onFilter={onFilter}
-          filters={filters}
-          onClose={handleOpenModal}
-          onReset={onReset}
-        />
-      )}
+      {isFilterModalOpen && <FilterModal onClose={handleOpenModal} />}
     </>
   );
 };

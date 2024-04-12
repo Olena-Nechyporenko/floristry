@@ -4,10 +4,22 @@ import { fetchBouquets, getBouquetById } from './operations';
 const bouquetsSlice = createSlice({
   name: 'bouquets',
   initialState: {
+    filters: {
+      flowerType: '',
+      price: '',
+      bouquetType: '',
+    },
     bouquets: [],
     currentBouquet: {},
     isLoading: false,
     error: null,
+  },
+  reducers: {
+    setFilters(state, action) {
+      state.filters.flowerType = action.payload.flowerType;
+      state.filters.price = action.payload.price;
+      state.filters.bouquetType = action.payload.bouquetType;
+    },
   },
   extraReducers: builder => {
     builder
@@ -37,5 +49,7 @@ const bouquetsSlice = createSlice({
       });
   },
 });
+
+export const { setFilters } = bouquetsSlice.actions;
 
 export const bouquetsReducer = bouquetsSlice.reducer;

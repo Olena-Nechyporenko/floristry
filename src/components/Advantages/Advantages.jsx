@@ -1,7 +1,7 @@
-import firstImg from '../../images/wide-assortment.jpg';
-import secondImg from '../../images/high-quality.jpg';
-import thirdImg from '../../images/creative-arrangement.jpg';
-import fourthImg from '../../images/professional-consultation.jpg';
+// import firstImg from '../../images/wide-assortment.jpg';
+// import secondImg from '../../images/high-quality.jpg';
+// import thirdImg from '../../images/creative-arrangement.jpg';
+// import fourthImg from '../../images/professional-consultation.jpg';
 import {
   AdvantagesSection,
   List,
@@ -27,12 +27,22 @@ export const Advantages = () => {
             </Text>
           </DescriptionWrapper>
           <ImageWrapperRight>
-            <Img src={firstImg} alt="Wide assortment" />
+            <Img
+              src={
+                'https://res.cloudinary.com/dzqlwkzwd/image/upload/v1712936103/images/wide-assortment_ucefbe.jpg'
+              }
+              alt="Wide assortment"
+            />
           </ImageWrapperRight>
         </Item>
         <Item>
           <ImageWrapperLeft>
-            <Img src={secondImg} alt="High quality" />
+            <Img
+              src={
+                'https://res.cloudinary.com/dzqlwkzwd/image/upload/v1712936100/images/high-quality_j3dqkb.jpg'
+              }
+              alt="High quality"
+            />
           </ImageWrapperLeft>
           <DescriptionWrapper>
             <DescrTitle>High quality</DescrTitle>
@@ -51,12 +61,22 @@ export const Advantages = () => {
             </Text>
           </DescriptionWrapper>
           <ImageWrapperRight>
-            <Img src={thirdImg} alt="Creative arrangement" />
+            <Img
+              src={
+                'https://res.cloudinary.com/dzqlwkzwd/image/upload/v1712936100/images/creative-arrangement_y9tvze.jpg'
+              }
+              alt="Creative arrangement"
+            />
           </ImageWrapperRight>
         </Item>
         <Item>
           <ImageWrapperLeft>
-            <Img src={fourthImg} alt="Professional consultation" />
+            <Img
+              src={
+                'https://res.cloudinary.com/dzqlwkzwd/image/upload/v1712936101/images/professional-consultation_tdihuq.jpg'
+              }
+              alt="Professional consultation"
+            />
           </ImageWrapperLeft>
           <DescriptionWrapper>
             <DescrTitle>Professional consultation</DescrTitle>

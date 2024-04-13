@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import Slider from 'react-slick';
-import img1 from '../../images/wedding-hero-1.jpg';
-import img2 from '../../images/wedding-hero-2.jpg';
+// import img1 from '../../images/wedding-hero-1.jpg';
+// import img2 from '../../images/wedding-hero-2.jpg';
 
 export const WeddingHero = styled.section`
   height: 400px;
@@ -69,11 +69,11 @@ const Slide = styled.div`
 `;
 
 export const Slide1 = styled(Slide)`
-  background-image: url(${img1});
+  background-image: url('https://res.cloudinary.com/dzqlwkzwd/image/upload/v1712936101/images/wedding-hero-1_wjldnl.jpg');
 `;
 
 export const Slide2 = styled(Slide)`
-  background-image: url(${img2});
+  background-image: url('https://res.cloudinary.com/dzqlwkzwd/image/upload/v1712936104/images/wedding-hero-2_upg2w6.jpg');
 `;
 
 export const TitleWrapper = styled.div`

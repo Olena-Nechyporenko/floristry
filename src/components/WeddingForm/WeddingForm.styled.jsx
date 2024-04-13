@@ -1,6 +1,6 @@
 import { Form } from 'formik';
 import styled from 'styled-components';
-import img from '../../images/background-form.jpg';
+// import img from '../../images/background-form.jpg';
 
 export const FormSection = styled.section`
   padding-bottom: 70px;
@@ -8,7 +8,7 @@ export const FormSection = styled.section`
 
 export const FormWrapper = styled.div`
   position: relative;
-  background-image: url(${img});
+  background-image: url('https://res.cloudinary.com/dzqlwkzwd/image/upload/v1712936100/images/background-form_wmgi6q.jpg');
   background-size: cover;
   background-position: right 80% top 0;
   background-repeat: no-repeat;

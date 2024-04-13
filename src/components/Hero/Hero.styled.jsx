@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import img1 from '../../images/home-hero-1.jpg';
-import img2 from '../../images/home-hero-2.jpg';
-import img3 from '../../images/home-hero-3.jpg';
+// import img1 from '../../images/home-hero-1.jpg';
+// import img2 from '../../images/home-hero-2.jpg';
+// import img3 from '../../images/home-hero-3.jpg';
 import Slider from 'react-slick';
 import { Link } from 'react-router-dom';
 
@@ -46,15 +46,15 @@ const Slide = styled.div`
 `;
 
 export const Slide1 = styled(Slide)`
-  background-image: url(${img1});
+  background-image: url('https://res.cloudinary.com/dzqlwkzwd/image/upload/v1712936103/images/home-hero-1_uqz6ie.jpg');
 `;
 
 export const Slide2 = styled(Slide)`
-  background-image: url(${img2});
+  background-image: url('https://res.cloudinary.com/dzqlwkzwd/image/upload/v1712936104/images/home-hero-2_sxupqb.jpg');
 `;
 
 export const Slide3 = styled(Slide)`
-  background-image: url(${img3});
+  background-image: url('https://res.cloudinary.com/dzqlwkzwd/image/upload/v1712936105/images/home-hero-3_ojbyar.jpg');
 `;
 
 export const TitleWrapper = styled.div`

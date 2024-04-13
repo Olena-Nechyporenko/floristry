@@ -8,34 +8,35 @@ import { useAuth } from 'hooks/useAuth';
 import { UserMenu } from 'components/UserMenu/UserMenu';
 
 import { AuthNav } from 'components/AuthNav/AuthNav';
-import { getCurrent, logIn, statusVerify } from 'redux/auth/operations';
-import { useDispatch } from 'react-redux';
+// import { getCurrent, logIn, statusVerify } from 'redux/auth/operations';
+// import { useDispatch } from 'react-redux';
 
 export const Layout = () => {
-  const { isLoggedIn, user } = useAuth();
-  const dispatch = useDispatch();
-  useEffect(() => {
-    const fetchVerifyStatus = async () => {
-      try {
-        await dispatch(getCurrent());
-        console.log(isLoggedIn, user);
-        const result = await dispatch(statusVerify(user._id));
-        if (result.verify) {
-          dispatch(logIn());
-        }
-      } catch (error) {
-        console.error('Error fetching verification status:', error);
-      }
-    };
+  const { isLoggedIn } = useAuth();
+  // const dispatch = useDispatch();
+  // useEffect(() => {
+  //   const fetchVerifyStatus = async () => {
+  //     try {
+  //       await dispatch(getCurrent());
+  //       console.log(isLoggedIn, user);
+  //       const result = await dispatch(statusVerify(user._id));
+  //       if (result.verify) {
+  //         dispatch(logIn());
+  //       }
+  //     } catch (error) {
+  //       console.error('Error fetching verification status:', error);
+  //     }
+  //   };
 
-    if (isLoggedIn) {
-      fetchVerifyStatus();
-    }
-  }, [dispatch, isLoggedIn, user]);
+  //   if (isLoggedIn) {
+  //     fetchVerifyStatus();
+  //   }
+  // }, [dispatch, isLoggedIn, user]);
 
   return (
     <Container>
       <Header />
+      {console.log(isLoggedIn)}
       {isLoggedIn ? <UserMenu /> : <AuthNav />}
 
       <Suspense fallback={<Loader width={80} height={80} />}>

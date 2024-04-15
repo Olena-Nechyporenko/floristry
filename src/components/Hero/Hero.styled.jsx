@@ -1,7 +1,4 @@
 import styled from 'styled-components';
-// import img1 from '../../images/home-hero-1.jpg';
-// import img2 from '../../images/home-hero-2.jpg';
-// import img3 from '../../images/home-hero-3.jpg';
 import Slider from 'react-slick';
 import { Link } from 'react-router-dom';
 

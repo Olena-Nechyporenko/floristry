@@ -1,4 +1,4 @@
-import { Suspense, useEffect } from 'react';
+import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 import { Container } from './Layout.styled';
 import { Header } from 'components/Header/Header';
@@ -36,7 +36,6 @@ export const Layout = () => {
   return (
     <Container>
       <Header />
-      {console.log(isLoggedIn)}
       {isLoggedIn ? <UserMenu /> : <AuthNav />}
 
       <Suspense fallback={<Loader width={80} height={80} />}>

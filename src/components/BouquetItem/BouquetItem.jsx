@@ -25,7 +25,6 @@ export const BouquetItem = ({ bouquet }) => {
 
   const handleAddToCart = () => {
     const existingProduct = cartProducts.find(item => item._id === bouquet._id);
-    console.log(existingProduct);
 
     if (existingProduct) {
       dispatch(

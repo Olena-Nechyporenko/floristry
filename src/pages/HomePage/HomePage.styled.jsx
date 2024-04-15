@@ -30,7 +30,7 @@ export const Title = styled.h2`
   text-align: center;
   font-size: 30px;
   height: 100%;
-  background-color: #e6b8ca;
+  background-color: var(--main-pink-color);
 
   @media screen and (min-width: 768px) {
     transform: rotate(-90deg);

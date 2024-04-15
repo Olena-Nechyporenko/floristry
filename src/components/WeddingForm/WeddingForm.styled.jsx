@@ -1,6 +1,5 @@
 import { Form } from 'formik';
 import styled from 'styled-components';
-// import img from '../../images/background-form.jpg';
 
 export const FormSection = styled.section`
   padding-bottom: 70px;

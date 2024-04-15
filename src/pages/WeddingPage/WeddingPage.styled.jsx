@@ -1,7 +1,5 @@
 import styled from 'styled-components';
 import Slider from 'react-slick';
-// import img1 from '../../images/wedding-hero-1.jpg';
-// import img2 from '../../images/wedding-hero-2.jpg';
 
 export const WeddingHero = styled.section`
   height: 400px;
@@ -103,7 +101,7 @@ export const Title = styled.h1`
   font-weight: 400;
   line-height: 1.3;
   text-align: center;
-  color: white;
+  color: var(--main-light-text-color);
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 `;
 
@@ -111,7 +109,7 @@ export const Text = styled.p`
   font-size: 16px;
   font-weight: 500;
   text-align: center;
-  color: white;
+  color: var(--main-light-text-color);
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
   padding: 0 10px;
 `;

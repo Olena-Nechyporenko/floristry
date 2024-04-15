@@ -6,6 +6,9 @@ import { useDispatch } from 'react-redux';
 import { refreshUser } from 'redux/auth/operations';
 import { PrivateRoute } from './PrivateRoute';
 import { Loader } from './Loader/Loader';
+import SuccessPage from 'pages/SuccessPage/SuccesPage';
+import FailurePage from 'pages/FailurePage/FailurePage';
+import NotFoundPage from 'pages/NotFoundPage/NotFoundPage';
 
 const HomePage = lazy(() => import('../pages/HomePage/HomePage'));
 const CatalogPage = lazy(() => import('pages/CatalogPage/CatalogPage'));
@@ -13,9 +16,6 @@ const CartPage = lazy(() => import('pages/CartPage/CartPage'));
 const PaymentPage = lazy(() => import('pages/PaymentPage/PaymentPage'));
 const WeddingPage = lazy(() => import('pages/WeddingPage/WeddingPage'));
 const OrderPage = lazy(() => import('pages/OrderPage/OrderPage'));
-const SuccessPage = lazy(() => import('pages/SuccessPage/SuccesPage'));
-const FailurePage = lazy(() => import('pages/FailurePage/FailurePage'));
-const NotFoundPage = lazy(() => import('pages/NotFoundPage/NotFoundPage'));
 
 export const App = () => {
   const dispatch = useDispatch();
@@ -32,9 +32,7 @@ export const App = () => {
         <Route index element={<HomePage />} />
         <Route
           path="/orders"
-          element={
-            <PrivateRoute redirectTo="/orders" component={<OrderPage />} />
-          }
+          element={<PrivateRoute redirectTo="/" component={<OrderPage />} />}
         />
         <Route path="/catalog" element={<CatalogPage />} />
         <Route path="/cart" element={<CartPage />} />

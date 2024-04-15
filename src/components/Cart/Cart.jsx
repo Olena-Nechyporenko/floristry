@@ -38,9 +38,17 @@ export const Cart = () => {
       <PricePayWrapper>
         <TotalPrice>Total price: {calculateTotal()} eur</TotalPrice>
         {isLoggedIn ? (
-          <Link to="/payment">
-            <PayButton>To pay</PayButton>
-          </Link>
+          products.length !== 0 ? (
+            <Link to="/payment">
+              <PayButton>To pay</PayButton>
+            </Link>
+          ) : (
+            <PayButton
+              onClick={() => Notiflix.Notify.failure('Your cart is empty')}
+            >
+              To pay
+            </PayButton>
+          )
         ) : (
           <PayButton onClick={() => Notiflix.Notify.failure('Please login')}>
             To pay

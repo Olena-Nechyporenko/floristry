@@ -11,7 +11,7 @@ export const ReviewsSection = styled.section`
 `;
 
 export const Title = styled.h2`
-  font-size: 25px;
+  font-size: 23px;
   font-weight: 500;
   text-align: center;
   width: 300px;

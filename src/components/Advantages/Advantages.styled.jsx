@@ -7,7 +7,7 @@ export const AdvantagesSection = styled.section`
 export const List = styled.ul`
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 40px;
 
   li:nth-child(odd) {
     display: flex;
@@ -26,7 +26,7 @@ export const List = styled.ul`
 export const Item = styled.li`
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 40px;
 
   @media screen and (min-width: 768px) {
     flex-direction: row;

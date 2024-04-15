@@ -1,8 +1,8 @@
 import React from 'react';
 import axios from 'axios';
+import * as Yup from 'yup';
 import Notiflix from 'notiflix';
 import { Formik, Field } from 'formik';
-import * as Yup from 'yup';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectCartProducts } from 'redux/cart/selectors';
 import { loadStripe } from '@stripe/stripe-js';

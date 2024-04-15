@@ -1,4 +1,5 @@
 import Notiflix from 'notiflix';
+import { useDispatch } from 'react-redux';
 import { changeQuantity, removeFromCart } from 'redux/cart/cartProductsSlice';
 import {
   BouquetWrapper,
@@ -12,7 +13,6 @@ import {
   StyledPrice,
   StyledTitle,
 } from './CartItem.styled';
-import { useDispatch } from 'react-redux';
 
 const notiflixShowOptions = {
   width: '340px',

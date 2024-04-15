@@ -1,3 +1,4 @@
+import { WeddingForm } from 'components/WeddingForm/WeddingForm';
 import { WeddingCatalog } from 'components/WeddingCatalog/WeddingCatalog';
 import {
   WeddingHero,
@@ -8,7 +9,6 @@ import {
   Title,
   Text,
 } from './WeddingPage.styled';
-import { WeddingForm } from 'components/WeddingForm/WeddingForm';
 
 export default function WeddingPage() {
   const settings = {

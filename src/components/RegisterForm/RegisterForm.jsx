@@ -1,8 +1,9 @@
+import * as Yup from 'yup';
+import Notiflix from 'notiflix';
+import { Formik } from 'formik';
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { getCurrent, register } from 'redux/auth/operations';
-import Notiflix from 'notiflix';
-import * as Yup from 'yup';
 import {
   BackDrop,
   Modal,
@@ -15,7 +16,6 @@ import {
   StyledButton,
   StyledTitle,
 } from './RegisterForm.styled';
-import { Formik } from 'formik';
 
 const notiflixReportOptions = {
   svgSize: '60px',

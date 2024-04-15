@@ -1,3 +1,8 @@
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchBouquets } from 'redux/bouquets/operations';
+import { selectAllBouquets, selectIsLoading } from 'redux/bouquets/selectors';
+import { Loader } from 'components/Loader/Loader';
 import { BouquetItem } from 'components/BouquetItem/BouquetItem';
 import {
   WeddingCatalogSection,
@@ -5,11 +10,6 @@ import {
   CatalogWrapper,
   LoadingText,
 } from './WeddingCatalog.styled';
-import { useDispatch, useSelector } from 'react-redux';
-import { selectAllBouquets, selectIsLoading } from 'redux/bouquets/selectors';
-import { useEffect } from 'react';
-import { fetchBouquets } from 'redux/bouquets/operations';
-import { Loader } from 'components/Loader/Loader';
 
 export const WeddingCatalog = () => {
   const dispatch = useDispatch();

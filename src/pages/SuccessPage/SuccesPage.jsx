@@ -1,5 +1,8 @@
 import Notiflix from 'notiflix';
 import { useDispatch, useSelector } from 'react-redux';
+import { sendOrder } from 'redux/orders/operations';
+import { selectCurrentOrder } from 'redux/orders/selectors';
+import { removeAllFromCart } from 'redux/cart/cartProductsSlice';
 import {
   Wrapper,
   Title,
@@ -8,9 +11,6 @@ import {
   ArrowIcon,
   CheckIcon,
 } from './SuccessPage.styled';
-import { selectCurrentOrder } from 'redux/orders/selectors';
-import { sendOrder } from 'redux/orders/operations';
-import { removeAllFromCart } from 'redux/cart/cartProductsSlice';
 
 const notiflixSuccessOptions = {
   fontSize: '17px',

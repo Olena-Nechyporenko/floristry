@@ -1,15 +1,14 @@
 import React, { useEffect } from 'react';
-import { BouquetItem } from 'components/BouquetItem/BouquetItem';
-import { CatalogWrapper, LoadingText } from './Catalog.styled';
-import { nanoid } from 'nanoid';
-import { fetchBouquets } from 'redux/bouquets/operations';
 import { useDispatch, useSelector } from 'react-redux';
-import { Filters } from 'components/Filters/Filters';
+import { fetchBouquets } from 'redux/bouquets/operations';
 import { Loader } from 'components/Loader/Loader';
+import { Filters } from 'components/Filters/Filters';
+import { BouquetItem } from 'components/BouquetItem/BouquetItem';
 import {
   selectFilteredBouquets,
   selectIsLoading,
 } from 'redux/bouquets/selectors';
+import { CatalogWrapper, LoadingText } from './Catalog.styled';
 
 export const Catalog = () => {
   const dispatch = useDispatch();
@@ -31,7 +30,7 @@ export const Catalog = () => {
       ) : (
         <CatalogWrapper>
           {filteredBouquets.map(bouquet => (
-            <BouquetItem key={nanoid()} bouquet={bouquet} />
+            <BouquetItem key={bouquet._id} bouquet={bouquet} />
           ))}
         </CatalogWrapper>
       )}

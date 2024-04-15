@@ -1,4 +1,6 @@
 import Notiflix from 'notiflix';
+import { useDispatch, useSelector } from 'react-redux';
+import { selectCartProducts } from 'redux/cart/selectors';
 import { addToCart, increaseQuantity } from 'redux/cart/cartProductsSlice';
 import {
   BouquetWrapper,
@@ -10,8 +12,6 @@ import {
   StyledPrice,
   StyledTitle,
 } from './BouquetItem.styled';
-import { useDispatch, useSelector } from 'react-redux';
-import { selectCartProducts } from 'redux/cart/selectors';
 
 const notiflixSuccessOptions = {
   fontSize: '17px',
@@ -19,7 +19,7 @@ const notiflixSuccessOptions = {
 };
 
 export const BouquetItem = ({ bouquet }) => {
-  const { url, price, description, name } = bouquet; // Destructure bouquet
+  const { url, price, description, name } = bouquet;
   const dispatch = useDispatch();
   const cartProducts = useSelector(selectCartProducts);
 

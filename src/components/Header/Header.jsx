@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { MobileMenu } from 'components/MobileMenu/MobileMenu';
 import {
   HeaderWrapper,
   NavList,
@@ -9,14 +10,8 @@ import {
   MobileNavList,
   BurgerIcon,
 } from './Header.module';
-import { MobileMenu } from 'components/MobileMenu/MobileMenu';
-// import { useAuth } from 'components/hooks/useAuth';
-// import { UserMenu } from 'components/UserMenu/UserMenu';
-// import { AuthNav } from 'components/AuthNav/AuthNav';
 
 export const Header = () => {
-  // const { isLoggedIn } = useAuth();
-
   const [anchor, setAnchor] = useState('');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -69,7 +64,6 @@ export const Header = () => {
               </LinkNav>
             </li>
           </NavList>
-          {/* {isLoggedIn ? <UserMenu /> : <AuthNav />} */}
 
           <MobileNavList>
             <li>

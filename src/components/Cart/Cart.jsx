@@ -1,6 +1,9 @@
-import { CartItem } from 'components/CartItem/CartItem';
+import Notiflix from 'notiflix';
+import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import { useAuth } from 'hooks/useAuth.js';
 import { selectCartProducts } from 'redux/cart/selectors.js';
+import { CartItem } from 'components/CartItem/CartItem';
 import {
   TextEmptyCart,
   CartProductsList,
@@ -8,9 +11,6 @@ import {
   TotalPrice,
   PayButton,
 } from './Cart.styled.jsx';
-import { Link } from 'react-router-dom';
-import { useAuth } from 'hooks/useAuth.js';
-import Notiflix from 'notiflix';
 
 export const Cart = () => {
   const products = useSelector(selectCartProducts);

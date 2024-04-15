@@ -1,8 +1,9 @@
+import * as Yup from 'yup';
+import { Formik } from 'formik';
 import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { logIn } from 'redux/auth/operations';
-import { Formik } from 'formik';
-import * as Yup from 'yup';
+import RegisterModal from 'components/RegisterForm/RegisterForm';
 import {
   BackDrop,
   Modal,
@@ -18,7 +19,6 @@ import {
   StyledRegisterButton,
   StyledText,
 } from './LoginForm.styled';
-import RegisterModal from 'components/RegisterForm/RegisterForm';
 
 const schema = Yup.object().shape({
   email: Yup.string().email('Invalid email').required('Email is required'),

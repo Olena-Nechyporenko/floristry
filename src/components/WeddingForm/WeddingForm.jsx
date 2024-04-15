@@ -1,7 +1,9 @@
 import Notiflix from 'notiflix';
-import { Formik, Field } from 'formik';
 import axios from 'axios';
 import * as Yup from 'yup';
+import { Formik, Field } from 'formik';
+import { useState } from 'react';
+import { Loader } from 'components/Loader/Loader';
 import {
   FormSection,
   Title,
@@ -11,8 +13,6 @@ import {
   StyledForm,
   StyledFormField,
 } from './WeddingForm.styled';
-import { Loader } from 'components/Loader/Loader';
-import { useState } from 'react';
 
 const notiflixShowOptions = {
   width: '340px',

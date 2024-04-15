@@ -1,6 +1,9 @@
 import { useEffect } from 'react';
 import { Formik, Field } from 'formik';
 import { nanoid } from 'nanoid';
+import { useDispatch, useSelector } from 'react-redux';
+import { setFilters } from 'redux/bouquets/bouquetSlice';
+import { selectFilters } from 'redux/bouquets/selectors';
 import {
   BackDrop,
   Modal,
@@ -12,9 +15,6 @@ import {
   SubmitButton,
   ResetButton,
 } from './FilterModal.styled';
-import { useDispatch, useSelector } from 'react-redux';
-import { setFilters } from 'redux/bouquets/bouquetSlice';
-import { selectFilters } from 'redux/bouquets/selectors';
 
 const flowerTypes = [
   'Roses',

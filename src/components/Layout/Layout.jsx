@@ -6,32 +6,10 @@ import { Footer } from 'components/Footer/Footer';
 import { Loader } from 'components/Loader/Loader';
 import { useAuth } from 'hooks/useAuth';
 import { UserMenu } from 'components/UserMenu/UserMenu';
-
 import { AuthNav } from 'components/AuthNav/AuthNav';
-// import { getCurrent, logIn, statusVerify } from 'redux/auth/operations';
-// import { useDispatch } from 'react-redux';
 
 export const Layout = () => {
   const { isLoggedIn } = useAuth();
-  // const dispatch = useDispatch();
-  // useEffect(() => {
-  //   const fetchVerifyStatus = async () => {
-  //     try {
-  //       await dispatch(getCurrent());
-  //       console.log(isLoggedIn, user);
-  //       const result = await dispatch(statusVerify(user._id));
-  //       if (result.verify) {
-  //         dispatch(logIn());
-  //       }
-  //     } catch (error) {
-  //       console.error('Error fetching verification status:', error);
-  //     }
-  //   };
-
-  //   if (isLoggedIn) {
-  //     fetchVerifyStatus();
-  //   }
-  // }, [dispatch, isLoggedIn, user]);
 
   return (
     <Container>
